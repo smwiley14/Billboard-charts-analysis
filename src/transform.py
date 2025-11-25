@@ -1,9 +1,9 @@
 from extract import SpotifyAPI, MusicBrainzAPI, ReccoBeats, BillBoardChart
-from datetime import date
+from datetime import date, timedelta
 import re
 import unicodedata
 import time
-from pandas import pd
+import pandas as pd
 
 sp = SpotifyAPI()
 mb = MusicBrainzAPI()
@@ -29,7 +29,7 @@ def get_spotify_song_ids_and_artists(chart) -> tuple [list, list]:
                         "url": artist_url
                     })
                     existing_ids.add(artist_id)
-    return (song_ids, pd.DataFrame(artists))
+    return (song_ids, artists)
 
 
 def normalize_artist_name(artist) -> str:
@@ -49,8 +49,9 @@ def normalize_artist_name(artist) -> str:
 def get_tags_music_brainz(artists):
     mbids = []
     for artist in artists:
+        print(artist)
+
         url = artist['url']
-        # print(url)
         mbid = mb.get_mbid(url)
         if mbid:
             artist['mbid'] = mbid
@@ -66,7 +67,7 @@ def get_audio_details(song_ids):
     all_results = []
     for i in range(0, len(song_ids), BATCH_SIZE):
         batch = song_ids[i:i + BATCH_SIZE]
-        results=rec.get_recco_song_details(batch)['content']
+        results=rec.get_recco_song_details(batch)
         for r in results:
             song_id = r['id']
             all_results.append(r)
@@ -84,7 +85,7 @@ def get_audio_details(song_ids):
 
 def get_chart_dataframe(chart):
     rows = []
-    for entry in chart:
+    for entry in chart.entries:
         rows.append({
             "title": entry.title,
             "artist": entry.artist,
@@ -96,22 +97,35 @@ def get_chart_dataframe(chart):
 
     return pd.DataFrame(rows)
 
+
+def most_recent_friday(ref_date=None):
+    # Use today's date if none is provided
+    if ref_date is None:
+        ref_date = date.today()
+    
+    # weekday(): Monday=0, ..., Friday=5, Sunday=6
+    days_since_friday = (ref_date.weekday() - 4) % 7
+    return ref_date - timedelta(days=days_since_friday)
+
 def get_dataframes():
-    today = date.today()
-    chart = BillBoardChart(today).data
+    date = most_recent_friday()
+    chart = BillBoardChart(date).data
 
     df_chart = get_chart_dataframe(chart)
-    song_ids, df_artists = get_spotify_song_ids_and_artists(chart)
-    get_tags_music_brainz(df_artists)
-    
-    df_audio = get_audio_details(song_ids)
 
+    song_ids, artists = get_spotify_song_ids_and_artists(chart)
+    # print(artists)
+    get_tags_music_brainz(artists)
+    df_audio = get_audio_details(song_ids)
+    df_artists = pd.DataFrame(artists)
     return {
         "chart": df_chart,
         "audio": df_audio,
         "artists" : df_artists
     }
-    # print(song_ids)
+
+
+
 if __name__ == "__main__":
     get_dataframes()
 

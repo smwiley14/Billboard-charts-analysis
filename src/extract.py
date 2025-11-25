@@ -160,7 +160,7 @@ class MusicBrainzAPI():
 
     def get_mbid(self, link):
         endpoint = f"url?resource={link}&inc=artist-rels"
-        res = self.mb_make_request(endpoint)
+        res = self.make_request(endpoint)
 
         if not res:
             return None
@@ -176,8 +176,8 @@ class MusicBrainzAPI():
     
     def mb_get_artist_tag(self, id):
         endpoint = f"artist/{id}?inc=tags"
-        tags = self.mb_make_request(endpoint)['tags']
-        res = self.mb_make_request(endpoint)
+        tags = self.make_request(endpoint)['tags']
+        res = self.make_request(endpoint)
         if not res:
             return None
         tags = res.get('tags', [])
@@ -203,25 +203,26 @@ headers = {
 
 class ReccoBeats:
     def __init__(self):
-        self.base=base
+        self.base=base_recco
         self.headers=headers
 
-    def get_recco_song_details(ids):
+    def get_recco_song_details(self, ids):
         ids_string=','.join(ids)
-        res = requests.get(f"{base_recco}/track?ids={ids_string}", headers=headers)
+        res = requests.get(f"{self.base}/track?ids={ids_string}", headers=self.headers)
         if(res.status_code == 200):
-            return res.json()
+            return res.json()['content']
         else:
             print(f"request failed with code {res.status_code} due to {res.reason}")
+            return None
 
-    def get_recco_audio_analysis(id):
-        res = requests.get(f"{base_recco}/track/{id}/audio-features", headers=headers)
+    def get_recco_audio_analysis(self, id):
+        res = requests.get(f"{self.base}/track/{id}/audio-features", headers=self.headers)
         if(res.status_code == 200):
             return res.json()
         else:
             print(f"{id}")
             print(f"audio request failed with code {res.status_code} due to {res.reason}")
 
-    def get_recco_artist_details(id):
-        res = requests.get(f"{base_recco}/artist/{id}", headers=headers)
+    def get_recco_artist_details(self, id):
+        res = requests.get(f"{base_self.baserecco}/artist/{id}", headers=self.headers)
         return res.json()
