@@ -3,3 +3,6 @@
 /.venv
 .cache
 # /airflow/logs
+test.ipynb
+logs
+*.yaml
