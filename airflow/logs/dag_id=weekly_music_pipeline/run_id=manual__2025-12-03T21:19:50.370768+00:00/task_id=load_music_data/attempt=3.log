@@ -1,0 +1,87 @@
+{"timestamp":"2025-12-03T21:59:37.537711","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-03T21:59:37.538859","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-03T21:59:37.652672Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:37.719005Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:37.719835Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:37.719996Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:37.722211Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:52.540706Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:52.542590Z","level":"info","event":"  Processing song 1/100: The Fate Of Ophelia by Taylor Swift","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:53.315018Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:54.029335Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:54.846674Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:55.530592Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:56.324274Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:57.037625Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:57.745303Z","level":"info","event":"7","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:58.165337Z","level":"info","event":"Failed to get access token: HTTP 503. Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:59:59.529597Z","level":"info","event":"8","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:00.323513Z","level":"info","event":"9","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:00.324875Z","level":"info","event":"  Processing song 10/100: I Got Better by Morgan Wallen","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:01.016984Z","level":"info","event":"10","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:01.798105Z","level":"info","event":"11","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:02.671030Z","level":"info","event":"12","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:03.324904Z","level":"info","event":"13","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:04.190408Z","level":"info","event":"14","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:05.191117Z","level":"info","event":"15","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:05.933956Z","level":"info","event":"16","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:06.777035Z","level":"info","event":"17","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:07.702027Z","level":"info","event":"18","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:08.478722Z","level":"info","event":"19","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:08.480470Z","level":"info","event":"  Processing song 20/100: Manchild by Sabrina Carpenter","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:09.318581Z","level":"info","event":"20","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:10.371900Z","level":"info","event":"21","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:25.973209Z","level":"info","event":"Network error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')). Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:27.525645Z","level":"info","event":"22","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:28.514201Z","level":"info","event":"23","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:29.364816Z","level":"info","event":"24","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:30.037660Z","level":"info","event":"25","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:30.860846Z","level":"info","event":"26","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:31.526248Z","level":"info","event":"27","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:32.990769Z","level":"info","event":"28","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:34.387339Z","level":"info","event":"29","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:00:34.395721Z","level":"info","event":"  Processing song 30/100: It's The Most Wonderful Time Of The Year by Andy Williams","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:16.199384Z","level":"info","event":"30","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:17.471780Z","level":"info","event":"31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:19.137272Z","level":"info","event":"32","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:19.984475Z","level":"info","event":"33","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:20.681656Z","level":"info","event":"34","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:21.325836Z","level":"info","event":"35","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:22.103512Z","level":"info","event":"36","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:22.740200Z","level":"info","event":"37","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:23.579710Z","level":"info","event":"38","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:24.302977Z","level":"info","event":"39","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:24.303399Z","level":"info","event":"  Processing song 40/100: A Holly Jolly Christmas by Burl Ives","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:25.080208Z","level":"info","event":"40","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:25.896875Z","level":"info","event":"41","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:26.595340Z","level":"info","event":"42","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:27.302566Z","level":"info","event":"43","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:28.073077Z","level":"info","event":"44","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:28.693623Z","level":"info","event":"45","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:29.572496Z","level":"info","event":"46","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:30.398147Z","level":"info","event":"47","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:31.133579Z","level":"info","event":"48","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:31.793836Z","level":"info","event":"49","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:31.794623Z","level":"info","event":"  Processing song 50/100: 20 Cigarettes by Morgan Wallen","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:32.491803Z","level":"info","event":"50","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:33.426489Z","level":"info","event":"51","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:34.209286Z","level":"info","event":"52","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:34.868535Z","level":"info","event":"53","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:35.582620Z","level":"info","event":"54","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:36.451584Z","level":"info","event":"55","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:37.264943Z","level":"info","event":"56","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:37.935247Z","level":"info","event":"57","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:38.633191Z","level":"info","event":"58","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:39.580973Z","level":"info","event":"59","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:39.582677Z","level":"info","event":"  Processing song 60/100: Go Girl by Summer Walker, Latto & Doja Cat","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:41.167290Z","level":"info","event":"60","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:42.708548Z","level":"info","event":"61","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:44.560547Z","level":"info","event":"62","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:09:45.259436Z","level":"info","event":"63","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:11:28.474793Z","level":"info","event":"64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:11:29.381614Z","level":"info","event":"65","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:11:30.028096Z","level":"info","event":"66","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:11:30.719718Z","level":"info","event":"67","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:11:31.414729Z","level":"info","event":"68","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:11:32.291713Z","level":"info","event":"69","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T22:11:32.292579Z","level":"info","event":"  Processing song 70/100: Sorry by NF With James Arthur","chan":"stdout","logger":"task"}

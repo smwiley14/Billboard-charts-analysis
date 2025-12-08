@@ -1,0 +1,27 @@
+{"timestamp":"2025-12-03T21:30:25.135848","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-03T21:30:25.140134","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-03T21:30:26.118414Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:30:26.573856Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:30:26.575866Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:30:26.588188Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:30:26.588896Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:21.615120Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:21.617988Z","level":"info","event":"  Processing song 1/100: The Fate Of Ophelia by Taylor Swift","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:22.479496Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:23.129974Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:24.123016Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:24.862693Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:25.858485Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:26.635322Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:27.423704Z","level":"info","event":"7","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:28.206518Z","level":"info","event":"8","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:29.076279Z","level":"info","event":"9","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:29.077758Z","level":"info","event":"  Processing song 10/100: I Got Better by Morgan Wallen","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:29.724307Z","level":"info","event":"10","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:30.342136Z","level":"info","event":"11","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:31.192742Z","level":"info","event":"12","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:32.162884Z","level":"info","event":"13","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:33.082166Z","level":"info","event":"14","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:33.883142Z","level":"info","event":"15","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:34.972120Z","level":"info","event":"16","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-03T21:38:35.689695Z","level":"info","event":"17","chan":"stdout","logger":"task"}

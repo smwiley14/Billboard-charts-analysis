@@ -1,0 +1,83 @@
+{"timestamp":"2025-12-06T20:16:02.396966","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-06T20:16:02.397798","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-06T20:16:02.498404Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:02.547591Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:02.548198Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:02.548303Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:02.548380Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:18.768268Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:18.770261Z","level":"info","event":"  Processing song 1/100: When I Was Your Man by Bruno Mars","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:19.866609Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:20.589422Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:21.256906Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:22.039650Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:22.843100Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:23.568968Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:24.375398Z","level":"info","event":"7","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:25.056680Z","level":"info","event":"8","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:25.811281Z","level":"info","event":"9","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:25.812768Z","level":"info","event":"  Processing song 10/100: Feel This Moment by Pitbull Featuring Christina Aguilera","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:26.504291Z","level":"info","event":"10","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:27.265378Z","level":"info","event":"11","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:27.942969Z","level":"info","event":"12","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:28.827003Z","level":"info","event":"13","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:29.609598Z","level":"info","event":"14","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:30.310047Z","level":"info","event":"15","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:30.984079Z","level":"info","event":"16","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:31.881868Z","level":"info","event":"17","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:32.648582Z","level":"info","event":"18","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:33.482383Z","level":"info","event":"19","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:33.483157Z","level":"info","event":"  Processing song 20/100: Ho Hey by The Lumineers","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:34.205968Z","level":"info","event":"20","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:35.228721Z","level":"info","event":"21","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:36.013873Z","level":"info","event":"22","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:36.689186Z","level":"info","event":"23","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:37.491958Z","level":"info","event":"24","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:38.304346Z","level":"info","event":"25","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:39.109489Z","level":"info","event":"26","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:40.090688Z","level":"info","event":"27","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:40.766529Z","level":"info","event":"28","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:41.787387Z","level":"info","event":"29","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:41.790972Z","level":"info","event":"  Processing song 30/100: Pour It Up by Rihanna","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:42.531574Z","level":"info","event":"30","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:43.214778Z","level":"info","event":"31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:44.127971Z","level":"info","event":"32","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:44.850465Z","level":"info","event":"33","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:45.523352Z","level":"info","event":"34","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:46.262005Z","level":"info","event":"35","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:47.154772Z","level":"info","event":"36","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:47.829371Z","level":"info","event":"37","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:48.532336Z","level":"info","event":"38","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:49.170562Z","level":"info","event":"39","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:49.171040Z","level":"info","event":"  Processing song 40/100: Alive by Krewella","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:49.976624Z","level":"info","event":"40","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:50.716462Z","level":"info","event":"41","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:51.448133Z","level":"info","event":"42","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:52.069006Z","level":"info","event":"43","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:52.836856Z","level":"info","event":"44","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:53.510409Z","level":"info","event":"45","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:54.111575Z","level":"info","event":"46","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:54.774233Z","level":"info","event":"47","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:55.741323Z","level":"info","event":"48","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:56.854659Z","level":"info","event":"49","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:56.858230Z","level":"info","event":"  Processing song 50/100: I Drive Your Truck by Lee Brice","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:57.655819Z","level":"info","event":"50","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:58.301702Z","level":"info","event":"51","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:59.109959Z","level":"info","event":"52","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:16:59.815894Z","level":"info","event":"53","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:01.074525Z","level":"info","event":"54","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:01.908796Z","level":"info","event":"55","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:03.371549Z","level":"info","event":"Network error: HTTPSConnectionPool(host='api.spotify.com', port=443): Max retries exceeded with url: /v1/search?q=track%3ANext%20To%20Me%20artist%3AEmeli%20Sande&type=track&limit=1 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))). Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:05.079929Z","level":"info","event":"56","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:06.699280Z","level":"info","event":"57","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:08.200351Z","level":"info","event":"58","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:09.501477Z","level":"info","event":"59","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:09.502649Z","level":"info","event":"  Processing song 60/100: Pom Poms by Jonas Brothers","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:10.685736Z","level":"info","event":"60","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:11.471719Z","level":"info","event":"61","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:12.168016Z","level":"info","event":"62","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:13.465093Z","level":"info","event":"Network error getting access token: HTTPSConnectionPool(host='accounts.spotify.com', port=443): Max retries exceeded with url: /api/token (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))). Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:15.173987Z","level":"info","event":"63","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:16.726215Z","level":"info","event":"64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:18.081708Z","level":"info","event":"65","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:17:19.861718Z","level":"info","event":"66","chan":"stdout","logger":"task"}

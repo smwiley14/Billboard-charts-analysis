@@ -1,0 +1,105 @@
+name,artist_id,url,mbid,tag
+Miley Cyrus,5YGY8feqx7naU7z4HrwZM6,https://open.spotify.com/artist/5YGY8feqx7naU7z4HrwZM6,7e9bd05a-117f-4cce-87bc-e011527a8b18,pop
+Eminem,7dGJo4pcD2V6oG8kP0tJRR,https://open.spotify.com/artist/7dGJo4pcD2V6oG8kP0tJRR,b95ce3ff-3d05-4e87-9e01-c97b66af13d4,hip hop
+Rihanna,5pKCCKE2ajJHZ9KAiaK11H,https://open.spotify.com/artist/5pKCCKE2ajJHZ9KAiaK11H,73e5e69d-3554-40d8-8516-00cb38737a1c,pop
+Lorde,163tK9Wjr9P9DmM0AVK7lm,https://open.spotify.com/artist/163tK9Wjr9P9DmM0AVK7lm,8e494408-8620-4c6a-82c2-c2ca4a1e4f12,pop
+Pitbull,0TnOYISbd1XYRBk9myaseg,https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg,d262ea27-3ffe-40f7-b922-85c42d625e67,dance-pop
+Kesha,6LqNN22kT3074XbTVUrhzX,https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX,fab34286-b8e1-4879-bce3-194e1358fbd2,dance-pop
+OneRepublic,5Pwc4xIPtQLFEnJriah9YJ,https://open.spotify.com/artist/5Pwc4xIPtQLFEnJriah9YJ,c33c2065-b1c3-4406-b066-d33a9e2ea71a,pop
+Avicii,1vCWHaC5f2uS3yhpwWbIA6,https://open.spotify.com/artist/1vCWHaC5f2uS3yhpwWbIA6,c85cfd6b-b1e9-4a50-bd55-eb725f04f7d5,progressive house
+Imagine Dragons,53XhwfbYqKCa1cC15pYq2q,https://open.spotify.com/artist/53XhwfbYqKCa1cC15pYq2q,012151a8-0f9a-44c9-997f-ebd68b5389f9,alternative rock
+One Direction,4AK6F7OLvEQ5QYCBNiQWHq,https://open.spotify.com/artist/4AK6F7OLvEQ5QYCBNiQWHq,1a425bbd-cca4-4b2c-aeb7-71cb176c828a,pop
+Katy Perry,6jJ0s89eD6GaHleKKya26X,https://open.spotify.com/artist/6jJ0s89eD6GaHleKKya26X,122d63fc-8671-43e4-9752-34e846d62a9c,pop
+A Great Big World,5xKp3UyavIBUsGy3DQdXeF,https://open.spotify.com/artist/5xKp3UyavIBUsGy3DQdXeF,6958e806-1e14-4844-a0a7-07a27756aa0f,indie pop
+Christina Aguilera,1l7ZsJRRS8wlW3WfJfPfNS,https://open.spotify.com/artist/1l7ZsJRRS8wlW3WfJfPfNS,b202beb7-99bd-47e7-8b72-195c8d72ebdd,pop
+Drake,3TVXtAsR1Inumwj472S9r4,https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4,9fff2f8a-21e6-47de-a2b8-7f449929d43f,hip hop
+Majid Jordan,4HzKw8XcD0piJmDrrPRCYk,https://open.spotify.com/artist/4HzKw8XcD0piJmDrrPRCYk,abaa7001-0d80-4e58-be5d-d2d246fd9d87,alternative r&b
+Kanye West,5K4W6rqBFWDnAN6FQUkS6x,https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x,164f0d73-1234-4e2c-8743-d77bf2191051,hip hop
+Passenger,0gadJ2b9A4SKsB1RFkBb66,https://open.spotify.com/artist/0gadJ2b9A4SKsB1RFkBb66,186e216a-2f8a-41a1-935f-8e30c018a8fe,indie folk
+Lady Gaga,1HY2Jd0NmPuamShAr6KMms,https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms,650e7db6-b795-4eb5-a702-5ea2fc46c848,pop
+Mike WiLL Made-It,0NWbwDZY1VkRqFafuQm6wk,https://open.spotify.com/artist/0NWbwDZY1VkRqFafuQm6wk,5a2071aa-0787-49fb-931c-fa85ba86e681,hip hop
+Wiz Khalifa,137W8MRPWKqSmrBGDBFSop,https://open.spotify.com/artist/137W8MRPWKqSmrBGDBFSop,f5dfa020-ad69-41cd-b3d4-fd7af0414e94,hip hop
+Juicy J,5gCRApTajqwbnHHPbr2Fpi,https://open.spotify.com/artist/5gCRApTajqwbnHHPbr2Fpi,c45d161f-83ce-4464-ba41-44202e6916d9,hip hop
+The Neighbourhood,77SW9BnxLY8rJ0RciFqkHh,https://open.spotify.com/artist/77SW9BnxLY8rJ0RciFqkHh,97b8d224-5660-419c-8dff-4b3bf0c33983,indie pop
+Zedd,2qxJFvFYMEDqd7ui6kSAcq,https://open.spotify.com/artist/2qxJFvFYMEDqd7ui6kSAcq,56c4b861-0922-4c3a-a9b9-3bfcb00f8274,edm
+Hayley Williams,6Rx1JKzBrSzoKQtmbVmBnM,https://open.spotify.com/artist/6Rx1JKzBrSzoKQtmbVmBnM,b4b5b5a7-feff-47d0-9458-83d0d135a692,alternative rock
+JAY-Z,3nFkdlSjzX9mRTtwJOzDYB,https://open.spotify.com/artist/3nFkdlSjzX9mRTtwJOzDYB,f82bcf78-5b69-4622-a5ef-73800768d9ac,pop rap
+Justin Timberlake,31TPClRtHm23RisEBtV3X7,https://open.spotify.com/artist/31TPClRtHm23RisEBtV3X7,596ffa74-3d08-44ef-b113-765d43d12738,pop
+Ellie Goulding,0X2BH1fck6amBIoJhDVmmJ,https://open.spotify.com/artist/0X2BH1fck6amBIoJhDVmmJ,33ca19f4-18c8-4411-98df-ac23890ce9f5,electropop
+Macklemore & Ryan Lewis,5BcAKTbp20cv7tC5VqPFoC,https://open.spotify.com/artist/5BcAKTbp20cv7tC5VqPFoC,97b226c8-7140-4da3-91ac-15e62e131a81,hip hop
+Macklemore,3JhNCzhSMTxs9WLGJJxWOY,https://open.spotify.com/artist/3JhNCzhSMTxs9WLGJJxWOY,b6d7ec94-830c-44dd-b699-ce66556b7e55,hip hop
+Ryan Lewis,5mZJerulcERBZV7xnhrVp1,https://open.spotify.com/artist/5mZJerulcERBZV7xnhrVp1,,
+Hollis,28KOnhhvUnyvgRNXEQ41WL,https://open.spotify.com/artist/28KOnhhvUnyvgRNXEQ41WL,c020936a-65d2-486b-9f0e-d9d69d0b00a0,
+ScHoolboy Q,5IcR3N7QB1j6KBL8eImZ8m,https://open.spotify.com/artist/5IcR3N7QB1j6KBL8eImZ8m,bce6d667-cde8-485e-b078-c0a05adea36d,gangsta rap
+YG,0A0FS04o6zMoto8OKPsDwY,https://open.spotify.com/artist/0A0FS04o6zMoto8OKPsDwY,6b1cf581-17a9-42c3-927b-d1e2797b1695,hip hop
+Jeezy,4yBK75WVCQXej1p04GWqxH,https://open.spotify.com/artist/4yBK75WVCQXej1p04GWqxH,dcad99e7-3c3e-4c78-bf8a-68203e17da48,hip hop
+Rich Homie Quan,5lHRUCqkQZCIWeX7xG4sYT,https://open.spotify.com/artist/5lHRUCqkQZCIWeX7xG4sYT,d9547d08-4c2e-47fc-9451-b8e3f889716e,hip hop
+Robin Thicke,0ZrpamOxcZybMHGg1AYtHP,https://open.spotify.com/artist/0ZrpamOxcZybMHGg1AYtHP,ddfd9b2f-186e-4b2c-ad09-01aa5380c225,soul
+T.I.,4OBJLual30L7gRl5UkeRcT,https://open.spotify.com/artist/4OBJLual30L7gRl5UkeRcT,f7ba7fbe-c6bd-4ac0-bee9-c25c558d7d62,hip hop
+Pharrell Williams,2RdwBSPQiwcmiDo9kixcl8,https://open.spotify.com/artist/2RdwBSPQiwcmiDo9kixcl8,149f91ef-1287-46da-9a8e-87fee02f1471,contemporary r&b
+Sara Bareilles,2Sqr0DXoaYABbjBo9HaMkM,https://open.spotify.com/artist/2Sqr0DXoaYABbjBo9HaMkM,e54be6b7-5c26-4b47-bb3f-c137429b9b55,classic pop and rock
+Selena Gomez,0C8ZW7ezQVs4URX5aX7Kqx,https://open.spotify.com/artist/0C8ZW7ezQVs4URX5aX7Kqx,e4bc69e2-a064-4f93-ada1-f7f209cc1cc3,dance-pop
+Chris Brown,7bXgB6jMjp9ATFy66eO08Z,https://open.spotify.com/artist/7bXgB6jMjp9ATFy66eO08Z,c234fa42-e6a6-443e-937e-2f4b073538a3,pop
+Nicki Minaj,0hCNtLu0JehylgoiP8L4Gh,https://open.spotify.com/artist/0hCNtLu0JehylgoiP8L4Gh,1036b808-f58c-4a3e-b461-a2c4492ecf1b,hip hop
+Jason Derulo,07YZf4WDAMNwqr4jfgOZ8y,https://open.spotify.com/artist/07YZf4WDAMNwqr4jfgOZ8y,6de0f914-3e60-4418-be3b-42e0feb6eb4d,pop
+Florida Georgia Line,3b8QkneNDz4JHKKKlLgYZg,https://open.spotify.com/artist/3b8QkneNDz4JHKKKlLgYZg,c16817df-0160-490d-a437-c128cbca9218,country pop
+AWOLNATION,4njdEjTnLfcGImKZu1iSrz,https://open.spotify.com/artist/4njdEjTnLfcGImKZu1iSrz,77b29df2-056e-409e-a1b2-5e2bbfe421c4,alternative rock
+Capital Cities,4gwpcMTbLWtBUlOijbVpuu,https://open.spotify.com/artist/4gwpcMTbLWtBUlOijbVpuu,119a2c67-e6d6-41cf-a58c-c51b75c80daa,electronic
+Sevyn Streeter,6If57j6e3TXXk0HiLcIZca,https://open.spotify.com/artist/6If57j6e3TXXk0HiLcIZca,ec3e1298-23c5-4c39-bb2b-ae6a588afdeb,contemporary r&b
+Luke Bryan,0BvkDsjIUla7X0k6CSWh1I,https://open.spotify.com/artist/0BvkDsjIUla7X0k6CSWh1I,aab35942-f176-4f77-bbf9-1d6aa98ccf3f,country
+Bastille,7EQ0qTo7fWT7DPxmxtSYEc,https://open.spotify.com/artist/7EQ0qTo7fWT7DPxmxtSYEc,7808accb-6395-4b25-858c-678bbb73896b,pop rock
+Joe Nichols,4aJTB79uwT4sP0Nb8QGWHc,https://open.spotify.com/artist/4aJTB79uwT4sP0Nb8QGWHc,e45692e4-69f6-4493-888b-7ab89d21d0a4,country
+2 Chainz,17lzZA2AlOHwCwFALHttmp,https://open.spotify.com/artist/17lzZA2AlOHwCwFALHttmp,dff0d392-4cd5-4052-9fbb-f485df3891e5,hip hop
+Big Sean,0c173mlxpT3dSFRgMO8XPh,https://open.spotify.com/artist/0c173mlxpT3dSFRgMO8XPh,942a9807-9c1a-4a0e-a285-1fde2c5be9d1,hip hop
+Lana Del Rey,00FQb4jTyendYWaN8pK0wa,https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa,b7539c32-53e7-4908-bda3-81449c367da6,indie pop
+Cedric Gervais,4Wjf8diP59VmPG7fi4y724,https://open.spotify.com/artist/4Wjf8diP59VmPG7fi4y724,c9073012-4547-4a72-8963-738d9f8503cc,edm
+Sage The Gemini,6d47Z08T4snK50HgTEHo5Z,https://open.spotify.com/artist/6d47Z08T4snK50HgTEHo5Z,c211af3d-65e0-46a7-ac49-6c84837a0d16,hip hop
+Iamsu!,2ZavqCJe7uqkRpISes0NFi,https://open.spotify.com/artist/2ZavqCJe7uqkRpISes0NFi,efa81d5c-b900-480a-b27f-0a66e48792de,hip hop
+Eli Young Band,6eKWqnckwdIlSnjaYgIyxv,https://open.spotify.com/artist/6eKWqnckwdIlSnjaYgIyxv,80737f69-60c5-4c0d-9562-88faf8d8f2f4,country
+Parmalee,4TshyQDihSYXSWqvclXl3I,https://open.spotify.com/artist/4TshyQDihSYXSWqvclXl3I,66980f96-2716-48e6-88c2-cbbb81b8e888,country
+Justin Bieber,1uNFoZAHBGtllmzznpCI3s,https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s,e0140a67-e4d1-4f13-8a01-364355bee46e,pop
+Taylor Swift,06HL4z0CvFAxyc27GXpf02,https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02,20244d07-534f-4eff-b4d4-930878889970,pop
+David Nail,4DZGvSv2oMkBUnPz67E6z6,https://open.spotify.com/artist/4DZGvSv2oMkBUnPz67E6z6,a73662ac-647d-4ca4-b26d-162a0d5c5a8e,contemporary country
+Blake Shelton,1UTPBmNbXNTittyMJrNkvw,https://open.spotify.com/artist/1UTPBmNbXNTittyMJrNkvw,2ad66473-ccb3-41d2-8756-b56680cdfe62,country
+Cassadee Pope,7ahuvq1mbb4idwG1iJbSFG,https://open.spotify.com/artist/7ahuvq1mbb4idwG1iJbSFG,4b714531-2c81-48d2-b134-4197f820caa1,country pop
+Kid Ink,6KZDXtSj0SzGOV705nNeh3,https://open.spotify.com/artist/6KZDXtSj0SzGOV705nNeh3,60614320-9caf-4ae4-bded-7140672fdf8a,pop rap
+August Alsina,19Fi1Rj7kk8kyiwxpXy3yM,https://open.spotify.com/artist/19Fi1Rj7kk8kyiwxpXy3yM,7c24178a-8658-4e7f-889f-82013f8fd3f6,contemporary r&b
+Trinidad James,0I5HubncQ8E1MFZOlPDY4J,https://open.spotify.com/artist/0I5HubncQ8E1MFZOlPDY4J,4da8a075-9db8-422e-a154-57386c572d88,hip hop
+Cole Swindell,1mfDfLsMxYcOOZkzBxvSVW,https://open.spotify.com/artist/1mfDfLsMxYcOOZkzBxvSVW,365247e5-db90-4d0e-bf2c-ca18b54fcab9,bro-country
+Zac Brown Band,6yJCxee7QumYr820xdIsjo,https://open.spotify.com/artist/6yJCxee7QumYr820xdIsjo,507226f4-0842-4f43-950e-81a7017230ec,contemporary country
+Ylvis,2lEOFtf3cCyzomQcMHJGfZ,https://open.spotify.com/artist/2lEOFtf3cCyzomQcMHJGfZ,18e9528e-a4af-4e09-9a35-ea11c7a7ae43,comedy
+The Band Perry,75FnCoo4FBxH5K1Rrx0k5A,https://open.spotify.com/artist/75FnCoo4FBxH5K1Rrx0k5A,28955336-2348-488a-9381-e3a7b0107343,country
+Martin Garrix,60d24wfXkVzDSfLS6hyCjZ,https://open.spotify.com/artist/60d24wfXkVzDSfLS6hyCjZ,3e1f2ee4-16be-4406-bf18-6173840cf2b1,edm
+Demi Lovato,6S2OmqARrzebs0tKUEyXyp,https://open.spotify.com/artist/6S2OmqARrzebs0tKUEyXyp,faf4cefb-036c-4c88-b93a-5b03dd0a0e6b,pop
+Lady A,32WkQRZEVKSzVAAYqukAEA,https://open.spotify.com/artist/32WkQRZEVKSzVAAYqukAEA,0eedfc95-e79a-4fd9-832a-cd816a0b3fda,country
+Darius Rucker,7FY5V3XMwlNBPitEjXowHQ,https://open.spotify.com/artist/7FY5V3XMwlNBPitEjXowHQ,3ae70f76-ea53-4cc5-906e-d47a384202a1,contemporary country
+Lil Wayne,55Aa2cqylxrFIXC767Z865,https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865,ac9a487a-d9d2-4f27-bb23-0f4686488345,hip hop
+Jhené Aiko,5ZS223C6JyBfXasXxrRqOk,https://open.spotify.com/artist/5ZS223C6JyBfXasXxrRqOk,ceb3f5b7-9f1a-430f-afbe-976fdcf30482,contemporary r&b
+Eric Paslay,4TONBKcqVR1LmPdfJxvkMU,https://open.spotify.com/artist/4TONBKcqVR1LmPdfJxvkMU,4b624758-58a1-42b3-9133-55a687f417ad,country
+Zendaya,6sCbFbEjbYepqswM1vWjjs,https://open.spotify.com/artist/6sCbFbEjbYepqswM1vWjjs,5b946a83-b395-4016-b67f-c71690f9a866,
+Future,1RyvyyTE3xzB2ZywiAwp0i,https://open.spotify.com/artist/1RyvyyTE3xzB2ZywiAwp0i,48262e82-db9f-4a92-b650-dfef979b73ec,hip hop
+John Legend,5y2Xq6xcjJb2jVM54GHK3t,https://open.spotify.com/artist/5y2Xq6xcjJb2jVM54GHK3t,75a72702-a5ef-4513-bca5-c5b944903546,soul
+B.o.B,5ndkK3dpZLKtBklKjxNQwT,https://open.spotify.com/artist/5ndkK3dpZLKtBklKjxNQwT,94c338ff-1985-4429-9dc8-997b61bb5932,hip hop
+Tim McGraw,6roFdX1y5BYSbp60OTJWMd,https://open.spotify.com/artist/6roFdX1y5BYSbp60OTJWMd,7e5cfc9a-e9e1-46f1-b81a-861b12049488,country
+Hunter Hayes,7H6dkUChT5EoOQtUVMg4cN,https://open.spotify.com/artist/7H6dkUChT5EoOQtUVMg4cN,0c75ddc6-2b5d-4b01-8c99-3d9479a14683,country
+Jason Mraz,4phGZZrJZRo4ElhRtViYdl,https://open.spotify.com/artist/4phGZZrJZRo4ElhRtViYdl,82eb8936-7bf6-4577-8320-a2639465206d,pop rock
+Wale,67nwj3Y5sZQLl72VNUHEYE,https://open.spotify.com/artist/67nwj3Y5sZQLl72VNUHEYE,e34e41f2-f480-45d3-8190-a3ce5ab34fab,hip hop
+Trey Songz,2iojnBLj0qIMiKPvVhLnsH,https://open.spotify.com/artist/2iojnBLj0qIMiKPvVhLnsH,4d7304f6-7fe3-4959-9d98-01a5af84afe6,r&b
+Britney Spears,26dSoYclwsYLMAKD3tpOr4,https://open.spotify.com/artist/26dSoYclwsYLMAKD3tpOr4,45a663b5-b1cb-4a91-bff6-2bef7bbfdd76,pop
+American Authors,0MlOPi3zIDMVrfA9R04Fe3,https://open.spotify.com/artist/0MlOPi3zIDMVrfA9R04Fe3,9ce0515d-cc88-4df6-8a2e-d231c13cb2c2,pop rock
+Bruno Mars,0du5cEVh5yTK9QJze8zA0C,https://open.spotify.com/artist/0du5cEVh5yTK9QJze8zA0C,afb680f2-b6eb-4cd7-a70b-a63b25c763d5,pop
+Will Champlin,2kM1LxD0AhAE5GULSYRQSa,https://open.spotify.com/artist/2kM1LxD0AhAE5GULSYRQSa,3e3b43db-8d12-4f0c-8d21-e7355bcd7433,contemporary r&b
+John Newman,34v5MVKeQnIo0CWYMbbrPf,https://open.spotify.com/artist/34v5MVKeQnIo0CWYMbbrPf,589ef702-7f3a-4a1c-8f2c-4727005cfc0e,pop
+Ariana Grande,66CXWjxzNUsdJxJ2JdwvnR,https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR,f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387,pop
+Jake Owen,1n2pb9Tsfe4SwAjmUac6YT,https://open.spotify.com/artist/1n2pb9Tsfe4SwAjmUac6YT,508f4f83-26dc-4d21-98d9-1a8c04d5ad4a,bro-country
+Idina Menzel,73Np75Wv2tju61Eo9Zw4IR,https://open.spotify.com/artist/73Np75Wv2tju61Eo9Zw4IR,929ca8c3-5df3-4fe9-bc59-f8d603780bce,musical
+Eric Church,2IvkS5MXK0vPGnwyJsrEyV,https://open.spotify.com/artist/2IvkS5MXK0vPGnwyJsrEyV,15856215-cc51-4423-879c-9ac955ccb11a,country
+Jon Pardi,4MoAOfV4ROWofLG3a3hhBN,https://open.spotify.com/artist/4MoAOfV4ROWofLG3a3hhBN,ad590765-191c-4c07-9d64-49633488e9a8,contemporary country
+Chris Young,4BYxqVkZyFjtik7crYLg5Q,https://open.spotify.com/artist/4BYxqVkZyFjtik7crYLg5Q,86de027e-097d-41b1-9b97-c0a69379ff4b,country
+Jason Aldean,3FfvYsEGaIb52QPXhg4DcH,https://open.spotify.com/artist/3FfvYsEGaIb52QPXhg4DcH,f24df11a-7e35-4979-a4db-a3b2a170ce27,country
+Daughtry,5P5FTygHyx2G57oszR3Wot,https://open.spotify.com/artist/5P5FTygHyx2G57oszR3Wot,21e3292e-dac8-4609-b57d-402f926aa41f,alternative rock
+Enrique Iglesias,7qG3b048QCHVRO5Pv1T5lw,https://open.spotify.com/artist/7qG3b048QCHVRO5Pv1T5lw,35f866dc-c061-48ba-8157-cf2e0eac4857,pop
+Fall Out Boy,4UXqAaa6dQYAk18Lv7PEgX,https://open.spotify.com/artist/4UXqAaa6dQYAk18Lv7PEgX,516cef4d-0718-4007-9939-f9b38af3f784,pop punk
+Danielle Bradbery,5iqStkZi6QmG8sgQZQrfGN,https://open.spotify.com/artist/5iqStkZi6QmG8sgQZQrfGN,efe7d853-d381-4887-be9b-dec26ff27705,country
+T-Pain,3aQeKQSyrW4qWr35idm0cy,https://open.spotify.com/artist/3aQeKQSyrW4qWr35idm0cy,ce55e49a-32f4-4757-9849-bf04d06d5fcc,hip hop
+Kendrick Lamar,2YZyLoL8N0Wb9xBt1NhZWg,https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg,381086ea-f511-4aba-bdf9-71c753dc5077,hip hop

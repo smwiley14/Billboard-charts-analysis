@@ -1,0 +1,29 @@
+{"timestamp":"2025-12-06T20:38:03.874386","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-06T20:38:03.874963","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-06T20:38:03.937611Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:38:03.961012Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:38:03.961179Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:38:03.961253Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:38:03.961306Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:44:27.953736Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:44:27.955571Z","level":"info","event":"  Processing song 1/100: When I Was Your Man by Bruno Mars","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:44:28.999293Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:44:29.725052Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:44:30.517263Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:44:32.399194Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:44:33.452290Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:44:35.053146Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:44:36.325521Z","level":"info","event":"7","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:44:37.077690Z","level":"info","event":"8","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:44:37.914118Z","level":"info","event":"9","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:44:37.915439Z","level":"info","event":"  Processing song 10/100: Feel This Moment by Pitbull Featuring Christina Aguilera","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:46:54.239175Z","level":"info","event":"Network error: HTTPSConnectionPool(host='api.spotify.com', port=443): Read timed out. (read timeout=30). Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:46:56.368428Z","level":"info","event":"10","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:46:57.816057Z","level":"info","event":"11","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:46:59.659716Z","level":"info","event":"12","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:51:45.094230Z","level":"info","event":"13","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:51:45.797638Z","level":"info","event":"14","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:51:46.496818Z","level":"info","event":"15","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:51:47.357946Z","level":"info","event":"16","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:51:48.495088Z","level":"info","event":"17","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T20:51:49.360390Z","level":"info","event":"18","chan":"stdout","logger":"task"}

@@ -1,0 +1,17 @@
+{"timestamp":"2025-12-07T04:47:11.864807","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-07T04:47:11.866251","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-07T04:47:11.972046Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:47:12.026163Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:47:12.026394Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:47:12.026510Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:47:12.026621Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:47:36.688933Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:47:36.705873Z","level":"info","event":"  Processing song 1/100: Blurred Lines by Robin Thicke Featuring T.I. + Pharrell","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:47:37.664782Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:47:38.660847Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:47:39.467777Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:54:37.006805Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:54:37.734507Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:54:39.089335Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T04:54:44.224923Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_running","message":"TI is no longer in the running state and task should terminate","current_state":"failed"}},"logger":"task"}
+{"timestamp":"2025-12-07T04:54:49.343458Z","level":"error","event":"Task killed!","logger":"task"}

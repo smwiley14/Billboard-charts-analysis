@@ -1,0 +1,21 @@
+{"timestamp":"2025-12-06T01:22:44.573853","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-06T01:22:44.574332","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-06T01:22:44.647763Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:22:44.678737Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:22:44.678913Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:22:44.679004Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:22:44.679068Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:23:00.958899Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:23:00.959975Z","level":"info","event":"  Processing song 1/100: Call Me Maybe by Carly Rae Jepsen","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:23:02.401714Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:23:03.730810Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:23:04.624920Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:23:05.382349Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:23:06.065536Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:23:06.868053Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:23:07.578501Z","level":"info","event":"7","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:23:08.274538Z","level":"info","event":"8","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:23:08.936575Z","level":"info","event":"9","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:23:08.937462Z","level":"info","event":"  Processing song 10/100: Blow Me (One Last Kiss) by P!nk","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:36:27.503509Z","level":"info","event":"10","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T01:36:28.335940Z","level":"info","event":"11","chan":"stdout","logger":"task"}

@@ -1,0 +1,67 @@
+{"timestamp":"2025-12-06T12:34:14.794305","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-06T12:34:14.794730","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-06T12:34:14.913166Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:14.956749Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:14.957290Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:14.957602Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:14.957815Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:28.651753Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:28.652935Z","level":"info","event":"  Processing song 1/100: One More Night by Maroon 5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:29.526667Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:30.379363Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:31.109528Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:32.354777Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:33.099254Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:33.984771Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:34.699371Z","level":"info","event":"7","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:35.410525Z","level":"info","event":"8","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:36.182562Z","level":"info","event":"9","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:36.184249Z","level":"info","event":"  Processing song 10/100: Good Time by Owl City & Carly Rae Jepsen","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:36.947502Z","level":"info","event":"10","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:37.807527Z","level":"info","event":"11","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:38.547562Z","level":"info","event":"12","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:39.311121Z","level":"info","event":"13","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:40.117812Z","level":"info","event":"14","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:40.888266Z","level":"info","event":"15","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:41.601661Z","level":"info","event":"16","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:42.340187Z","level":"info","event":"17","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:43.236730Z","level":"info","event":"18","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:44.419594Z","level":"info","event":"Network error: HTTPSConnectionPool(host='api.spotify.com', port=443): Max retries exceeded with url: /v1/search?q=track%3ASomebody%20That%20I%20Used%20To%20Know%20artist%3AGotye%20&type=track&limit=1 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))). Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:46.491721Z","level":"info","event":"19","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:46.561804Z","level":"info","event":"  Processing song 20/100: Mercy by Kanye West, Big Sean, Pusha T, 2 Chainz","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:47.574826Z","level":"info","event":"20","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:48.840765Z","level":"info","event":"21","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:50.039136Z","level":"info","event":"22","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:50.909644Z","level":"info","event":"23","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:51.705113Z","level":"info","event":"24","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:52.491982Z","level":"info","event":"25","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:53.301137Z","level":"info","event":"26","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:54.024742Z","level":"info","event":"27","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:54.777001Z","level":"info","event":"28","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:55.668032Z","level":"info","event":"29","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:55.668913Z","level":"info","event":"  Processing song 30/100: 50 Ways To Say Goodbye by Train","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:56.502894Z","level":"info","event":"30","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:57.177456Z","level":"info","event":"31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:58.065553Z","level":"info","event":"32","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:58.770573Z","level":"info","event":"33","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:34:59.447272Z","level":"info","event":"34","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:00.154713Z","level":"info","event":"35","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:00.824690Z","level":"info","event":"36","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:01.591674Z","level":"info","event":"37","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:02.254579Z","level":"info","event":"38","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:03.073392Z","level":"info","event":"39","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:03.073969Z","level":"info","event":"  Processing song 40/100: It's Time by Imagine Dragons","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:03.894746Z","level":"info","event":"40","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:04.771019Z","level":"info","event":"41","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:05.547254Z","level":"info","event":"42","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:06.274714Z","level":"info","event":"43","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:07.044377Z","level":"info","event":"44","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:07.731010Z","level":"info","event":"45","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:08.524509Z","level":"info","event":"46","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:09.342047Z","level":"info","event":"47","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:10.386894Z","level":"info","event":"48","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:11.234546Z","level":"info","event":"49","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:11.235196Z","level":"info","event":"  Processing song 50/100: Heart Attack by Trey Songz","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:11.893467Z","level":"info","event":"50","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:35:12.582659Z","level":"info","event":"51","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T12:52:06.988207Z","level":"info","event":"52","chan":"stdout","logger":"task"}

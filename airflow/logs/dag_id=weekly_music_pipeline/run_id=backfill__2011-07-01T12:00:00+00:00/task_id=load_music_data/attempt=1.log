@@ -1,0 +1,496 @@
+{"timestamp":"2025-12-05T05:19:27.501475","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-05T05:19:27.502128","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-05T05:19:28.672028Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:28.759272Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:28.759577Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:28.759773Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:28.759891Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:46.888077Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:46.892822Z","level":"info","event":"  Processing song 1/100: Rolling In The Deep by Adele","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:47.592924Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:48.294492Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:49.017997Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:49.890603Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:50.761258Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:51.638124Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:52.300791Z","level":"info","event":"7","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:53.294433Z","level":"info","event":"8","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:53.936872Z","level":"info","event":"9","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:53.937632Z","level":"info","event":"  Processing song 10/100: The Show Goes On by Lupe Fiasco","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:54.884687Z","level":"info","event":"10","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:55.599201Z","level":"info","event":"11","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:56.239667Z","level":"info","event":"12","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:56.829065Z","level":"info","event":"13","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:57.767521Z","level":"info","event":"14","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:58.387564Z","level":"info","event":"15","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:59.050904Z","level":"info","event":"16","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:59.312270Z","level":"info","event":"17","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:19:59.931495Z","level":"info","event":"18","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:00.568835Z","level":"info","event":"19","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:00.569211Z","level":"info","event":"  Processing song 20/100: Tonight Tonight by Hot Chelle Rae","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:01.371412Z","level":"info","event":"20","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:01.999827Z","level":"info","event":"21","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:02.984049Z","level":"info","event":"22","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:03.756006Z","level":"info","event":"23","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:04.617230Z","level":"info","event":"24","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:05.294147Z","level":"info","event":"25","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:06.133011Z","level":"info","event":"26","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:06.788157Z","level":"info","event":"27","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:07.629740Z","level":"info","event":"28","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:07.855658Z","level":"info","event":"29","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:07.857154Z","level":"info","event":"  Processing song 30/100: Down On Me by Jeremih Featuring 50 Cent","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:08.542807Z","level":"info","event":"30","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:09.137600Z","level":"info","event":"31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:09.842299Z","level":"info","event":"32","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:10.530115Z","level":"info","event":"33","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:11.192814Z","level":"info","event":"34","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:11.471749Z","level":"info","event":"35","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:12.048162Z","level":"info","event":"36","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:12.930673Z","level":"info","event":"37","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:15.536024Z","level":"info","event":"38","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:16.215448Z","level":"info","event":"39","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:16.216520Z","level":"info","event":"  Processing song 40/100: Firework by Katy Perry","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:19.909368Z","level":"info","event":"40","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:20.700517Z","level":"info","event":"41","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:21.472344Z","level":"info","event":"42","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:22.239560Z","level":"info","event":"43","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:23.318530Z","level":"info","event":"44","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:23.995345Z","level":"info","event":"45","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:24.869815Z","level":"info","event":"46","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:25.608732Z","level":"info","event":"47","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:26.222967Z","level":"info","event":"48","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:26.912924Z","level":"info","event":"49","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:26.916136Z","level":"info","event":"  Processing song 50/100: You And Tequila by Kenny Chesney Featuring Grace Potter","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:27.650674Z","level":"info","event":"50","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:28.321529Z","level":"info","event":"51","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:29.007638Z","level":"info","event":"52","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:29.599533Z","level":"info","event":"53","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:30.203839Z","level":"info","event":"54","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:30.865619Z","level":"info","event":"55","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:31.780437Z","level":"info","event":"56","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:32.393958Z","level":"info","event":"57","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:33.071399Z","level":"info","event":"58","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:33.755559Z","level":"info","event":"59","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:33.756550Z","level":"info","event":"  Processing song 60/100: Backseat by New Boyz Featuring The Cataracs & Dev","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:34.451587Z","level":"info","event":"60","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:35.115810Z","level":"info","event":"61","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:35.720617Z","level":"info","event":"62","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:36.376255Z","level":"info","event":"63","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:37.093646Z","level":"info","event":"64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:37.935597Z","level":"info","event":"65","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:38.624757Z","level":"info","event":"66","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:39.288301Z","level":"info","event":"67","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:39.852011Z","level":"info","event":"68","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:40.504768Z","level":"info","event":"69","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:40.508366Z","level":"info","event":"  Processing song 70/100: Pumped Up Kicks by Foster the People","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:41.221665Z","level":"info","event":"70","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:42.629796Z","level":"info","event":"71","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:43.642522Z","level":"info","event":"72","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:44.305095Z","level":"info","event":"73","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:44.957434Z","level":"info","event":"74","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:45.590644Z","level":"info","event":"75","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:46.413001Z","level":"info","event":"76","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:47.094899Z","level":"info","event":"77","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:47.691143Z","level":"info","event":"78","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:48.489996Z","level":"info","event":"79","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:48.490544Z","level":"info","event":"  Processing song 80/100: I Need A Doctor by Dr. Dre Featuring Eminem & Skylar Grey","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:49.265785Z","level":"info","event":"80","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:49.834226Z","level":"info","event":"81","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:50.468127Z","level":"info","event":"82","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:51.343129Z","level":"info","event":"83","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:52.063521Z","level":"info","event":"84","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:52.971425Z","level":"info","event":"85","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:53.625458Z","level":"info","event":"86","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:54.511322Z","level":"info","event":"87","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:55.158210Z","level":"info","event":"88","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:55.805307Z","level":"info","event":"89","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:55.805702Z","level":"info","event":"  Processing song 90/100: Black Horse And The Cherry Tree by Casey Weston","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:56.444640Z","level":"info","event":"90","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:57.077980Z","level":"info","event":"91","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:57.714769Z","level":"info","event":"92","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:58.519816Z","level":"info","event":"93","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:59.243862Z","level":"info","event":"94","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:20:59.912121Z","level":"info","event":"95","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:00.572896Z","level":"info","event":"96","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:01.194334Z","level":"info","event":"97","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:01.781513Z","level":"info","event":"98","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:02.451127Z","level":"info","event":"99","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:02.452127Z","level":"info","event":"  Processing song 100/100: Monster by Paramore","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:03.236356Z","level":"info","event":"100","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:03.237071Z","level":"info","event":"{'name': 'Adele', 'id': '4dpARuHxo51G3z768sgnrY', 'url': 'https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:03.237408Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/4dpARuHxo51G3z768sgnrY&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:03.598613Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/cc2c9c3c-b7bc-4b8b-84d8-4fbd8779e493?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:04.717285Z","level":"info","event":"{'name': 'Pitbull', 'id': '0TnOYISbd1XYRBk9myaseg', 'url': 'https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:04.718375Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/0TnOYISbd1XYRBk9myaseg&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:04.836265Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/d262ea27-3ffe-40f7-b922-85c42d625e67?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:05.954756Z","level":"info","event":"{'name': 'AFROJACK', 'id': '4D75GcNG95ebPtNvoNVXhz', 'url': 'https://open.spotify.com/artist/4D75GcNG95ebPtNvoNVXhz'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:05.959348Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/4D75GcNG95ebPtNvoNVXhz&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:06.069301Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/a3ee920f-4e7f-4993-8aca-4b8538cfaa4a?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:07.189868Z","level":"info","event":"{'name': 'Ne-Yo', 'id': '21E3waRsmPlU7jZsS13rcj', 'url': 'https://open.spotify.com/artist/21E3waRsmPlU7jZsS13rcj'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:07.193700Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/21E3waRsmPlU7jZsS13rcj&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:07.310409Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/a4a01f5d-18e7-4571-8c3a-76ec0e24e2d7?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:08.425388Z","level":"info","event":"{'name': 'Nayer', 'id': '1ruutHJcECI7cos2n5TqpO', 'url': 'https://open.spotify.com/artist/1ruutHJcECI7cos2n5TqpO'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:08.426930Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1ruutHJcECI7cos2n5TqpO&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:08.602278Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/276d7d13-c0c4-4e67-a165-8e3764e4a2f3?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:09.723550Z","level":"info","event":"{'name': 'LMFAO', 'id': '3sgFRtyBnxXD5ESfmbK4dl', 'url': 'https://open.spotify.com/artist/3sgFRtyBnxXD5ESfmbK4dl'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:09.724600Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/3sgFRtyBnxXD5ESfmbK4dl&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:09.845747Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/ed5d9086-e8cd-473a-b96c-d81ad6c98f0d?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:10.957132Z","level":"info","event":"{'name': 'Lauren Bennett', 'id': '2jLE4BoXHriQ96JagEtiDP', 'url': 'https://open.spotify.com/artist/2jLE4BoXHriQ96JagEtiDP'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:10.958375Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/2jLE4BoXHriQ96JagEtiDP&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:11.072307Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/131a8268-b0aa-4c5c-89fc-d0e618af3f45?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:12.194647Z","level":"info","event":"{'name': 'GoonRock', 'id': '53sIBaVjXQhfH89Vu6nEGh', 'url': 'https://open.spotify.com/artist/53sIBaVjXQhfH89Vu6nEGh'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:12.196816Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/53sIBaVjXQhfH89Vu6nEGh&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:12.305719Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/727b0e62-ad3e-4e14-ae3c-f068b0a84195?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:12.419807Z","level":"info","event":"Rate limit hit. Retrying in 1s...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:13.540371Z","level":"info","event":"Rate limit hit. Retrying in 2s...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:16.703701Z","level":"info","event":"{'name': 'Katy Perry', 'id': '6jJ0s89eD6GaHleKKya26X', 'url': 'https://open.spotify.com/artist/6jJ0s89eD6GaHleKKya26X'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:16.707269Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/6jJ0s89eD6GaHleKKya26X&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:16.815078Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/122d63fc-8671-43e4-9752-34e846d62a9c?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:17.929198Z","level":"info","event":"{'name': 'Lady Gaga', 'id': '1HY2Jd0NmPuamShAr6KMms', 'url': 'https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:17.931407Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1HY2Jd0NmPuamShAr6KMms&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:18.054800Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/650e7db6-b795-4eb5-a702-5ea2fc46c848?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:19.176552Z","level":"info","event":"{'name': 'Jason Aldean', 'id': '3FfvYsEGaIb52QPXhg4DcH', 'url': 'https://open.spotify.com/artist/3FfvYsEGaIb52QPXhg4DcH'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:19.177587Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/3FfvYsEGaIb52QPXhg4DcH&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:19.302299Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/f24df11a-7e35-4979-a4db-a3b2a170ce27?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:20.410010Z","level":"info","event":"{'name': 'Nicki Minaj', 'id': '0hCNtLu0JehylgoiP8L4Gh', 'url': 'https://open.spotify.com/artist/0hCNtLu0JehylgoiP8L4Gh'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:20.410944Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/0hCNtLu0JehylgoiP8L4Gh&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:20.519635Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/1036b808-f58c-4a3e-b461-a2c4492ecf1b?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:21.624964Z","level":"info","event":"{'name': 'Bruno Mars', 'id': '0du5cEVh5yTK9QJze8zA0C', 'url': 'https://open.spotify.com/artist/0du5cEVh5yTK9QJze8zA0C'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:21.625688Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/0du5cEVh5yTK9QJze8zA0C&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:21.734504Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/afb680f2-b6eb-4cd7-a70b-a63b25c763d5?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:22.865310Z","level":"info","event":"{'name': 'Lupe Fiasco', 'id': '01QTIT5P1pFP3QnnFSdsJf', 'url': 'https://open.spotify.com/artist/01QTIT5P1pFP3QnnFSdsJf'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:22.867906Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/01QTIT5P1pFP3QnnFSdsJf&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:22.994249Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/cf15719f-51f9-4db8-a15d-5eed9664ce69?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:24.120467Z","level":"info","event":"{'name': 'Black Eyed Peas', 'id': '1yxSLGMDHlW21z4YXirZDS', 'url': 'https://open.spotify.com/artist/1yxSLGMDHlW21z4YXirZDS'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:24.121775Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1yxSLGMDHlW21z4YXirZDS&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:24.238293Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/d5be5333-4171-427e-8e12-732087c6b78e?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:25.350850Z","level":"info","event":"{'name': 'Jennifer Lopez', 'id': '2DlGxzQSjYe5N6G9nkYghR', 'url': 'https://open.spotify.com/artist/2DlGxzQSjYe5N6G9nkYghR'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:25.353915Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/2DlGxzQSjYe5N6G9nkYghR&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:25.466829Z","level":"info","event":"Rate limit hit. Retrying in 1s...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:26.583060Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/f0602f55-1770-483d-89bd-4bae0d0ac086?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:27.697782Z","level":"info","event":"{'name': 'Lil Wayne', 'id': '55Aa2cqylxrFIXC767Z865', 'url': 'https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:27.697987Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:27.814976Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/ac9a487a-d9d2-4f27-bb23-0f4686488345?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:28.929122Z","level":"info","event":"{'name': 'Jason Derulo', 'id': '07YZf4WDAMNwqr4jfgOZ8y', 'url': 'https://open.spotify.com/artist/07YZf4WDAMNwqr4jfgOZ8y'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:28.929728Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/07YZf4WDAMNwqr4jfgOZ8y&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:29.039300Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/6de0f914-3e60-4418-be3b-42e0feb6eb4d?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:30.156950Z","level":"info","event":"{'name': 'Britney Spears', 'id': '26dSoYclwsYLMAKD3tpOr4', 'url': 'https://open.spotify.com/artist/26dSoYclwsYLMAKD3tpOr4'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:30.157933Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/26dSoYclwsYLMAKD3tpOr4&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:30.278996Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/45a663b5-b1cb-4a91-bff6-2bef7bbfdd76?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:31.389741Z","level":"info","event":"{'name': 'Bad Meets Evil', 'id': '77IURH5NC56Jn09QHi76is', 'url': 'https://open.spotify.com/artist/77IURH5NC56Jn09QHi76is'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:31.390001Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/77IURH5NC56Jn09QHi76is&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:31.502596Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/87f27b14-cbd0-44ea-93a3-6fead5cb45e7?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:32.620666Z","level":"info","event":"{'name': 'Chris Brown', 'id': '7bXgB6jMjp9ATFy66eO08Z', 'url': 'https://open.spotify.com/artist/7bXgB6jMjp9ATFy66eO08Z'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:32.621888Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/7bXgB6jMjp9ATFy66eO08Z&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:32.734051Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/c234fa42-e6a6-443e-937e-2f4b073538a3?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:33.840079Z","level":"info","event":"{'name': 'Busta Rhymes', 'id': '1YfEcTuGvBQ8xSD1f53UnK', 'url': 'https://open.spotify.com/artist/1YfEcTuGvBQ8xSD1f53UnK'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:33.840493Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1YfEcTuGvBQ8xSD1f53UnK&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:33.945248Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/10a9ff92-9637-4498-afea-7044b2ab0dc0?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:35.057149Z","level":"info","event":"{'name': 'DJ Khaled', 'id': '0QHgL1lAIqAw0HtD7YldmP', 'url': 'https://open.spotify.com/artist/0QHgL1lAIqAw0HtD7YldmP'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:35.059177Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/0QHgL1lAIqAw0HtD7YldmP&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:35.178302Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/081a2d60-9791-4e05-a075-f1890355eeee?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:35.327933Z","level":"info","event":"Rate limit hit. Retrying in 1s...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:36.440030Z","level":"info","event":"Rate limit hit. Retrying in 2s...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:39.599659Z","level":"info","event":"{'name': 'Drake', 'id': '3TVXtAsR1Inumwj472S9r4', 'url': 'https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:39.600965Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:39.711423Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/9fff2f8a-21e6-47de-a2b8-7f449929d43f?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:40.832045Z","level":"info","event":"{'name': 'Rick Ross', 'id': '1sBkRIssrMs1AbVkOJbc7a', 'url': 'https://open.spotify.com/artist/1sBkRIssrMs1AbVkOJbc7a'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:40.832375Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1sBkRIssrMs1AbVkOJbc7a&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:40.957594Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/13bcb2bb-db37-4397-baf5-e0f085be2d64?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:42.077391Z","level":"info","event":"{'name': 'Hot Chelle Rae', 'id': '6jTnHxhb6cDCaCu4rdvsQ0', 'url': 'https://open.spotify.com/artist/6jTnHxhb6cDCaCu4rdvsQ0'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:42.080020Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/6jTnHxhb6cDCaCu4rdvsQ0&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:42.210114Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/20aee940-3b65-4d04-8768-9a5918db2973?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:43.325899Z","level":"info","event":"{'name': 'Blake Shelton', 'id': '1UTPBmNbXNTittyMJrNkvw', 'url': 'https://open.spotify.com/artist/1UTPBmNbXNTittyMJrNkvw'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:43.332516Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1UTPBmNbXNTittyMJrNkvw&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:43.457989Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/2ad66473-ccb3-41d2-8756-b56680cdfe62?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:44.576209Z","level":"info","event":"{'name': 'Selena Gomez & The Scene', 'id': '6dJeKm76NjfXBNTpHmOhfO', 'url': 'https://open.spotify.com/artist/6dJeKm76NjfXBNTpHmOhfO'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:44.578863Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/6dJeKm76NjfXBNTpHmOhfO&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:44.714309Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/37d0a847-32d3-480f-bd1e-101f50a3d332?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:45.817613Z","level":"info","event":"{'name': 'Wiz Khalifa', 'id': '137W8MRPWKqSmrBGDBFSop', 'url': 'https://open.spotify.com/artist/137W8MRPWKqSmrBGDBFSop'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:45.819434Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/137W8MRPWKqSmrBGDBFSop&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:45.935248Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/f5dfa020-ad69-41cd-b3d4-fd7af0414e94?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:47.048280Z","level":"info","event":"{'name': 'Kelly Rowland', 'id': '3AuMNF8rQAKOzjYppFNAoB', 'url': 'https://open.spotify.com/artist/3AuMNF8rQAKOzjYppFNAoB'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:47.049231Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/3AuMNF8rQAKOzjYppFNAoB&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:47.171212Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/31bea673-d23a-4889-8da1-7cb040863268?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:48.287551Z","level":"info","event":"{'name': 'Kesha', 'id': '6LqNN22kT3074XbTVUrhzX', 'url': 'https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:48.288489Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:48.413023Z","level":"info","event":"Rate limit hit. Retrying in 1s...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:49.530085Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/fab34286-b8e1-4879-bce3-194e1358fbd2?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:50.651508Z","level":"info","event":"{'name': 'Lady A', 'id': '32WkQRZEVKSzVAAYqukAEA', 'url': 'https://open.spotify.com/artist/32WkQRZEVKSzVAAYqukAEA'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:50.652489Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/32WkQRZEVKSzVAAYqukAEA&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:50.761161Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/0eedfc95-e79a-4fd9-832a-cd816a0b3fda?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:51.891711Z","level":"info","event":"{'name': 'Zac Brown Band', 'id': '6yJCxee7QumYr820xdIsjo', 'url': 'https://open.spotify.com/artist/6yJCxee7QumYr820xdIsjo'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:51.892148Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/6yJCxee7QumYr820xdIsjo&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:52.007657Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/507226f4-0842-4f43-950e-81a7017230ec?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:53.138769Z","level":"info","event":"{'name': 'Jimmy Buffett', 'id': '28AyklUmMECPwdfo8NEsV0', 'url': 'https://open.spotify.com/artist/28AyklUmMECPwdfo8NEsV0'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:53.141384Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/28AyklUmMECPwdfo8NEsV0&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:53.262292Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/16fdd9af-467f-47ce-bd29-3413b445b90f?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:54.379797Z","level":"info","event":"{'name': 'Luke Bryan', 'id': '0BvkDsjIUla7X0k6CSWh1I', 'url': 'https://open.spotify.com/artist/0BvkDsjIUla7X0k6CSWh1I'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:54.382023Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/0BvkDsjIUla7X0k6CSWh1I&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:54.507555Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/aab35942-f176-4f77-bbf9-1d6aa98ccf3f?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:55.617379Z","level":"info","event":"{'name': 'Jeremih', 'id': '3KV3p5EY4AvKxOlhGHORLg', 'url': 'https://open.spotify.com/artist/3KV3p5EY4AvKxOlhGHORLg'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:55.620142Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/3KV3p5EY4AvKxOlhGHORLg&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:55.730310Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/1c009a08-74d1-4682-bc56-8bfbe9e66b62?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:56.842901Z","level":"info","event":"{'name': '50 Cent', 'id': '3q7HBObVc0L8jNeTe5Gofh', 'url': 'https://open.spotify.com/artist/3q7HBObVc0L8jNeTe5Gofh'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:56.846556Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/3q7HBObVc0L8jNeTe5Gofh&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:56.964640Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/8e68819d-71be-4e7d-b41d-f1df81b01d3f?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:58.107426Z","level":"info","event":"{'name': 'Taylor Swift', 'id': '06HL4z0CvFAxyc27GXpf02', 'url': 'https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:58.109069Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:58.227660Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/20244d07-534f-4eff-b4d4-930878889970?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:58.347067Z","level":"info","event":"Rate limit hit. Retrying in 1s...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:21:59.484246Z","level":"info","event":"Rate limit hit. Retrying in 2s...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:02.627752Z","level":"info","event":"{'name': 'Brad Paisley', 'id': '13YmWQJFwgZrd4bf5IjMY4', 'url': 'https://open.spotify.com/artist/13YmWQJFwgZrd4bf5IjMY4'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:02.631084Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/13YmWQJFwgZrd4bf5IjMY4&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:02.749614Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/6cfd7ffc-824f-4219-8e27-4b9417700f44?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:03.872663Z","level":"info","event":"{'name': 'Carrie Underwood', 'id': '4xFUf1FHVy696Q1JQZMTRj', 'url': 'https://open.spotify.com/artist/4xFUf1FHVy696Q1JQZMTRj'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:03.875910Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/4xFUf1FHVy696Q1JQZMTRj&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:04.039889Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/70f0e309-5418-49b6-a130-666e2f76eecd?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:05.252328Z","level":"info","event":"{'name': 'Big Sean', 'id': '0c173mlxpT3dSFRgMO8XPh', 'url': 'https://open.spotify.com/artist/0c173mlxpT3dSFRgMO8XPh'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:05.253991Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/0c173mlxpT3dSFRgMO8XPh&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:05.362766Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/942a9807-9c1a-4a0e-a285-1fde2c5be9d1?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:06.494785Z","level":"info","event":"{'name': 'The Band Perry', 'id': '75FnCoo4FBxH5K1Rrx0k5A', 'url': 'https://open.spotify.com/artist/75FnCoo4FBxH5K1Rrx0k5A'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:06.495137Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/75FnCoo4FBxH5K1Rrx0k5A&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:06.619828Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/28955336-2348-488a-9381-e3a7b0107343?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:07.747279Z","level":"info","event":"{'name': 'P!nk', 'id': '1KCSPY1glIKqW2TotWuXOR', 'url': 'https://open.spotify.com/artist/1KCSPY1glIKqW2TotWuXOR'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:07.747613Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1KCSPY1glIKqW2TotWuXOR&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:07.861514Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/f4d5cc07-3bc9-4836-9b15-88a08359bc63?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:08.974156Z","level":"info","event":"{'name': 'The Script', 'id': '3AQRLZ9PuTAozP28Skbq8V', 'url': 'https://open.spotify.com/artist/3AQRLZ9PuTAozP28Skbq8V'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:08.984614Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/3AQRLZ9PuTAozP28Skbq8V&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:09.107906Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/4c98aa1b-34eb-4336-987f-5e50aa059c00?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:10.324004Z","level":"info","event":"{'name': 'Tinie Tempah', 'id': '0Tob4H0FLtEONHU1MjpUEp', 'url': 'https://open.spotify.com/artist/0Tob4H0FLtEONHU1MjpUEp'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:10.326305Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/0Tob4H0FLtEONHU1MjpUEp&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:10.433900Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/3cce3d37-d44f-46a2-b1e3-cd7247d5015c?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:11.543889Z","level":"info","event":"{'name': 'Eric Turner', 'id': '79DOwuMzV2h4es3em0t002', 'url': 'https://open.spotify.com/artist/79DOwuMzV2h4es3em0t002'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:11.545092Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/79DOwuMzV2h4es3em0t002&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:11.657902Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/df2f7876-e731-4bde-965c-bd4a67b3fadd?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:12.776370Z","level":"info","event":"{'name': 'Enrique Iglesias', 'id': '7qG3b048QCHVRO5Pv1T5lw', 'url': 'https://open.spotify.com/artist/7qG3b048QCHVRO5Pv1T5lw'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:12.780697Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/7qG3b048QCHVRO5Pv1T5lw&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:12.906416Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/35f866dc-c061-48ba-8157-cf2e0eac4857?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:14.022269Z","level":"info","event":"{'name': 'USHER', 'id': '23zg3TcAtWQy7J6upgbUnj', 'url': 'https://open.spotify.com/artist/23zg3TcAtWQy7J6upgbUnj'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:14.023485Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/23zg3TcAtWQy7J6upgbUnj&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:14.142208Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/3414d446-735a-443c-931f-10634f57e5b9?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:15.253384Z","level":"info","event":"{'name': 'Jessie J', 'id': '2gsggkzM5R49q6jpPvazou', 'url': 'https://open.spotify.com/artist/2gsggkzM5R49q6jpPvazou'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:15.255034Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/2gsggkzM5R49q6jpPvazou&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:15.376597Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/d24fb461-dee8-41fc-bb15-2f13bb2644a6?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:16.492570Z","level":"info","event":"{'name': 'B.o.B', 'id': '5ndkK3dpZLKtBklKjxNQwT', 'url': 'https://open.spotify.com/artist/5ndkK3dpZLKtBklKjxNQwT'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:16.495862Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/5ndkK3dpZLKtBklKjxNQwT&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:16.603838Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/94c338ff-1985-4429-9dc8-997b61bb5932?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:17.763857Z","level":"info","event":"{'name': 'Miguel', 'id': '360IAlyVv4PCEVjgyMZrxK', 'url': 'https://open.spotify.com/artist/360IAlyVv4PCEVjgyMZrxK'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:17.768348Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/360IAlyVv4PCEVjgyMZrxK&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:17.881734Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/285e1285-aecc-478f-a8da-0c8cf69e1217?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:18.993042Z","level":"info","event":"{'name': 'Chris Young', 'id': '4BYxqVkZyFjtik7crYLg5Q', 'url': 'https://open.spotify.com/artist/4BYxqVkZyFjtik7crYLg5Q'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:19.000577Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/4BYxqVkZyFjtik7crYLg5Q&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:19.137241Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/86de027e-097d-41b1-9b97-c0a69379ff4b?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:20.298446Z","level":"info","event":"{'name': 'Martin Solveig', 'id': '1bj5GrcLom5gZFF5t949Xl', 'url': 'https://open.spotify.com/artist/1bj5GrcLom5gZFF5t949Xl'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:20.301442Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1bj5GrcLom5gZFF5t949Xl&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:20.415623Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/06db73fd-57e2-4a6f-bcd3-699fb7bb7af4?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:20.555107Z","level":"info","event":"Rate limit hit. Retrying in 1s...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:22.699960Z","level":"info","event":"{'name': 'Dragonette', 'id': '4GLJPBj5Cdr9AgLKvLWM4n', 'url': 'https://open.spotify.com/artist/4GLJPBj5Cdr9AgLKvLWM4n'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:22.701139Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/4GLJPBj5Cdr9AgLKvLWM4n&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:22.812958Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/00ef5e52-582b-4d53-a03a-bbd5b3084197?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:23.934209Z","level":"info","event":"{'name': 'Kanye West', 'id': '5K4W6rqBFWDnAN6FQUkS6x', 'url': 'https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:23.938265Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:24.096317Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/164f0d73-1234-4e2c-8743-d77bf2191051?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:25.217366Z","level":"info","event":"{'name': 'Jake Owen', 'id': '1n2pb9Tsfe4SwAjmUac6YT', 'url': 'https://open.spotify.com/artist/1n2pb9Tsfe4SwAjmUac6YT'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:25.221029Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1n2pb9Tsfe4SwAjmUac6YT&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:25.341307Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/508f4f83-26dc-4d21-98d9-1a8c04d5ad4a?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:26.467102Z","level":"info","event":"{'name': 'Kenny Chesney', 'id': '3grHWM9bx2E9vwJCdlRv9O', 'url': 'https://open.spotify.com/artist/3grHWM9bx2E9vwJCdlRv9O'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:26.468298Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/3grHWM9bx2E9vwJCdlRv9O&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:26.585891Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/5dca4d22-d6c8-4e70-8ca1-4543e43353c7?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:27.706578Z","level":"info","event":"{'name': 'Grace Potter', 'id': '1PJVVIeS5Wu0wbZDhtC0Ht', 'url': 'https://open.spotify.com/artist/1PJVVIeS5Wu0wbZDhtC0Ht'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:27.708409Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1PJVVIeS5Wu0wbZDhtC0Ht&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:27.836965Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/b1103b87-3b91-4ec5-9d7b-15c2d1e486af?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:28.968628Z","level":"info","event":"{'name': 'T-Pain', 'id': '3aQeKQSyrW4qWr35idm0cy', 'url': 'https://open.spotify.com/artist/3aQeKQSyrW4qWr35idm0cy'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:28.970076Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/3aQeKQSyrW4qWr35idm0cy&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:29.095027Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/ce55e49a-32f4-4757-9849-bf04d06d5fcc?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:30.207556Z","level":"info","event":"{'name': 'Coldplay', 'id': '4gzpq5DPGxSnKTe4SA8HAU', 'url': 'https://open.spotify.com/artist/4gzpq5DPGxSnKTe4SA8HAU'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:30.208699Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/4gzpq5DPGxSnKTe4SA8HAU&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:30.321850Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/cc197bad-dc9c-440d-a5b5-d52ba2e14234?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:31.428127Z","level":"info","event":"{'name': 'Rihanna', 'id': '5pKCCKE2ajJHZ9KAiaK11H', 'url': 'https://open.spotify.com/artist/5pKCCKE2ajJHZ9KAiaK11H'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:31.430901Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/5pKCCKE2ajJHZ9KAiaK11H&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:31.546277Z","level":"info","event":"Rate limit hit. Retrying in 1s...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:32.663454Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/73e5e69d-3554-40d8-8516-00cb38737a1c?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:33.773710Z","level":"info","event":"{'name': 'David Guetta', 'id': '1Cs0zKBU1kc0i8ypK3B9ai', 'url': 'https://open.spotify.com/artist/1Cs0zKBU1kc0i8ypK3B9ai'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:33.777050Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1Cs0zKBU1kc0i8ypK3B9ai&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:33.893559Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/302bd7b9-d012-4360-897a-93b00c855680?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:35.017221Z","level":"info","event":"{'name': 'Flo Rida', 'id': '0jnsk9HBra6NMjO2oANoPY', 'url': 'https://open.spotify.com/artist/0jnsk9HBra6NMjO2oANoPY'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:35.019693Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/0jnsk9HBra6NMjO2oANoPY&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:35.148457Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/4593d49a-7f67-46ba-9ec0-126bd676286f?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:36.275753Z","level":"info","event":"{'name': 'Justin Moore', 'id': '30e8DmahrEamvLbFRPdWmk', 'url': 'https://open.spotify.com/artist/30e8DmahrEamvLbFRPdWmk'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:36.281724Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/30e8DmahrEamvLbFRPdWmk&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:36.398630Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/ab5d785b-ff87-48b5-b9e1-027e3c21ec0d?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:37.516853Z","level":"info","event":"{'name': 'Dia Frampton', 'id': '3ppkM4QtM781APpaX7H9t7', 'url': 'https://open.spotify.com/artist/3ppkM4QtM781APpaX7H9t7'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:37.520592Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/3ppkM4QtM781APpaX7H9t7&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:37.762164Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/fe3399b8-16c1-4e96-8f06-331072cb61bf?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:38.952676Z","level":"info","event":"{'name': 'Alabama', 'id': '6rJqqRce0Kvo2dJUXoHleC', 'url': 'https://open.spotify.com/artist/6rJqqRce0Kvo2dJUXoHleC'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:38.959327Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/6rJqqRce0Kvo2dJUXoHleC&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:39.086931Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/7ac055fa-e357-4890-9098-010b8094a900?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:40.215482Z","level":"info","event":"{'name': 'Eric Church', 'id': '2IvkS5MXK0vPGnwyJsrEyV', 'url': 'https://open.spotify.com/artist/2IvkS5MXK0vPGnwyJsrEyV'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:40.216747Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/2IvkS5MXK0vPGnwyJsrEyV&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:40.333184Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/15856215-cc51-4423-879c-9ac955ccb11a?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:41.455686Z","level":"info","event":"{'name': 'New Boyz', 'id': '1ZKqrja0WvbSssYNFO3lzs', 'url': 'https://open.spotify.com/artist/1ZKqrja0WvbSssYNFO3lzs'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:41.457774Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1ZKqrja0WvbSssYNFO3lzs&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:41.587464Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/8e1d63a3-2980-4d69-ba61-1024e8a6df4b?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:41.702010Z","level":"info","event":"Rate limit hit. Retrying in 1s...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:43.889337Z","level":"info","event":"{'name': 'The Cataracs', 'id': '7C64wNX3howEFZjAYRKsfP', 'url': 'https://open.spotify.com/artist/7C64wNX3howEFZjAYRKsfP'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:43.891988Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/7C64wNX3howEFZjAYRKsfP&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:44.020333Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/50d9d3ee-8947-4079-9d73-b01dd3e71d8a?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:45.152366Z","level":"info","event":"{'name': 'DEV', 'id': '7Ip2u3e5Nv6fFb5xyIHxEE', 'url': 'https://open.spotify.com/artist/7Ip2u3e5Nv6fFb5xyIHxEE'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:45.163381Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/7Ip2u3e5Nv6fFb5xyIHxEE&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:45.295558Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/7cc04f00-4c8f-40ea-894c-5f65777b3575?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:46.419586Z","level":"info","event":"{'name': 'Maroon 5', 'id': '04gDigrS5kc9YWfZHwBETP', 'url': 'https://open.spotify.com/artist/04gDigrS5kc9YWfZHwBETP'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:46.423854Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/04gDigrS5kc9YWfZHwBETP&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:46.547471Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/0ab49580-c84f-44d4-875f-d83760ea2cfe?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:47.672787Z","level":"info","event":"{'name': 'Keith Urban', 'id': '0u2FHSq3ln94y5Q57xazwf', 'url': 'https://open.spotify.com/artist/0u2FHSq3ln94y5Q57xazwf'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:47.677678Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/0u2FHSq3ln94y5Q57xazwf&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:47.803341Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/f45da029-7b00-4bf3-962c-0eeb20309cc4?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:48.922549Z","level":"info","event":"{'name': 'Javier Colon', 'id': '3flTDj1VSZCktpBGZlNutt', 'url': 'https://open.spotify.com/artist/3flTDj1VSZCktpBGZlNutt'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:48.924261Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/3flTDj1VSZCktpBGZlNutt&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:49.053948Z","level":"info","event":"HTTP 404: Not Found","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:49.054134Z","level":"info","event":"unable to get mbid for https://open.spotify.com/artist/3flTDj1VSZCktpBGZlNutt","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:50.068576Z","level":"info","event":"{'name': 'Eli Young Band', 'id': '6eKWqnckwdIlSnjaYgIyxv', 'url': 'https://open.spotify.com/artist/6eKWqnckwdIlSnjaYgIyxv'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:50.089906Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/6eKWqnckwdIlSnjaYgIyxv&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:50.205073Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/80737f69-60c5-4c0d-9562-88faf8d8f2f4?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:51.325851Z","level":"info","event":"{'name': 'Shania Twain', 'id': '5e4Dhzv426EvQe3aDb64jL', 'url': 'https://open.spotify.com/artist/5e4Dhzv426EvQe3aDb64jL'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:51.329143Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/5e4Dhzv426EvQe3aDb64jL&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:51.489186Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/faabb55d-3c9e-4c23-8779-732ac2ee2c0d?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:53.059050Z","level":"info","event":"{'name': 'Dierks Bentley', 'id': '7x8nK0m0cP2ksQf0mjWdPS', 'url': 'https://open.spotify.com/artist/7x8nK0m0cP2ksQf0mjWdPS'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:53.067733Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/7x8nK0m0cP2ksQf0mjWdPS&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:53.184104Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/6bd7faa9-601f-44db-a2a6-239209f83156?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:54.386148Z","level":"info","event":"{'name': 'YC Worldwide', 'id': '1JvKSExhqV480k3qFUJwLm', 'url': 'https://open.spotify.com/artist/1JvKSExhqV480k3qFUJwLm'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:54.388196Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1JvKSExhqV480k3qFUJwLm&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:54.566565Z","level":"info","event":"HTTP 404: Not Found","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:54.567256Z","level":"info","event":"unable to get mbid for https://open.spotify.com/artist/1JvKSExhqV480k3qFUJwLm","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:55.569243Z","level":"info","event":"{'name': 'Future', 'id': '1RyvyyTE3xzB2ZywiAwp0i', 'url': 'https://open.spotify.com/artist/1RyvyyTE3xzB2ZywiAwp0i'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:55.570539Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1RyvyyTE3xzB2ZywiAwp0i&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:55.697575Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/48262e82-db9f-4a92-b650-dfef979b73ec?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:56.830650Z","level":"info","event":"{'name': 'Foster The People', 'id': '7gP3bB2nilZXLfPHJhMdvc', 'url': 'https://open.spotify.com/artist/7gP3bB2nilZXLfPHJhMdvc'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:56.832077Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/7gP3bB2nilZXLfPHJhMdvc&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:56.954149Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/e0e1a584-dd0a-4bd1-88d1-c4c62895039d?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:58.081189Z","level":"info","event":"{'name': 'Beyoncé', 'id': '6vWDO969PvNqNYHIOW5v0m', 'url': 'https://open.spotify.com/artist/6vWDO969PvNqNYHIOW5v0m'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:58.095559Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/6vWDO969PvNqNYHIOW5v0m&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:58.216206Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/859d0860-d480-4efd-970c-c05d5f1776b8?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:59.352681Z","level":"info","event":"{'name': 'Scotty McCreery', 'id': '6ZV6lGY0prbqpTD0Md8i29', 'url': 'https://open.spotify.com/artist/6ZV6lGY0prbqpTD0Md8i29'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:59.353689Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/6ZV6lGY0prbqpTD0Md8i29&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:22:59.478859Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/2294c553-58e4-425b-8bab-bee01f2d477a?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:00.613502Z","level":"info","event":"{'name': 'Nicole Scherzinger', 'id': '40xbWSB4JPdOkRyuTDy1oP', 'url': 'https://open.spotify.com/artist/40xbWSB4JPdOkRyuTDy1oP'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:00.617051Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/40xbWSB4JPdOkRyuTDy1oP&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:00.745610Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/0f7534a6-dc5f-46ca-a2e0-13d214cdd52b?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:01.859420Z","level":"info","event":"{'name': 'Trey Songz', 'id': '2iojnBLj0qIMiKPvVhLnsH', 'url': 'https://open.spotify.com/artist/2iojnBLj0qIMiKPvVhLnsH'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:01.862126Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/2iojnBLj0qIMiKPvVhLnsH&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:01.976658Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/4d7304f6-7fe3-4959-9d98-01a5af84afe6?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:03.118932Z","level":"info","event":"{'name': 'Marc Anthony', 'id': '4wLXwxDeWQ8mtUIRPxGiD6', 'url': 'https://open.spotify.com/artist/4wLXwxDeWQ8mtUIRPxGiD6'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:03.121978Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/4wLXwxDeWQ8mtUIRPxGiD6&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:03.373793Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/25607613-aceb-445a-8519-83a2ee0f8402?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:04.565664Z","level":"info","event":"{'name': 'Vicci Martinez', 'id': '1sxu3pxg9icRUHpyWpDxz2', 'url': 'https://open.spotify.com/artist/1sxu3pxg9icRUHpyWpDxz2'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:04.568294Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1sxu3pxg9icRUHpyWpDxz2&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:04.717636Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/6aabc385-f85b-4c98-8f68-684891a44c81?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:05.938789Z","level":"info","event":"{'name': 'Rodney Atkins', 'id': '2qgvmDsc4jrqbAbjq1HGM2', 'url': 'https://open.spotify.com/artist/2qgvmDsc4jrqbAbjq1HGM2'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:05.939156Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/2qgvmDsc4jrqbAbjq1HGM2&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:06.065445Z","level":"info","event":"HTTP 404: Not Found","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:06.065809Z","level":"info","event":"unable to get mbid for https://open.spotify.com/artist/2qgvmDsc4jrqbAbjq1HGM2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:07.071852Z","level":"info","event":"{'name': 'Dr. Dre', 'id': '6DPYiyq5kWVQS4RGwxzPC7', 'url': 'https://open.spotify.com/artist/6DPYiyq5kWVQS4RGwxzPC7'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:07.073699Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/6DPYiyq5kWVQS4RGwxzPC7&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:07.198392Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/5f6ab597-f57a-40da-be9e-adad48708203?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:08.314539Z","level":"info","event":"{'name': 'Eminem', 'id': '7dGJo4pcD2V6oG8kP0tJRR', 'url': 'https://open.spotify.com/artist/7dGJo4pcD2V6oG8kP0tJRR'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:08.316160Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/7dGJo4pcD2V6oG8kP0tJRR&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:08.442501Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/b95ce3ff-3d05-4e87-9e01-c97b66af13d4?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:09.562050Z","level":"info","event":"{'name': 'Skylar Grey', 'id': '4utLUGcTvOJFr6aqIJtYWV', 'url': 'https://open.spotify.com/artist/4utLUGcTvOJFr6aqIJtYWV'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:09.562432Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/4utLUGcTvOJFr6aqIJtYWV&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:09.684419Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/bd01c9d7-89dd-4cb4-9baa-a43bfa292bed?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:10.801202Z","level":"info","event":"{'name': 'Andy Grammer', 'id': '2oX42qP5ineK3hrhBECLmj', 'url': 'https://open.spotify.com/artist/2oX42qP5ineK3hrhBECLmj'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:10.802306Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/2oX42qP5ineK3hrhBECLmj&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:10.917369Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/9e60ea29-9607-4f7d-aa96-2092ef41f0d3?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:12.042623Z","level":"info","event":"{'name': 'Trace Adkins', 'id': '79FMDwzZQxHgSkIYBl3ODU', 'url': 'https://open.spotify.com/artist/79FMDwzZQxHgSkIYBl3ODU'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:12.049252Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/79FMDwzZQxHgSkIYBl3ODU&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:12.184799Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/3dc9c919-508f-4255-b05e-0eed6a28137d?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:13.389568Z","level":"info","event":"{'name': 'Marsha Ambrosius', 'id': '46VWDbmWmzvPBTmkSr25gM', 'url': 'https://open.spotify.com/artist/46VWDbmWmzvPBTmkSr25gM'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:13.393842Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/46VWDbmWmzvPBTmkSr25gM&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:13.513353Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/24285231-f192-42f1-baea-0f467dd1d8aa?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:14.628380Z","level":"info","event":"{'name': 'Gym Class Heroes', 'id': '4IJczjB0fJ04gs4uvP0Fli', 'url': 'https://open.spotify.com/artist/4IJczjB0fJ04gs4uvP0Fli'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:14.635180Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/4IJczjB0fJ04gs4uvP0Fli&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:14.781102Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/f4d4b515-0b74-423f-a161-db184330c37c?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:15.923688Z","level":"info","event":"{'name': 'Adam Levine', 'id': '4bYPcJP5jwMhSivRcqie2n', 'url': 'https://open.spotify.com/artist/4bYPcJP5jwMhSivRcqie2n'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:15.925329Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/4bYPcJP5jwMhSivRcqie2n&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:16.081366Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/a1421d73-1a21-484b-97ad-77c9a5676daf?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:17.340877Z","level":"info","event":"{'name': 'Ace Hood', 'id': '31HjiqargV4NAw4GZqUale', 'url': 'https://open.spotify.com/artist/31HjiqargV4NAw4GZqUale'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:17.341550Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/31HjiqargV4NAw4GZqUale&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:17.451924Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/986ee464-cf8a-4e59-a71f-74756102067f?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:18.562474Z","level":"info","event":"{'name': 'Seether', 'id': '6B5c4sch27tWHAGdarpPaW', 'url': 'https://open.spotify.com/artist/6B5c4sch27tWHAGdarpPaW'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:18.573373Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/6B5c4sch27tWHAGdarpPaW&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:18.691796Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/fbcd7b29-455f-49e6-9c4f-8249d20a055e?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:19.815289Z","level":"info","event":"{'name': 'Miranda Lambert', 'id': '66lH4jAE7pqPlOlzUKbwA0', 'url': 'https://open.spotify.com/artist/66lH4jAE7pqPlOlzUKbwA0'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:19.815643Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/66lH4jAE7pqPlOlzUKbwA0&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:19.924202Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/4eca1aa0-c79f-481b-af8a-4a2d6c41aa5c?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:21.037595Z","level":"info","event":"{'name': 'John Summit', 'id': '7kNqXtgeIwFtelmRjWv205', 'url': 'https://open.spotify.com/artist/7kNqXtgeIwFtelmRjWv205'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:21.039140Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/7kNqXtgeIwFtelmRjWv205&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:21.228307Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/2547c5e3-314c-4332-981d-f18c902a4086?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:22.403203Z","level":"info","event":"{'name': 'Casey Weston', 'id': '22Fg6dE7cFJm88AiUzGHAa', 'url': 'https://open.spotify.com/artist/22Fg6dE7cFJm88AiUzGHAa'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:22.416053Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/22Fg6dE7cFJm88AiUzGHAa&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:22.551621Z","level":"info","event":"HTTP 404: Not Found","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:22.554850Z","level":"info","event":"unable to get mbid for https://open.spotify.com/artist/22Fg6dE7cFJm88AiUzGHAa","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:23.556699Z","level":"info","event":"{'name': 'Mumford & Sons', 'id': '3gd8FJtBJtkRxdfbTu19U2', 'url': 'https://open.spotify.com/artist/3gd8FJtBJtkRxdfbTu19U2'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:23.560561Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/3gd8FJtBJtkRxdfbTu19U2&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:23.682038Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/c44e9c22-ef82-4a77-9bcd-af6c958446d6?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:24.805017Z","level":"info","event":"{'name': 'Joe Jonas', 'id': '7gbmX8SsfjEjxDMzBi1ZOL', 'url': 'https://open.spotify.com/artist/7gbmX8SsfjEjxDMzBi1ZOL'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:24.809282Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/7gbmX8SsfjEjxDMzBi1ZOL&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:24.969710Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/79e1bb77-fd8b-42ab-8043-892af5370f0b?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:26.132578Z","level":"info","event":"{'name': 'Victorious Cast', 'id': '1KYszkVzlhV3rAqmAcYIgd', 'url': 'https://open.spotify.com/artist/1KYszkVzlhV3rAqmAcYIgd'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:26.133771Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1KYszkVzlhV3rAqmAcYIgd&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:26.256603Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/19c682b6-31cc-41fa-bf6e-1796f2a1e778?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:27.380086Z","level":"info","event":"{'name': 'Victoria Justice', 'id': '2OTfr6S2kuHRYStjt1IkY6', 'url': 'https://open.spotify.com/artist/2OTfr6S2kuHRYStjt1IkY6'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:27.380574Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/2OTfr6S2kuHRYStjt1IkY6&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:27.503416Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/4ce94c22-acbc-4535-a0e4-b8a8d002887e?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:28.622503Z","level":"info","event":"{'name': 'Kirk Franklin', 'id': '4akybxRTGHJZ1DXjLhJ1qu', 'url': 'https://open.spotify.com/artist/4akybxRTGHJZ1DXjLhJ1qu'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:28.624302Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/4akybxRTGHJZ1DXjLhJ1qu&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:28.743167Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/685332a4-12ed-4c3b-8d0e-04e6a37e28f0?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:29.863852Z","level":"info","event":"{'name': 'Eva Simons', 'id': '2d6W4cnC5XsVOaxtgaj9hA', 'url': 'https://open.spotify.com/artist/2d6W4cnC5XsVOaxtgaj9hA'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:29.866756Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/2d6W4cnC5XsVOaxtgaj9hA&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:30.859281Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/481cbdd9-02ac-46fd-825f-afed658bc505?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:32.028293Z","level":"info","event":"{'name': 'Toby Keith', 'id': '2bA6fzP0lMAQ4kz6CF61w8', 'url': 'https://open.spotify.com/artist/2bA6fzP0lMAQ4kz6CF61w8'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:32.029169Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/2bA6fzP0lMAQ4kz6CF61w8&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:32.147306Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/2f951906-5629-4fef-a260-5033151c162a?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:33.267690Z","level":"info","event":"{'name': 'Billy Currington', 'id': '1By9QBFnjZAoI83BZppHlt', 'url': 'https://open.spotify.com/artist/1By9QBFnjZAoI83BZppHlt'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:33.268954Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/1By9QBFnjZAoI83BZppHlt&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:33.509048Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/dbf94c49-0dd9-4f72-85d5-f548beb453f6?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:33.625863Z","level":"info","event":"Rate limit hit. Retrying in 1s...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:35.826139Z","level":"info","event":"{'name': 'Xenia', 'id': '4hlUIRQCAtCnIO4mh0jvpq', 'url': 'https://open.spotify.com/artist/4hlUIRQCAtCnIO4mh0jvpq'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:35.831387Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/4hlUIRQCAtCnIO4mh0jvpq&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:36.075939Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/49c354e3-1230-487e-961c-d28c15ee262b?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:37.301115Z","level":"info","event":"{'name': 'Paramore', 'id': '74XFHRwlV6OrjEM0A2NCMF', 'url': 'https://open.spotify.com/artist/74XFHRwlV6OrjEM0A2NCMF'}","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:37.303060Z","level":"info","event":"https://musicbrainz.org/ws/2/url?resource=https://open.spotify.com/artist/74XFHRwlV6OrjEM0A2NCMF&inc=artist-rels&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:37.435802Z","level":"info","event":"https://musicbrainz.org/ws/2/artist/44cf61b8-5197-448a-b82b-cef6ee89fac5?inc=tags&fmt=json","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:38.707557Z","level":"info","event":"Fetching audio details for 97 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:38.710965Z","level":"info","event":"  Fetching batch 1/3 (40 songs)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:39.891878Z","level":"info","event":"  Retrieved 24 song details","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:41.899303Z","level":"info","event":"  Fetching batch 2/3 (40 songs)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:42.960928Z","level":"info","event":"  Retrieved 29 song details","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:44.962693Z","level":"info","event":"  Fetching batch 3/3 (17 songs)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:46.019447Z","level":"info","event":"  Retrieved 12 song details","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:46.020036Z","level":"info","event":"Fetching audio analysis for 65 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:23:56.661104Z","level":"info","event":"  Processing audio analysis 10/65...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:24:10.091458Z","level":"info","event":"  Processing audio analysis 20/65...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:24:23.257760Z","level":"info","event":"  Processing audio analysis 30/65...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:24:34.366867Z","level":"info","event":"  Processing audio analysis 40/65...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:24:45.302784Z","level":"info","event":"  Processing audio analysis 50/65...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:24:56.264303Z","level":"info","event":"  Processing audio analysis 60/65...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.005583Z","level":"info","event":"Completed fetching audio details for 65 songs","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.070920Z","level":"info","event":"DEBUG: DATABASE_URL value: postgresql+psycopg2:****@postgres/music_warehouse","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.188270Z","level":"info","event":"TYPE OF ENGINE: <class 'sqlalchemy.engine.base.Engine'>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.189219Z","level":"info","event":"ENGINE DIR: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_compiled_cache', '_connection_cls', '_echo', '_execute_clauseelement', '_execute_compiled', '_execute_default', '_execution_options', '_has_events', '_is_future', '_lru_size_alert', '_option_cls', '_optional_conn_ctx_manager', '_run_ddl_visitor', '_run_visitor', '_schema_translate_map', '_should_log_debug', '_should_log_info', '_sqla_logger_namespace', '_trans_ctx', '_wrap_pool_connect', 'begin', 'clear_compiled_cache', 'connect', 'dialect', 'dispatch', 'dispose', 'driver', 'echo', 'engine', 'execute', 'execution_options', 'get_execution_options', 'has_table', 'hide_parameters', 'logger', 'logging_name', 'name', 'pool', 'raw_connection', 'run_callable', 'scalar', 'table_names', 'transaction', 'update_execution_options', 'url']","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.189532Z","level":"info","event":"IS SQLALCHEMY ENGINE: True","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.189933Z","level":"info","event":"Database connection successful","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.190112Z","level":"info","event":"Loading chart_weeks (1 rows)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.225931Z","level":"info","event":"  Exported CSV to data_exports/chart_weeks.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.226940Z","level":"info","event":"Loading songs (97 rows)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.246712Z","level":"info","event":"  Exported CSV to data_exports/songs.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.247333Z","level":"info","event":"Loading artists (109 rows)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.256571Z","level":"info","event":"  Exported CSV to data_exports/artists.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.257161Z","level":"info","event":"Loading song_artists (139 rows)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.265398Z","level":"info","event":"  Exported CSV to data_exports/song_artists.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.267432Z","level":"info","event":"Loading chart_entries (100 rows)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.290411Z","level":"info","event":"  Exported CSV to data_exports/chart_entries.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.288955","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
+{"timestamp":"2025-12-05T05:25:02.361644Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.363760Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-05T05:25:02.365725Z","level":"info","event":"Task operator:<Task(PythonOperator): load_music_data>","chan":"stdout","logger":"task"}

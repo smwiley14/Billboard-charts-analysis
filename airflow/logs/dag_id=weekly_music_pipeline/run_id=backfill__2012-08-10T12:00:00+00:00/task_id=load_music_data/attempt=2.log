@@ -1,0 +1,57 @@
+{"timestamp":"2025-12-06T00:52:45.664100","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-06T00:52:45.665556","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-06T00:52:46.639523Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:52:46.738182Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:52:46.738577Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:52:46.739123Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:52:46.739367Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:03.226255Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:03.227235Z","level":"info","event":"  Processing song 1/100: Call Me Maybe by Carly Rae Jepsen","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:03.941357Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:04.847536Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:05.546729Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:06.379917Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:07.043849Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:08.217177Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:08.897886Z","level":"info","event":"7","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:09.638951Z","level":"info","event":"8","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:10.422004Z","level":"info","event":"9","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:10.422959Z","level":"info","event":"  Processing song 10/100: Blow Me (One Last Kiss) by P!nk","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:11.247383Z","level":"info","event":"10","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:12.213048Z","level":"info","event":"11","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:13.048524Z","level":"info","event":"12","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:13.742507Z","level":"info","event":"13","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:14.535043Z","level":"info","event":"14","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:15.203106Z","level":"info","event":"15","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:15.910820Z","level":"info","event":"16","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:16.595763Z","level":"info","event":"17","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:17.241560Z","level":"info","event":"18","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:17.959274Z","level":"info","event":"19","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:17.959718Z","level":"info","event":"  Processing song 20/100: Starships by Nicki Minaj","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:18.535055Z","level":"info","event":"20","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:19.161918Z","level":"info","event":"21","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:19.819927Z","level":"info","event":"22","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:20.594470Z","level":"info","event":"23","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:21.375147Z","level":"info","event":"24","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:22.673850Z","level":"info","event":"25","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:23.397512Z","level":"info","event":"26","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:24.018823Z","level":"info","event":"27","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:24.622320Z","level":"info","event":"28","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:25.451732Z","level":"info","event":"29","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:25.452660Z","level":"info","event":"  Processing song 30/100: Too Close by Alex Clare","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:26.217236Z","level":"info","event":"30","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:26.967167Z","level":"info","event":"31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:27.650464Z","level":"info","event":"32","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:28.382863Z","level":"info","event":"33","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:29.320142Z","level":"info","event":"34","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:30.003695Z","level":"info","event":"35","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:30.733009Z","level":"info","event":"36","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:31.412684Z","level":"info","event":"37","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:32.112348Z","level":"info","event":"38","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:32.430037Z","level":"info","event":"39","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:32.430284Z","level":"info","event":"  Processing song 40/100: 5-1-5-0 by Dierks Bentley","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:33.239384Z","level":"info","event":"40","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:34.132735Z","level":"info","event":"41","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:34.783558Z","level":"info","event":"42","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:35.605509Z","level":"info","event":"43","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T00:53:36.321774Z","level":"info","event":"44","chan":"stdout","logger":"task"}

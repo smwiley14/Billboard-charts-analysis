@@ -1,0 +1,93 @@
+{"timestamp":"2025-12-06T15:30:45.140936","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-06T15:30:45.141523","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-06T15:30:45.238227Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:30:45.276873Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:30:45.277244Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:30:45.277606Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:30:45.277829Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:30:59.956751Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:30:59.960366Z","level":"info","event":"  Processing song 1/100: One More Night by Maroon 5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:01.241843Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:02.027238Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:02.736219Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:03.536267Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:04.276573Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:05.664921Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:06.409928Z","level":"info","event":"7","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:07.031164Z","level":"info","event":"8","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:07.673440Z","level":"info","event":"9","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:07.673693Z","level":"info","event":"  Processing song 10/100: Good Time by Owl City & Carly Rae Jepsen","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:08.330326Z","level":"info","event":"10","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:08.980972Z","level":"info","event":"11","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:09.642654Z","level":"info","event":"12","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:10.451097Z","level":"info","event":"13","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:11.178993Z","level":"info","event":"14","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:11.869645Z","level":"info","event":"15","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:12.521572Z","level":"info","event":"16","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:13.291607Z","level":"info","event":"17","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:14.013946Z","level":"info","event":"18","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:14.649269Z","level":"info","event":"19","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:14.650035Z","level":"info","event":"  Processing song 20/100: Blown Away by Carrie Underwood","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:15.352312Z","level":"info","event":"20","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:15.986246Z","level":"info","event":"21","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:16.573727Z","level":"info","event":"22","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:17.271373Z","level":"info","event":"23","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:18.209194Z","level":"info","event":"24","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:18.856836Z","level":"info","event":"25","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:34.422014Z","level":"info","event":"Network error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')). Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:36.074016Z","level":"info","event":"26","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:36.826525Z","level":"info","event":"27","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:37.599803Z","level":"info","event":"28","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:38.312371Z","level":"info","event":"29","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:38.316117Z","level":"info","event":"  Processing song 30/100: I Will Wait by Mumford & Sons","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:38.951783Z","level":"info","event":"30","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:39.703422Z","level":"info","event":"31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:40.477240Z","level":"info","event":"32","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:41.622865Z","level":"info","event":"33","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:31:43.037442Z","level":"info","event":"34","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:16.719125Z","level":"info","event":"35","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:18.023225Z","level":"info","event":"36","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:19.468346Z","level":"info","event":"37","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:20.467607Z","level":"info","event":"38","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:21.313295Z","level":"info","event":"39","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:21.313648Z","level":"info","event":"  Processing song 40/100: No Lie by 2 Chainz Featuring Drake","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:22.025532Z","level":"info","event":"40","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:22.675511Z","level":"info","event":"41","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:23.681851Z","level":"info","event":"42","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:24.781877Z","level":"info","event":"43","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:25.437023Z","level":"info","event":"44","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:26.128731Z","level":"info","event":"45","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:27.188641Z","level":"info","event":"46","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:27.856959Z","level":"info","event":"47","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:28.594397Z","level":"info","event":"48","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:29.083161Z","level":"info","event":"Failed to get access token: HTTP 503. Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:30.490339Z","level":"info","event":"49","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:30.491219Z","level":"info","event":"  Processing song 50/100: Turn On The Lights by Future","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:31.277556Z","level":"info","event":"50","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:31.977118Z","level":"info","event":"51","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:32.769587Z","level":"info","event":"52","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:33.695424Z","level":"info","event":"53","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:34.404545Z","level":"info","event":"54","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:35.071235Z","level":"info","event":"55","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:35.903134Z","level":"info","event":"56","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:36.517482Z","level":"info","event":"57","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:37.200807Z","level":"info","event":"58","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:37.828485Z","level":"info","event":"59","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:37.829434Z","level":"info","event":"  Processing song 60/100: Madness by Muse","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:39.226741Z","level":"info","event":"Network error getting access token: HTTPSConnectionPool(host='accounts.spotify.com', port=443): Max retries exceeded with url: /api/token (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))). Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:40.702640Z","level":"info","event":"60","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:41.385080Z","level":"info","event":"61","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:42.223187Z","level":"info","event":"62","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:42.925532Z","level":"info","event":"63","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:43.570457Z","level":"info","event":"64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:44.458863Z","level":"info","event":"65","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:45.181224Z","level":"info","event":"66","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:34:45.959454Z","level":"info","event":"67","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:46:07.670064Z","level":"info","event":"68","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:46:08.365840Z","level":"info","event":"69","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:46:08.368552Z","level":"info","event":"  Processing song 70/100: Begin Again by Taylor Swift","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:46:09.213558Z","level":"info","event":"70","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:46:09.876348Z","level":"info","event":"71","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:46:10.613867Z","level":"info","event":"72","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:46:11.297843Z","level":"info","event":"73","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T15:46:11.994373Z","level":"info","event":"74","chan":"stdout","logger":"task"}

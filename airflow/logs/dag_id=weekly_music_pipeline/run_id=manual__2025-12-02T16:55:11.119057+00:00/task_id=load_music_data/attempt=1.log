@@ -1,0 +1,11 @@
+{"timestamp":"2025-12-02T16:56:14.258368","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-02T16:56:14.267162","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-02T16:56:15.407460Z","level":"info","event":"Pandas version: 2.3.3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-02T16:56:15.413209Z","level":"info","event":"SQLAlchemy version: 1.4.54","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-02T16:56:15.416209Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-02T16:56:16.297425Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-02T16:56:16.342707Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-02T16:56:16.354329Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-02T16:56:16.354842Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-02T16:56:35.628173Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_running","message":"TI is no longer in the running state and task should terminate","current_state":"failed"}},"logger":"task"}
+{"timestamp":"2025-12-02T16:56:45.857005Z","level":"error","event":"Task killed!","logger":"task"}

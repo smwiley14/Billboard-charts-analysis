@@ -1,4 +1,5 @@
 .env
-/data_exports
+# /data_exports
 /.venv
 .cache
+# /airflow/logs

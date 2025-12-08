@@ -1,0 +1,15 @@
+{"timestamp":"2025-12-07T13:16:44.170416","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-07T13:16:44.170882","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-07T13:16:45.359350Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T13:16:45.487823Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T13:16:45.488159Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T13:16:45.490054Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T13:16:45.491015Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T13:17:04.208409Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T13:17:04.209720Z","level":"info","event":"  Processing song 1/100: Blurred Lines by Robin Thicke Featuring T.I. + Pharrell","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T13:17:05.908393Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T13:17:06.503788Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T13:17:07.348810Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T13:17:08.064821Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T14:17:46.324786Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T14:17:47.662793Z","level":"info","event":"6","chan":"stdout","logger":"task"}

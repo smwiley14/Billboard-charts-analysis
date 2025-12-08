@@ -1,0 +1,104 @@
+{"timestamp":"2025-12-06T07:01:39.724683","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-06T07:01:39.725503","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-06T07:01:40.190083Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:01:40.245678Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:01:40.246026Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:01:40.246142Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:01:40.246209Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:01:55.737496Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:01:55.738485Z","level":"info","event":"  Processing song 1/100: We Are Never Ever Getting Back Together by Taylor Swift","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:01:56.434688Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:01:57.103655Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:01:57.910462Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:01:58.562106Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:01:59.251611Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:01:59.971509Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:00.740420Z","level":"info","event":"7","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:01.447349Z","level":"info","event":"8","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:02.298207Z","level":"info","event":"9","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:02.300017Z","level":"info","event":"  Processing song 10/100: Too Close by Alex Clare","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:03.041739Z","level":"info","event":"10","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:03.699844Z","level":"info","event":"11","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:04.371352Z","level":"info","event":"12","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:05.112289Z","level":"info","event":"13","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:05.792451Z","level":"info","event":"14","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:06.587137Z","level":"info","event":"15","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:07.498038Z","level":"info","event":"16","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:08.326913Z","level":"info","event":"17","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:08.932078Z","level":"info","event":"18","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:09.649081Z","level":"info","event":"19","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:09.649760Z","level":"info","event":"  Processing song 20/100: Where Have You Been by Rihanna","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:10.450495Z","level":"info","event":"20","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:11.173777Z","level":"info","event":"21","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:12.961613Z","level":"info","event":"22","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:13.867238Z","level":"info","event":"23","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:14.515617Z","level":"info","event":"24","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:15.141089Z","level":"info","event":"25","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:15.922502Z","level":"info","event":"26","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:16.533733Z","level":"info","event":"27","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:17.180931Z","level":"info","event":"28","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:17.794422Z","level":"info","event":"29","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:17.794826Z","level":"info","event":"  Processing song 30/100: Let's Go by Calvin Harris Featuring Ne-Yo","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:18.547627Z","level":"info","event":"30","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:19.352876Z","level":"info","event":"31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:20.055113Z","level":"info","event":"32","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:21.007185Z","level":"info","event":"33","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:21.656217Z","level":"info","event":"34","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:22.371537Z","level":"info","event":"35","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:23.146643Z","level":"info","event":"36","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:23.799408Z","level":"info","event":"37","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:24.584541Z","level":"info","event":"38","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:25.397126Z","level":"info","event":"39","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:25.398125Z","level":"info","event":"  Processing song 40/100: Drive By by Train","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:26.246571Z","level":"info","event":"40","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:26.883194Z","level":"info","event":"41","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:27.644770Z","level":"info","event":"42","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:28.586356Z","level":"info","event":"43","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:29.289766Z","level":"info","event":"44","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:29.974141Z","level":"info","event":"45","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:30.778322Z","level":"info","event":"46","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:31.438991Z","level":"info","event":"47","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:32.153298Z","level":"info","event":"48","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:32.857585Z","level":"info","event":"49","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:02:32.858252Z","level":"info","event":"  Processing song 50/100: Let Me Love You (Until You Learn To Love Yourself) by Ne-Yo","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:30.078949Z","level":"info","event":"50","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:31.645016Z","level":"info","event":"51","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:32.825815Z","level":"info","event":"52","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:34.244545Z","level":"info","event":"53","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:35.507246Z","level":"info","event":"54","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:36.095447Z","level":"info","event":"55","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:36.816620Z","level":"info","event":"56","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:37.585522Z","level":"info","event":"57","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:38.236096Z","level":"info","event":"58","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:39.146986Z","level":"info","event":"59","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:39.148691Z","level":"info","event":"  Processing song 60/100: Angel Eyes by Love And Theft","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:39.868104Z","level":"info","event":"60","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:40.480483Z","level":"info","event":"61","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:41.314224Z","level":"info","event":"62","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:41.985856Z","level":"info","event":"63","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:42.623950Z","level":"info","event":"64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:43.313211Z","level":"info","event":"65","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:44.025031Z","level":"info","event":"66","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:45.006294Z","level":"info","event":"67","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:45.635046Z","level":"info","event":"68","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:46.329865Z","level":"info","event":"69","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:46.330377Z","level":"info","event":"  Processing song 70/100: Birthday Song by 2 Chainz Featuring Kanye West","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:47.027763Z","level":"info","event":"70","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:47.775544Z","level":"info","event":"71","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:48.418373Z","level":"info","event":"72","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:49.058115Z","level":"info","event":"73","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:49.920313Z","level":"info","event":"74","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:50.553012Z","level":"info","event":"75","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:51.335799Z","level":"info","event":"76","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:52.017901Z","level":"info","event":"77","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:52.707625Z","level":"info","event":"78","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:53.347799Z","level":"info","event":"79","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:53.348665Z","level":"info","event":"  Processing song 80/100: Bag Of Money by Wale Featuring Rick Ross, Meek Mill & T-Pain","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:54.051629Z","level":"info","event":"80","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:54.970221Z","level":"info","event":"81","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:56.662456Z","level":"info","event":"82","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:57.683176Z","level":"info","event":"83","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:04:58.749994Z","level":"info","event":"84","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:21:00.762117Z","level":"info","event":"85","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:21:01.928206Z","level":"info","event":"86","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-06T07:21:03.164995Z","level":"info","event":"87","chan":"stdout","logger":"task"}

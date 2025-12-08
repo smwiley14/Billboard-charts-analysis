@@ -1,0 +1,89 @@
+{"timestamp":"2025-12-07T02:27:48.990728","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-07T02:27:48.992721","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-07T02:27:49.560396Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:27:49.610033Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:27:49.610198Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:27:49.610312Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:27:49.610442Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:21.044008Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:21.046272Z","level":"info","event":"  Processing song 1/100: Can't Hold Us by Macklemore & Ryan Lewis Featuring Ray Dalton","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:21.906067Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:26.950428Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:28.039302Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:28.860972Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:29.413808Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:30.184553Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:31.899880Z","level":"info","event":"7","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:33.078604Z","level":"info","event":"8","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:34.657285Z","level":"info","event":"9","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:34.660717Z","level":"info","event":"  Processing song 10/100: Cruise by Florida Georgia Line Featuring Nelly","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:36.410448Z","level":"info","event":"10","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:37.212639Z","level":"info","event":"11","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:37.909675Z","level":"info","event":"12","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:45.259031Z","level":"info","event":"13","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:46.152786Z","level":"info","event":"14","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:28:47.073972Z","level":"info","event":"Network error: HTTPSConnectionPool(host='api.spotify.com', port=443): Max retries exceeded with url: /v1/search?q=track%3AGet%20Lucky%20artist%3ADaft%20Punk%20&type=track&limit=1 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))). Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:24.444720Z","level":"info","event":"15","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:25.961709Z","level":"info","event":"16","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:26.736621Z","level":"info","event":"17","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:27.456622Z","level":"info","event":"18","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:28.203870Z","level":"info","event":"19","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:28.206684Z","level":"info","event":"  Processing song 20/100: #thatPOWER by will.i.am Featuring Justin Bieber","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:29.032391Z","level":"info","event":"20","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:30.594239Z","level":"info","event":"21","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:31.420497Z","level":"info","event":"22","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:32.967518Z","level":"info","event":"23","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:34.533157Z","level":"info","event":"24","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:35.217042Z","level":"info","event":"25","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:36.117580Z","level":"info","event":"26","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:36.805630Z","level":"info","event":"27","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:37.616471Z","level":"info","event":"28","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:38.247732Z","level":"info","event":"29","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:38.247882Z","level":"info","event":"  Processing song 30/100: Here's To Never Growing Up by Avril Lavigne","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:39.030021Z","level":"info","event":"30","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:40.111127Z","level":"info","event":"31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:41.813929Z","level":"info","event":"32","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:43.111272Z","level":"info","event":"33","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:44.756876Z","level":"info","event":"34","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:45.962176Z","level":"info","event":"35","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:46.629245Z","level":"info","event":"36","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:47.413806Z","level":"info","event":"37","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:48.260112Z","level":"info","event":"38","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:48.871629Z","level":"info","event":"39","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:48.872382Z","level":"info","event":"  Processing song 40/100: Fine China by Chris Brown","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:50.002215Z","level":"info","event":"40","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:50.696445Z","level":"info","event":"41","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:29:51.403178Z","level":"info","event":"42","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:12.045728Z","level":"info","event":"43","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:13.097648Z","level":"info","event":"44","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:13.907883Z","level":"info","event":"45","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:14.614280Z","level":"info","event":"46","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:15.754595Z","level":"info","event":"47","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:16.444911Z","level":"info","event":"48","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:17.887236Z","level":"info","event":"49","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:17.889576Z","level":"info","event":"  Processing song 50/100: The Other Side by Jason Derulo","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:18.690391Z","level":"info","event":"50","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:20.265247Z","level":"info","event":"51","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:21.882006Z","level":"info","event":"52","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:22.700694Z","level":"info","event":"53","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:23.491411Z","level":"info","event":"54","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:24.306659Z","level":"info","event":"55","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:30:24.990132Z","level":"info","event":"56","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:22.018591Z","level":"info","event":"Network error: HTTPSConnectionPool(host='api.spotify.com', port=443): Max retries exceeded with url: /v1/search?q=track%3AI%20Want%20Crazy%20artist%3AHunter%20Hayes&type=track&limit=1 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))). Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:23.773956Z","level":"info","event":"57","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:24.489095Z","level":"info","event":"58","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:25.396142Z","level":"info","event":"59","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:25.396612Z","level":"info","event":"  Processing song 60/100: Gone, Gone, Gone by Phillip Phillips","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:26.119695Z","level":"info","event":"60","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:26.967055Z","level":"info","event":"Network error getting access token: HTTPSConnectionPool(host='accounts.spotify.com', port=443): Max retries exceeded with url: /api/token (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)'))). Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:29.845667Z","level":"info","event":"61","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:31.335989Z","level":"info","event":"62","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:32.131385Z","level":"info","event":"63","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:32.819035Z","level":"info","event":"64","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:33.564892Z","level":"info","event":"65","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:34.365899Z","level":"info","event":"66","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:35.113577Z","level":"info","event":"67","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:35.762232Z","level":"info","event":"68","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:36.398922Z","level":"info","event":"69","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:32:36.399519Z","level":"info","event":"  Processing song 70/100: Anywhere With You by Jake Owen","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-07T02:46:13.915180Z","level":"info","event":"Network error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')). Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}

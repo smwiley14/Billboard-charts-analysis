@@ -1,0 +1,63 @@
+{"timestamp":"2025-12-04T16:49:29.254368","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-12-04T16:49:29.255207","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-04T16:49:29.369939Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:29.527013Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:29.527221Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:29.527352Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:29.527422Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:45.918131Z","level":"info","event":"  Searching Spotify for 100 songs...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:45.921837Z","level":"info","event":"  Processing song 1/100: The Fate Of Ophelia by Taylor Swift","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:46.714272Z","level":"info","event":"Failed to get access token: HTTP 503. Retrying in 1s (attempt 1/3)...","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:48.045157Z","level":"info","event":"1","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:48.767726Z","level":"info","event":"2","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:49.446539Z","level":"info","event":"3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:50.079606Z","level":"info","event":"4","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:50.688451Z","level":"info","event":"5","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:51.426679Z","level":"info","event":"6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:52.239855Z","level":"info","event":"7","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:53.062546Z","level":"info","event":"8","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:53.955328Z","level":"info","event":"9","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:53.956216Z","level":"info","event":"  Processing song 10/100: Thriller by Michael Jackson","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:54.642173Z","level":"info","event":"10","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:55.291327Z","level":"info","event":"11","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:56.095305Z","level":"info","event":"12","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:56.785198Z","level":"info","event":"13","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:57.511433Z","level":"info","event":"14","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:58.127839Z","level":"info","event":"15","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:59.262665Z","level":"info","event":"16","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:49:59.849702Z","level":"info","event":"17","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:00.581881Z","level":"info","event":"18","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:01.259198Z","level":"info","event":"19","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:01.261744Z","level":"info","event":"  Processing song 20/100: Father Figure by Taylor Swift","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:01.925153Z","level":"info","event":"20","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:02.635818Z","level":"info","event":"21","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:03.280897Z","level":"info","event":"22","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:04.014828Z","level":"info","event":"23","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:04.939433Z","level":"info","event":"24","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:05.542049Z","level":"info","event":"25","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:06.278307Z","level":"info","event":"26","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:06.982529Z","level":"info","event":"27","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:07.674043Z","level":"info","event":"28","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:08.501681Z","level":"info","event":"29","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:08.505349Z","level":"info","event":"  Processing song 30/100: Dracula by Tame Impala","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:09.155315Z","level":"info","event":"30","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:09.868551Z","level":"info","event":"31","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:10.639395Z","level":"info","event":"32","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:11.300125Z","level":"info","event":"33","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:11.988838Z","level":"info","event":"34","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:12.636275Z","level":"info","event":"35","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:13.306532Z","level":"info","event":"36","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:14.332171Z","level":"info","event":"37","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:14.975380Z","level":"info","event":"38","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:15.738284Z","level":"info","event":"39","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:15.748483Z","level":"info","event":"  Processing song 40/100: Back In The Saddle by Luke Combs","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:16.658683Z","level":"info","event":"40","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:16.704295Z","level":"error","event":"Server indicated the task shouldn't be running anymore. Terminating process","detail":{"detail":{"reason":"not_running","message":"TI is no longer in the running state and task should terminate","current_state":"failed"}},"logger":"task"}
+{"timestamp":"2025-12-04T16:50:17.354047Z","level":"info","event":"41","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:18.047686Z","level":"info","event":"42","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:18.755248Z","level":"info","event":"43","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:19.367989Z","level":"info","event":"44","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:20.217079Z","level":"info","event":"45","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:20.850675Z","level":"info","event":"46","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:21.595732Z","level":"info","event":"47","chan":"stdout","logger":"task"}
+{"timestamp":"2025-12-04T16:50:21.732582Z","level":"error","event":"Task killed!","logger":"task"}
