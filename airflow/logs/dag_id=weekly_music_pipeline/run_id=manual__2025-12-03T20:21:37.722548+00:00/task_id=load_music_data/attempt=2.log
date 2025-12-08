@@ -1,7 +1,0 @@
-{"timestamp":"2025-12-03T20:31:11.918857","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
-{"timestamp":"2025-12-03T20:31:11.933045","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/music_load_dag.py","logger":"airflow.models.dagbag.DagBag"}
-{"timestamp":"2025-12-03T20:31:13.494401Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"task"}
-{"timestamp":"2025-12-03T20:31:46.591645Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
-{"timestamp":"2025-12-03T20:31:46.595667Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
-{"timestamp":"2025-12-03T20:31:46.597868Z","level":"info","event":"Current task name:load_music_data","chan":"stdout","logger":"task"}
-{"timestamp":"2025-12-03T20:31:46.603125Z","level":"info","event":"Dag name:weekly_music_pipeline","chan":"stdout","logger":"task"}

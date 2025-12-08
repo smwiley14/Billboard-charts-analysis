@@ -1,0 +1,680 @@
+{"timestamp":"2025-12-08T18:41:22.913931","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:41:28.961555Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:41:59.231082","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:41:59.517197Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:42:30.444624","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:42:31.519510Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:43:02.582968","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:43:03.263326Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:43:34.028514","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:43:34.643885Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:44:05.186400","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:44:05.363948Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:44:36.020978","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:44:36.201747Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:45:07.499298","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:45:08.438507Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:45:39.123245","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:45:39.294601Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:46:09.888103","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:46:10.055998Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:46:40.685898","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:46:40.835616Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:47:10.967341","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:47:11.111959Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:47:31.380222","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:47:31.802364Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:47:31.767821","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-03-19T12:00:00+00:00","ti_id":"019aff45-95ef-7c99-a732-c2c6b528a915","logger":"task"}
+{"timestamp":"2025-12-08T18:47:31.768639","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-03-26T12:00:00+00:00","ti_id":"019aff45-9710-7518-aa9f-74c284a49b61","logger":"task"}
+{"timestamp":"2025-12-08T18:47:31.768783","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-04-16T12:00:00+00:00","ti_id":"019aff45-99dc-717e-9253-1467efa44eae","logger":"task"}
+{"timestamp":"2025-12-08T18:47:31.768875","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-04-09T12:00:00+00:00","ti_id":"019aff45-985d-7854-ba7e-7c6dab8afd1c","logger":"task"}
+{"timestamp":"2025-12-08T18:47:31.768962","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-04-02T12:00:00+00:00","ti_id":"019aff45-9790-7d23-a4cd-03e352d7cd4b","logger":"task"}
+{"timestamp":"2025-12-08T18:47:31.769153","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-03-12T12:00:00+00:00","ti_id":"019aff45-9581-786a-9ab3-3b5008baa0ce","logger":"task"}
+{"timestamp":"2025-12-08T18:47:31.769274","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-02-05T12:00:00+00:00","ti_id":"019aff45-9208-7e5b-9dca-301cb5de6f9d","logger":"task"}
+{"timestamp":"2025-12-08T18:47:31.769416","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-01-15T12:00:00+00:00","ti_id":"019aff45-9102-7203-b4be-c87661fd196d","logger":"task"}
+{"timestamp":"2025-12-08T18:47:31.769496","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-01-29T12:00:00+00:00","ti_id":"019aff45-919e-7f4e-9c72-8c7d549e9fed","logger":"task"}
+{"timestamp":"2025-12-08T18:47:31.769548","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-02-12T12:00:00+00:00","ti_id":"019aff45-92e5-7d01-9afa-ea755e038ca6","logger":"task"}
+{"timestamp":"2025-12-08T18:47:31.769610","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-01-22T12:00:00+00:00","ti_id":"019aff45-913f-7c1b-89fb-bc998ba35b60","logger":"task"}
+{"timestamp":"2025-12-08T18:47:31.769733","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-01-08T12:00:00+00:00","ti_id":"019aff45-90c7-7267-a764-91f5c894493c","logger":"task"}
+{"timestamp":"2025-12-08T18:48:02.691717","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:48:06.465402Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:48:36.991404","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:48:37.130284Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:49:08.258019","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:49:08.434684Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:49:39.175945","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:49:39.306557Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:50:01.384344","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:50:01.553986Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:50:01.567677","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"scheduled__2010-01-01T12:00:00+00:00","ti_id":"019aff45-8f19-71b6-9975-fd57381d2e91","logger":"task"}
+{"timestamp":"2025-12-08T18:50:32.271353","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:50:32.428382Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:51:02.752130","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:51:02.838399Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:51:33.583998","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:51:33.679313Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:52:04.546517","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:52:04.656869Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:52:34.819139","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:52:35.019868Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:53:05.556013","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:53:05.740147Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:53:36.290253","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:53:36.421451Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:54:06.649027","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:54:06.800187Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:54:36.891702","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:54:37.080942Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:55:07.303621","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:55:07.427226Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:55:38.286294","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:55:38.522538Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:56:08.818217","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:56:10.693293Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:56:41.187435","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:56:41.811103Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:57:12.133603","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:57:12.744610Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:57:43.711767","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:57:43.806601Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:58:14.231672","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:58:14.408284Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:58:44.582985","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:58:44.749200Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:59:14.836327","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:59:14.971285Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T18:59:45.328289","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T18:59:45.486512Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:00:15.701841","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:00:15.834314Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:00:46.148077","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:00:46.247417Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:01:16.727056","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:01:16.813594Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:01:46.868762","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:01:46.952417Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:02:17.048877","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:02:17.171448Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:02:47.287922","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:02:47.573979Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:03:18.128261","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:03:19.155867Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:06:30.476084","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:06:30.592601Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:23:23.118466","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:23:23.241679Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:23:53.551241","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:23:53.642619Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:37:39.241950","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:37:40.582784Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:49:36.164355","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:49:37.804655Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:50:08.775824","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:50:08.937813Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:50:38.986603","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:50:39.069728Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:51:09.655877","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:51:09.738411Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:51:40.268508","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:51:40.366325Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:52:11.017176","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:52:11.119570Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:52:41.446307","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:52:41.537369Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:53:11.974511","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:53:12.096246Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:53:42.552659","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:53:42.659880Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:54:13.402662","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:54:13.509682Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:54:43.778984","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:54:43.888492Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:55:14.404384","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:55:14.514229Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:55:44.974584","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:55:45.094566Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:56:15.718992","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:56:15.874152Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:56:46.545314","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:56:46.715020Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:57:17.573471","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:57:18.092976Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:57:48.955160","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:57:49.463100Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:58:19.498627","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:58:19.579321Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:58:50.235568","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:58:50.318877Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:59:20.763195","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:59:20.865249Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T19:59:51.414280","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T19:59:51.515952Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:00:22.205406","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:00:22.317181Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:00:52.768958","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:00:52.897443Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:01:23.509819","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:01:23.623578Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:02:40.512894","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:02:41.579573Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:03:12.561262","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:03:13.220503Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:03:43.341876","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:03:43.576651Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:04:13.775873","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:04:14.129130Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:04:44.368240","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:04:44.759775Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:05:14.930045","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:05:15.048877Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:09:16.516402","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:09:20.002601Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:09:51.270273","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:09:52.271375Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:10:22.485185","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:10:22.701460Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:10:53.035103","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:10:53.192639Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:11:23.627847","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:11:23.837241Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:11:54.635151","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:11:54.847324Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:12:25.480705","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:12:25.607871Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:12:55.866184","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:12:56.019670Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:13:26.364166","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:13:26.527394Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:13:57.464540","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:13:57.586421Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:14:27.797893","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:14:28.027657Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:14:58.107424","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:14:58.233150Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:15:29.984118","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:15:30.104793Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:16:00.643625","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:16:03.514199Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:16:34.222646","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:16:34.331353Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:17:04.908282","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:17:05.054947Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:17:35.610372","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:17:35.736227Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:18:06.489044","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:18:06.599796Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:18:37.226073","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:18:37.413408Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:19:07.742511","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:19:08.092911Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:19:38.196070","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:19:38.305264Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:20:08.779954","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:20:08.961373Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:20:39.414918","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:20:39.602022Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:21:10.216002","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:21:10.368858Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:21:40.467256","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:21:40.608721Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:22:10.979433","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:22:11.237852Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:22:41.411428","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:22:41.578760Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:23:11.708398","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:23:11.873445Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:23:42.426505","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:23:42.622574Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:24:13.755520","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:24:16.837424Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:24:47.761966","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:24:48.555449Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:25:19.664886","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:25:19.806169Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:25:49.933678","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:25:50.024395Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:26:20.761764","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:26:20.861918Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:26:51.242616","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:26:51.364784Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:27:21.680370","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:27:21.807190Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:27:51.852517","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:27:51.972267Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:28:22.029985","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:28:22.133590Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:28:52.445946","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:28:52.602916Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:29:23.402390","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:29:23.538702Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:29:53.799423","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:29:54.022631Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:30:24.808748","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:30:25.394016Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:30:55.602245","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:30:55.685188Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:31:25.826862","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:31:25.934083Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:31:56.783179","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:31:56.909921Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:32:27.431241","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:32:27.645966Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:32:57.869968","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:32:58.015180Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:33:28.249728","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:33:30.826711Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:34:00.978636","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:34:02.837385Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:34:33.065998","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:34:33.177467Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:35:04.171329","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:35:04.337312Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:35:34.622816","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:35:34.765600Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:36:05.208525","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:36:05.314919Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:36:35.433041","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:36:35.545906Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:37:05.633144","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:37:05.722957Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:37:36.279400","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:37:36.397359Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:38:07.167683","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:38:07.295268Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:38:37.671095","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:38:37.816159Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:39:08.210900","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:39:08.355614Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:39:39.087117","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:39:39.252280Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:40:09.560769","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:40:09.713998Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:40:40.361273","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:40:40.473466Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:41:11.147407","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:41:11.274043Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:41:42.314292","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:41:42.415368Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:42:13.146891","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:42:14.153802Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:42:44.305892","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:42:44.663148Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:43:15.092070","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:43:15.236463Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:43:25.137802","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:43:26.403865Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:43:57.167738","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:43:57.285659Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:44:27.606652","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:44:27.711291Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:44:58.578447","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:44:58.710755Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:45:28.888902","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:45:28.982459Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:45:59.079115","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:45:59.299638Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:46:29.666957","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:46:29.851734Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:47:00.060577","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:47:00.221699Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:47:31.096527","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:47:31.211522Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:48:01.477200","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:48:01.661188Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:48:31.991330","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:48:32.148480Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:49:02.554314","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:49:02.757087Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:49:33.131302","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:49:33.656626Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:50:04.440810","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:50:04.693612Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:50:35.189229","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:50:35.299103Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:51:06.340929","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:51:06.436794Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:51:37.239324","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:51:39.352983Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:51:40.814251","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:51:41.605219Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:52:13.697201","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:52:13.857041Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:52:44.323139","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:52:44.453375Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:53:15.408584","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:53:15.568149Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:53:46.674651","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:53:48.284339Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:54:18.555169","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:54:18.731059Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:54:50.610310","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:54:50.794317Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:55:21.389456","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:55:21.572902Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:55:52.581845","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:55:52.969194Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:56:23.700056","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:56:23.941057Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:56:54.839019","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:56:55.009387Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:57:25.334535","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:57:25.598849Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:57:56.306465","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:57:56.416943Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:58:27.434493","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:58:27.553105Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:58:57.701287","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:58:57.815041Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:59:28.785106","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:59:28.952852Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T20:59:59.219989","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T20:59:59.374392Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:00:30.417220","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:00:34.022937Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:01:05.080598","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:01:05.214006Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:01:35.360334","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:01:35.504870Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:02:05.827439","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:02:05.985632Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:02:36.660478","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:02:36.867485Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:03:06.997683","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:03:07.109929Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:03:38.970679","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:03:39.281245Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:04:10.895412","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:04:11.086611Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:04:41.692549","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:04:42.006085Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:05:12.095929","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:05:12.225317Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:05:43.679401","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:05:43.861772Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:06:14.108348","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:06:14.352715Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:06:44.871319","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:06:45.086777Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:07:15.364736","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:07:15.530180Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:07:45.971576","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:07:46.166150Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:08:17.143320","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:08:17.393186Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:08:48.000805","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:08:48.192035Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:09:18.431700","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:09:22.081042Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:09:52.186411","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:09:52.931011Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:10:23.289723","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:10:23.459892Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:10:54.173740","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:10:54.351553Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:11:25.260709","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:11:26.074634Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:11:57.688322","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:12:00.832731Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:12:31.838885","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:12:32.386120Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:13:03.806359","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:13:06.647852Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:14:18.302345","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:14:19.136912Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:14:52.503142","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:14:53.870775Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:15:25.686638","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:15:27.206015Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:15:57.882261","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:15:58.230958Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:16:30.921091","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:16:31.936634Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:17:02.689505","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:17:02.940454Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:17:33.048282","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:17:33.209229Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:18:04.216978","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:18:04.355334Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:18:35.109495","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:18:35.223803Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:19:06.262515","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:19:06.393963Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:19:37.646027","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:19:39.147796Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:20:09.387231","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:20:21.220902Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:21:22.768827","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:21:25.614752Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:22:24.915783","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:22:29.438185Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:27:35.326254","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:27:36.335423Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:28:07.354381","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:28:07.529156Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:28:38.369852","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:28:38.521946Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:29:08.658642","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:29:08.765227Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:29:40.113439","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:29:40.258786Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:30:10.312982","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:30:10.422925Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:30:40.662246","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:30:40.776549Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:31:11.175338","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:31:11.297859Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:31:41.501866","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:31:41.796513Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:32:12.094838","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:32:12.234658Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:32:42.436952","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:32:42.741558Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:33:12.919165","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:33:13.067596Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:33:43.516961","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:33:43.626827Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:34:14.133849","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:34:14.378105Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:34:45.509766","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:37:37.424170","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:37:40.709855Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:38:11.524023","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:38:12.540662Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:38:43.617535","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:38:43.959609Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:39:14.376742","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:39:14.511490Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:39:44.951025","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:39:45.123510Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:40:02.003526","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:40:02.128971Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:40:02.130591","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019affcd-b1ac-7f64-a144-ab75e4e3f228","logger":"task"}
+{"timestamp":"2025-12-08T21:40:32.302518","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:40:32.479069Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:41:03.751202","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:41:03.902624Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:41:34.150666","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:41:34.365748Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:42:05.005082","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:42:05.670159Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:42:38.719379","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:42:40.556520Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:43:12.676915","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:43:12.946321Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:43:43.522705","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:43:49.134129Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:46:35.839576","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:46:51.468098Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:52:30.808265","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:52:34.762115Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:53:05.461088","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:53:06.892565Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:53:37.333337","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:53:38.345258Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:54:21.557432","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:54:22.924372Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:55:47.666733","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:55:51.749279Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:59:12.479461","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:59:22.718826Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:59:21.471764","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T21:59:37.898436","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T21:59:51.272239Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T21:59:48.676311","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T21:59:48.793369","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:00:06.753897","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:00:11.836339Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:00:11.705686","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:00:21.424800","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:06:13.797282","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:06:37.158770Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:06:40.130394","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:06:43.154860Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:06:43.258026","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.262277","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.263809","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.264335","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.264516","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.264761","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.265099","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.265300","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.265557","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.265759","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.266104","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.266259","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.266396","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.266609","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.266937","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.267051","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.267191","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.267280","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.267595","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.267868","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.268143","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.268337","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.268491","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.268734","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.268930","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.269081","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.269198","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.269364","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.269490","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.269605","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.269729","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:43.269811","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:46.809074","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:06:48.892604Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:06:48.812188","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:06:58.930189","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:07:01.052382Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:07:01.304837","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:07:10.298709","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:07:13.302145Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:07:13.123689","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:07:20.782283","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:07:24.226764Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:07:24.563040","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:07:30.477689","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:07:37.589218Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:07:35.640927","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:07:44.659355","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:07:55.908313Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:07:57.168408","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:08:02.271849","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:08:05.752706Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:08:06.234186","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:08:08.686491","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:08:19.433923Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:08:18.936639","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:08:24.865795","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:08:36.103655Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:08:36.547679","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:08:36.631395","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:08:48.248095","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:08:59.682457","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:08:59.697545","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:09:03.055115Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:09:29.031780","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:10:04.515107","level":"error","event":"Process timed out, PID: 158","logger":"airflow.utils.timeout.TimeoutPosix"}
+{"timestamp":"2025-12-08T22:10:04.930474","level":"error","event":"Failed to import: /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag","error_detail":[{"exc_type":"AirflowTaskTimeout","exc_value":"DagBag import timeout for /opt/airflow/dags/load_dag.py after 30.0s.\nPlease take a look at these docs to improve your DAG import time:\n* https://airflow.apache.org/docs/apache-airflow/3.0.6/best-practices.html#top-level-python-code\n* https://airflow.apache.org/docs/apache-airflow/3.0.6/best-practices.html#reducing-dag-complexity, PID: 158","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py","lineno":394,"name":"parse"},{"filename":"<frozen importlib._bootstrap_external>","lineno":999,"name":"exec_module"},{"filename":"<frozen importlib._bootstrap>","lineno":488,"name":"_call_with_frames_removed"},{"filename":"/opt/airflow/dags/load_dag.py","lineno":5,"name":"<module>"},{"filename":"/opt/airflow/src/load.py","lineno":1,"name":"<module>"},{"filename":"/opt/airflow/src/transform.py","lineno":1,"name":"<module>"},{"filename":"/opt/airflow/src/extract.py","lineno":9,"name":"<module>"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/billboard.py","lineno":9,"name":"<module>"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/bs4/__init__.py","lineno":65,"name":"<module>"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/bs4/builder/__init__.py","lineno":843,"name":"<module>"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/bs4/builder/_lxml.py","lineno":31,"name":"<module>"},{"filename":"<frozen importlib._bootstrap>","lineno":645,"name":"parent"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/timeout.py","lineno":69,"name":"handle_timeout"}],"is_group":false,"exceptions":[]}]}
+{"timestamp":"2025-12-08T22:10:06.928231Z","level":"warning","event":"Process exited abnormally","exit_code":126,"logger":"processor"}
+{"timestamp":"2025-12-08T22:10:11.910628","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:10:20.903854Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:10:18.152692","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:10:18.161361","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:10:18.162149","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:10:58.973371","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:11:04.440408Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:11:05.048041","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:11:05.176745","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:11:10.537974","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:11:27.603637Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:11:15.178798","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:12:36.822396","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:12:39.363831Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:12:39.621007","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:12:39.799768Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:12:39.783334","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:13:03.495198","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:13:03.631623Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:13:03.639058","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:13:13.712308","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:13:14.027246Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:13:14.036438","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:13:25.461559","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:13:27.807933Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:13:27.435296","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:13:35.613903","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:13:36.984845Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:13:37.013263","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:13:45.609623","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:13:46.079451Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:13:45.996919","level":"warning","event":"Callback requested but no callback found","dag_id":"weekly_billboard_pipeline","task_id":"load_weekly_music_data","run_id":"backfill__2000-01-21T12:00:00+00:00","ti_id":"019afff4-fad0-729f-995d-c18059d94f52","logger":"task"}
+{"timestamp":"2025-12-08T22:14:16.879885","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:14:16.985842Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:14:47.359525","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:14:47.470407Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:15:18.271268","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:15:18.387248Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:15:48.530120","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:15:48.676267Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:16:18.874876","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:16:19.027212Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:16:49.759632","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:16:49.885948Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:17:20.301134","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:17:20.400374Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:17:50.926756","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:17:51.037901Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:18:21.677415","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:18:21.853030Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:18:52.418976","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:18:53.830544Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:19:24.771979","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:19:24.899213Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:19:55.064324","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:19:55.166422Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:20:25.500184","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:20:25.615963Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:20:55.925856","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:20:56.043412Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:21:26.885885","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:21:27.005828Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:21:57.784418","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:21:57.893706Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:22:28.392540","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:22:28.477512Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:22:59.101338","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:22:59.231548Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:23:29.560732","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:23:29.656952Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:24:00.577930","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:24:00.651863Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:24:30.970271","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:24:31.072006Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:25:01.612310","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:25:01.766808Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:25:32.197346","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:25:32.309362Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
+{"timestamp":"2025-12-08T22:26:03.011012","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-12-08T22:26:03.158883Z","level":"info","event":"postgresql+psycopg2://airflow:airflow@postgres/airflow","chan":"stdout","logger":"processor"}
