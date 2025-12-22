@@ -9,10 +9,11 @@ import pandas as pd
 import billboard
 from billboard import ChartData
 from requests.adapters import HTTPAdapter, Retry
+from sqlalchemy import create_engine, text
 
 
 
-load_dotenv()
+# load_dotenv()
 
 client_id = os.getenv("CLIENT_ID")
 client_secret = os.getenv("CLIENT_SECRET")
@@ -209,6 +210,56 @@ class MusicBrainzAPI():
     def __init__(self) -> object:
         self.base = base
         self.session = requests.Session()
+        self._db_engine = None
+    
+    def _get_db_engine(self):
+        """Get or create database engine connection."""
+        if self._db_engine is None:
+            database_url = os.getenv("MUSIC_WAREHOUSE_DATABASE_URL")
+            if not database_url:
+                return None
+            
+            # Ensure we're using psycopg2 driver
+            if not database_url.startswith("postgresql"):
+                return None
+            
+            if "+psycopg2" not in database_url:
+                database_url = database_url.replace("postgresql://", "postgresql+psycopg2://")
+            
+            self._db_engine = create_engine(
+                database_url,
+                pool_pre_ping=True,
+                echo=False
+            )
+        return self._db_engine
+    
+    def _artist_has_mbid_and_tag(self, artist_id):
+        """Check if an artist already has mbid and tag in the database."""
+        if not artist_id:
+            return False, None, None
+        
+        engine = self._get_db_engine()
+        if not engine:
+            # If no database connection, assume artist doesn't have data and proceed
+            return False, None, None
+        
+        try:
+            with engine.connect() as conn:
+                result = conn.execute(
+                    text("SELECT mbid, tag FROM artists WHERE artist_id = :artist_id LIMIT 1"),
+                    {"artist_id": artist_id}
+                )
+                row = result.fetchone()
+                if row and row[0] and row[1]:  # Both mbid and tag exist
+                    return True, row[0], row[1]
+                elif row and row[0]:  # Only mbid exists
+                    return False, row[0], None
+                else:
+                    return False, None, None
+        except Exception as e:
+            print(f"Error checking if artist has mbid and tag in database: {e}")
+            # On error, assume artist doesn't have data and proceed
+            return False, None, None
 
         
     # def make_request(self, endpoint):
@@ -252,7 +303,28 @@ class MusicBrainzAPI():
     
     
 
-    def get_mbid(self, link):
+    def get_mbid(self, link, artist_id=None):
+        """
+        Get MusicBrainz ID from a Spotify URL.
+        
+        Args:
+            link: Spotify artist URL
+            artist_id: Spotify artist_id to check in database (optional)
+        
+        Returns:
+            MusicBrainz ID if fetched or found in DB, None on error
+        """
+        # Check database first if artist_id is provided
+        if artist_id:
+            has_data, existing_mbid, existing_tag = self._artist_has_mbid_and_tag(artist_id)
+            if has_data:
+                print(f"Artist {artist_id} already has mbid ({existing_mbid}) and tag ({existing_tag}) in database, skipping MusicBrainz API calls")
+                return existing_mbid  # Return existing mbid so it can be used
+            elif existing_mbid:
+                # Artist has mbid but no tag, return the existing mbid
+                print(f"Artist {artist_id} already has mbid ({existing_mbid}) in database, skipping get_mbid call")
+                return existing_mbid
+        
         endpoint = f"url?resource={link}&inc=artist-rels"
         res = self.make_request(endpoint)
 
@@ -267,7 +339,24 @@ class MusicBrainzAPI():
         return artist.get("id")
     
     
-    def mb_get_artist_tag(self, id):
+    def mb_get_artist_tag(self, id, artist_id=None):
+        """
+        Get artist tag/genre from MusicBrainz ID.
+        
+        Args:
+            id: MusicBrainz artist ID
+            artist_id: Spotify artist_id to check in database (optional)
+        
+        Returns:
+            Artist tag if fetched, None if artist already has tag in DB or on error
+        """
+        # Check database first if artist_id is provided
+        if artist_id:
+            has_data, existing_mbid, existing_tag = self._artist_has_mbid_and_tag(artist_id)
+            if has_data:
+                print(f"Artist {artist_id} already has tag ({existing_tag}) in database, skipping MusicBrainz tag fetch")
+                return existing_tag
+        
         endpoint = f"artist/{id}?inc=tags"
         res = self.make_request(endpoint)
         if not res:
@@ -297,6 +386,72 @@ class ReccoBeats:
     def __init__(self):
         self.base=base_recco
         self.headers=headers
+        self._db_engine = None
+    
+    def _get_db_engine(self):
+        """Get or create database engine connection."""
+        if self._db_engine is None:
+            database_url = os.getenv("MUSIC_WAREHOUSE_DATABASE_URL")
+            if not database_url:
+                return None
+            
+            # Ensure we're using psycopg2 driver
+            if not database_url.startswith("postgresql"):
+                return None
+            
+            if "+psycopg2" not in database_url:
+                database_url = database_url.replace("postgresql://", "postgresql+psycopg2://")
+            
+            self._db_engine = create_engine(
+                database_url,
+                pool_pre_ping=True,
+                echo=False
+            )
+        return self._db_engine
+    
+    def _song_exists_in_db(self, song_id):
+        """Check if a song already exists in the database."""
+        if not song_id:
+            return False
+        
+        engine = self._get_db_engine()
+        if not engine:
+            # If no database connection, assume song doesn't exist and proceed
+            return False
+        
+        try:
+            with engine.connect() as conn:
+                result = conn.execute(
+                    text("SELECT 1 FROM songs WHERE song_id = :song_id LIMIT 1"),
+                    {"song_id": song_id}
+                )
+                return result.fetchone() is not None
+        except Exception as e:
+            print(f"Error checking if song exists in database: {e}")
+            # On error, assume song doesn't exist and proceed
+            return False
+    
+    def _artist_exists_in_db(self, artist_id):
+        """Check if an artist already exists in the database."""
+        if not artist_id:
+            return False
+        
+        engine = self._get_db_engine()
+        if not engine:
+            # If no database connection, assume artist doesn't exist and proceed
+            return False
+        
+        try:
+            with engine.connect() as conn:
+                result = conn.execute(
+                    text("SELECT 1 FROM artists WHERE artist_id = :artist_id LIMIT 1"),
+                    {"artist_id": artist_id}
+                )
+                return result.fetchone() is not None
+        except Exception as e:
+            print(f"Error checking if artist exists in database: {e}")
+            # On error, assume artist doesn't exist and proceed
+            return False
 
     def _make_request_with_retry(self, url, max_retries=5, initial_delay=1):
         ## Make a request with exponential backoff retry logic for rate limiting.
@@ -358,7 +513,22 @@ class ReccoBeats:
         else:
             return None
 
-    def get_recco_audio_analysis(self, id):
+    def get_recco_audio_analysis(self, id, song_id=None):
+        """
+        Get audio analysis for a track.
+        
+        Args:
+            id: ReccoBeats track ID
+            song_id: Spotify song_id to check in database (optional)
+        
+        Returns:
+            Audio features dict if fetched, None if song already exists in DB or on error
+        """
+        # Check database first if song_id is provided
+        if song_id and self._song_exists_in_db(song_id):
+            print(f"Song {song_id} already exists in database, skipping audio features fetch")
+            return None
+        
         url = f"{self.base}/track/{id}/audio-features"
         res = self._make_request_with_retry(url)
         
@@ -373,7 +543,22 @@ class ReccoBeats:
                 print(f"Audio analysis request failed for {id} with code {res.status_code}: {res.reason}")
             return None
 
-    def get_recco_artist_details(self, id):
+    def get_recco_artist_details(self, id, artist_id=None):
+        """
+        Get artist details from ReccoBeats API.
+        
+        Args:
+            id: ReccoBeats artist ID
+            artist_id: Spotify artist_id to check in database (optional)
+        
+        Returns:
+            Artist details dict if fetched, None if artist already exists in DB or on error
+        """
+        # Check database first if artist_id is provided
+        if artist_id and self._artist_exists_in_db(artist_id):
+            print(f"Artist {artist_id} already exists in database, skipping artist details fetch")
+            return None
+        
         url = f"{self.base}/artist/{id}"
         res = self._make_request_with_retry(url)
         if res and res.status_code == 200:

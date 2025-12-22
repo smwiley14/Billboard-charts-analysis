@@ -7,12 +7,8 @@ import pandas as pd
 import sqlalchemy as sa
 
 
-sp = SpotifyAPI()
-mb = MusicBrainzAPI()
-rec = ReccoBeats()
 
-
-def get_spotify_song_ids_and_artists(chart) -> tuple[list, list, list, list]:
+def get_spotify_song_ids_and_artists(sp, chart) -> tuple[list, list, list, list]:
     """
     Returns:
         - chart: chart entries with song_id and artist_id (primary artist) added
@@ -94,24 +90,25 @@ def normalize_artist_name(artist) -> str:
     return artist
     
 
-def get_tags_music_brainz(artists):
+def get_tags_music_brainz(mb, artists):
     mbids = []
     for artist in artists:
         print(artist)
 
         url = artist['url']
-        mbid = mb.get_mbid(url)
+        artist_id = artist.get('id')  # Spotify artist_id for database check
+        mbid = mb.get_mbid(url, artist_id=artist_id)
         if mbid:
             artist['mbid'] = mbid
-            tag = mb.mb_get_artist_tag(mbid)
+            tag = mb.mb_get_artist_tag(mbid, artist_id=artist_id)
             if tag:
                 artist['tag'] = tag
         else:
             print(f"unable to get mbid for {url}")
-        time.sleep(1)
+        # time.sleep(1)
 
 
-def get_audio_details(song_ids):
+def get_audio_details(rec, song_ids):
     """
     Fetch audio features for songs from ReccoBeats API.
     Includes retry logic with exponential backoff for 429 rate limit errors.
@@ -173,8 +170,9 @@ def get_audio_details(song_ids):
             print(f"  Processing audio analysis {idx}/{len(all_results)}...")
         # Use the song_id we extracted, or fall back to 'id' field
         track_id = item.get('id')
+        song_id = item.get('song_id')  # Spotify song_id for database check
         if track_id:
-            res = rec.get_recco_audio_analysis(track_id)
+            res = rec.get_recco_audio_analysis(track_id, song_id=song_id)
             if res:
                 item.update(res)
         
@@ -243,13 +241,19 @@ def get_dataframes(chart_week: str):
     - artists (PK: artist_id)
     - song_artists (PK: song_id, artist_id) - many-to-many relationship
     """
+
+
+    sp = SpotifyAPI()
+    mb = MusicBrainzAPI()
+    rec = ReccoBeats()
+
     temp = BillBoardChart(chart_week).data
     chart = create_chart_object(temp)
 
-    chart, song_ids, artists, song_artists = get_spotify_song_ids_and_artists(chart)
-    get_tags_music_brainz(artists)
+    chart, song_ids, artists, song_artists = get_spotify_song_ids_and_artists(sp, chart)
+    get_tags_music_brainz(mb, artists)
 
-    df_audio = get_audio_details(song_ids)
+    df_audio = get_audio_details(rec, song_ids)
     df_artists = pd.DataFrame(artists)
     df_chart = pd.DataFrame(chart)
 
