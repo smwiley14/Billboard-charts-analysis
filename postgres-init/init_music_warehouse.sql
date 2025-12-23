@@ -1,19 +1,26 @@
+SELECT 'CREATE DATABASE music_warehouse'
+WHERE NOT EXISTS (
+  SELECT FROM pg_database WHERE datname = 'music_warehouse'
+)\gexec
+
+\c music_warehouse
+
 -- Music Chart Data Warehouse Schema
 -- This DDL creates the tables for storing Billboard chart data with song and artist information
 
 -- Drop tables if they exist (for clean setup - remove in production)
-DROP TABLE IF EXISTS chart_entries CASCADE;
-DROP TABLE IF EXISTS song_artists CASCADE;
-DROP TABLE IF EXISTS chart_weeks CASCADE;
-DROP TABLE IF EXISTS songs CASCADE;
-DROP TABLE IF EXISTS artists CASCADE;
+-- DROP TABLE IF EXISTS chart_entries CASCADE;
+-- DROP TABLE IF EXISTS song_artists CASCADE;
+-- DROP TABLE IF EXISTS chart_weeks CASCADE;
+-- DROP TABLE IF EXISTS songs CASCADE;
+-- DROP TABLE IF EXISTS artists CASCADE;
 
 -- ============================================================================
 -- DIMENSION TABLES
 -- ============================================================================
 
 -- Chart Weeks: Represents each week for which chart data is collected
-CREATE TABLE chart_weeks (
+CREATE TABLE IF NOT EXISTS chart_weeks (
     chart_week DATE PRIMARY KEY
 );
 
@@ -21,7 +28,7 @@ COMMENT ON TABLE chart_weeks IS 'Represents each week for which Billboard chart 
 COMMENT ON COLUMN chart_weeks.chart_week IS 'The date of the chart week (typically a Friday)';
 
 -- Artists: Unique artists appearing on charts
-CREATE TABLE artists (
+CREATE TABLE IF NOT EXISTS artists (
     artist_id VARCHAR(255) PRIMARY KEY,
     name VARCHAR(500) NOT NULL,
     url TEXT,
@@ -39,7 +46,7 @@ COMMENT ON COLUMN artists.tag IS 'Primary genre/tag from MusicBrainz';
 -- Songs: Unique songs appearing on charts
 -- Note: Audio feature columns are dynamically added from ReccoBeats API
 -- Common columns include: danceability, energy, valence, tempo, key, mode, etc.
-CREATE TABLE songs (
+CREATE TABLE IF NOT EXISTS songs (
     song_id VARCHAR(255) PRIMARY KEY,
     title VARCHAR(500) NOT NULL,
     -- Additional audio feature columns will be added dynamically by pandas to_sql
@@ -71,7 +78,7 @@ COMMENT ON COLUMN songs.title IS 'Song title';
 
 -- Song Artists: Many-to-many relationship between songs and artists
 -- A song can have multiple artists (collaborations, features, etc.)
-CREATE TABLE song_artists (
+CREATE TABLE IF NOT EXISTS song_artists (
     song_id VARCHAR(255) NOT NULL,
     artist_id VARCHAR(255) NOT NULL,
     PRIMARY KEY (song_id, artist_id),
@@ -91,7 +98,7 @@ COMMENT ON COLUMN song_artists.artist_id IS 'Foreign key to artists table';
 -- ============================================================================
 
 -- Chart Entries: Individual chart positions for each week
-CREATE TABLE chart_entries (
+CREATE TABLE IF NOT EXISTS chart_entries (
     chart_week DATE NOT NULL,
     rank INTEGER NOT NULL,
     song_id VARCHAR(255),
