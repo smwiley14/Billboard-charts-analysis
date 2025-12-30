@@ -60,6 +60,11 @@ x-airflow-common:
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
+    AIRFLOW__SCHEDULER__PARSING_PROCESSES: "1"
+    AIRFLOW__CORE__PARALLELISM: "2"
+    AIRFLOW__CORE__DAG_CONCURRENCY: "1"
+    AIRFLOW__CORE__MAX_ACTIVE_RUNS_PER_DAG: "1"
+
     # Database URL for music data pipeline (uses same postgres service and database as Airflow)
     # To use a separate database, create it first: docker-compose exec postgres psql -U airflow -c "CREATE DATABASE music_db;"
     # Then change this to: postgresql+psycopg2://airflow:airflow@postgres/music_db
@@ -67,7 +72,7 @@ x-airflow-common:
     MUSIC_WAREHOUSE_DATABASE_URL: postgresql+psycopg2://airflow:airflow@postgres/music_warehouse
     AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
-    AIRFLOW__CORE__LOAD_EXAMPLES: 'true'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__CORE__EXECUTION_API_SERVER_URL: 'http://airflow-apiserver:8080/execution/'
     # yamllint disable rule:line-length
     # Use simple http server on scheduler for health checks
@@ -149,10 +154,21 @@ services:
       retries: 5
       start_period: 30s
     restart: always
+
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    environment:
+      AIRFLOW__API__WORKERS: "1"
+      AIRFLOW__API__WORKER_TIMEOUT: "120"
+
+      AIRFLOW__CORE__PARALLELISM: "2"
+      AIRFLOW__CORE__DAG_CONCURRENCY: "1"
+      AIRFLOW__CORE__MAX_ACTIVE_RUNS_PER_DAG: "1"
+
+      AIRFLOW__SCHEDULER__PARSING_PROCESSES: "1"
+
     build: .
 
 
@@ -166,6 +182,7 @@ services:
       retries: 5
       start_period: 30s
     restart: always
+
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:

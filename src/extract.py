@@ -35,6 +35,9 @@ class SpotifyAPI:
         """
         for attempt in range(1, max_retries + 1):
             try:
+                if hasattr(self, "_token") and time.time() < self._token_expires_at:
+                    return self._token
+
                 response = requests.post(
                     self.token_url,
                     data={"grant_type": "client_credentials"},

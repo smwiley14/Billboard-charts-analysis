@@ -153,7 +153,7 @@ def load_to_postgres(date: str):
             raise  # Re-raise to see the full error
 
         # also write out a CSV export for inspection
-        csv_path = os.path.join(output_dir, f"{name}.csv")
-        df.to_csv(csv_path, index=False)
-        print(f"  Exported CSV to {csv_path}")
+        # csv_path = os.path.join(output_dir, f"{name}.csv")
+        # df.to_csv(csv_path, index=False)
+        # print(f"  Exported CSV to {csv_path}")
 
