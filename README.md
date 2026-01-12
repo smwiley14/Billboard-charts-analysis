@@ -39,3 +39,16 @@ select * from chart_weeks
 
 DELETE FROM dag_run WHERE dag_id='weekly_billboard_pipeline';
 DELETE FROM task_instance WHERE dag_id='weekly_billboard_pipeline';
+
+## Dashboard Deployment
+
+To deploy the Streamlit dashboard on your Digital Ocean server, see the deployment guide:
+
+- **Quick Start**: See `deploy/QUICK_START.md` for the fastest deployment path
+- **Full Guide**: See `deploy/DEPLOYMENT.md` for detailed deployment options including:
+  - Systemd service deployment (recommended)
+  - Docker deployment
+  - Nginx reverse proxy setup
+  - Digital Ocean App Platform
+
+The dashboard requires a `MUSIC_WAREHOUSE_DATABASE_URL` environment variable pointing to your PostgreSQL database.
