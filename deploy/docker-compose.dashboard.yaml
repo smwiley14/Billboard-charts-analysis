@@ -1,5 +1,8 @@
 # Add this service to your existing docker-compose.yaml
 # Or use: docker compose -f docker-compose.yaml -f deploy/docker-compose.dashboard.yaml up -d
+#
+# Note: This will use the MUSIC_WAREHOUSE_DATABASE_URL from your main docker-compose.yaml
+# If you want to override it, set it in your .env file or modify the environment section below
 
 services:
   dashboard:
@@ -10,13 +13,17 @@ services:
     ports:
       - "8501:8501"
     env_file:
-      - .env
+      - ${ENV_FILE_PATH:-.env}  # Use same env file as your main docker-compose
     environment:
-      - MUSIC_WAREHOUSE_DATABASE_URL=${MUSIC_WAREHOUSE_DATABASE_URL}
+      # Use the same database URL format as your Airflow services
+      # This connects to the postgres service in your docker-compose network
+      MUSIC_WAREHOUSE_DATABASE_URL: postgresql+psycopg2://airflow:airflow@postgres:5432/music_warehouse
     depends_on:
       postgres:
         condition: service_healthy
     restart: unless-stopped
+    networks:
+      - default  # Use the same network as your other services
     healthcheck:
       test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8501/_stcore/health')"]
       interval: 30s

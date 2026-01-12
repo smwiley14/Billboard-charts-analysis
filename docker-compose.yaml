@@ -386,9 +386,11 @@ services:
     ports:
       - "8501:8501"
     env_file:
-      - .env
+      - ${ENV_FILE_PATH:-.env}  # Use same env file as other services
     environment:
-      - MUSIC_WAREHOUSE_DATABASE_URL=${MUSIC_WAREHOUSE_DATABASE_URL}
+      # Use the same database connection as Airflow services
+      # postgres is the service name in docker-compose network
+      MUSIC_WAREHOUSE_DATABASE_URL: postgresql+psycopg2://airflow:airflow@postgres:5432/music_warehouse
     depends_on:
       postgres:
         condition: service_healthy

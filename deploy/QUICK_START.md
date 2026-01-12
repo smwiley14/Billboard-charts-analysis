@@ -2,14 +2,33 @@
 
 ## Fastest Way to Deploy
 
-### 1. On Your Local Machine
+### Option A: Using Docker Compose (Easiest - Already Configured!)
+
+If you're using docker-compose, the dashboard service is **already configured** in your `docker-compose.yaml` with the correct environment variables. Just start it:
 
 ```bash
-# Make sure you have your .env file ready with database connection
-# Format: postgresql+psycopg2://user:password@host:port/database
+# On your Digital Ocean server
+cd /path/to/your/project
+
+# Start the dashboard service
+docker compose up -d dashboard
+
+# Check it's running
+docker compose ps dashboard
+
+# View logs
+docker compose logs -f dashboard
 ```
 
-### 2. On Your Digital Ocean Server
+The dashboard will be available at: `http://YOUR_SERVER_IP:8501`
+
+**Note**: The environment variables are already set in docker-compose.yaml, so no .env file needed!
+
+---
+
+### Option B: Systemd Service (For Non-Docker Deployment)
+
+### 1. On Your Digital Ocean Server
 
 ```bash
 # SSH into your server
@@ -31,21 +50,29 @@ chmod +x deploy/deploy.sh
 sudo ./deploy/deploy.sh
 ```
 
-### 3. Access Your Dashboard
+### 2. Access Your Dashboard
 
 Open in browser: `http://YOUR_SERVER_IP:8501`
 
 ---
 
-## If Your Database is on the Same Server
+## If Using Docker Compose
 
-If your PostgreSQL database is running on the same Digital Ocean server:
+If you're using docker-compose (which you are!), the database connection is **already configured**:
+- The dashboard service uses: `postgresql+psycopg2://airflow:airflow@postgres:5432/music_warehouse`
+- `postgres` is the service name in your docker network
+- No .env file needed - it's hardcoded in docker-compose.yaml
+
+Just run: `docker compose up -d dashboard`
+
+---
+
+## If Your Database is on the Same Server (Non-Docker)
+
+If your PostgreSQL database is running on the same Digital Ocean server but NOT in docker:
 
 ```bash
 # Find your database connection details
-# If using Docker:
-docker compose ps  # See your postgres container
-
 # Your connection string might be:
 MUSIC_WAREHOUSE_DATABASE_URL=postgresql+psycopg2://airflow:airflow@localhost:5432/music_warehouse
 ```
