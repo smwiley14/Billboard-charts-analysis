@@ -1,3 +1,16 @@
+21st century Billboard Charts Analysis
+
+This project grabs the [Billboard Hot 100]([url](https://www.billboard.com/charts/hot-100/)) every week from 2000 - Present Day and uses Airflow and a number of Different API's to transform and ingest data into a postgres database. I then ran some analytics on this database and presented a dashboard - this is deployed at [(link)](url).
+
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 
 ## Backfill Command
 
