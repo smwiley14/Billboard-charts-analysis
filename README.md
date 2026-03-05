@@ -50,5 +50,11 @@ To deploy the Streamlit dashboard on your Digital Ocean server, see the deployme
   - Docker deployment
   - Nginx reverse proxy setup
   - Digital Ocean App Platform
+- **Public Access**: See `deploy/PUBLIC_ACCESS.md` for making the dashboard publicly accessible with HTTPS
 
 The dashboard requires a `MUSIC_WAREHOUSE_DATABASE_URL` environment variable pointing to your PostgreSQL database.
+
+### 🎵 Live Dashboard
+
+[![Dashboard](https://img.shields.io/badge/Dashboard-Live-brightgreen)](https://your-dashboard-url.com)
+

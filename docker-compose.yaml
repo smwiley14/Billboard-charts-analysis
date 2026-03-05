@@ -381,7 +381,7 @@ services:
   dashboard:
     build:
       context: .
-      dockerfile: deploy/Dockerfile.dashboard
+      dockerfile: Dockerfile.dashboard
     container_name: billboard-dashboard
     ports:
       - "8501:8501"

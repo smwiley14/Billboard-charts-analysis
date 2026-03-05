@@ -92,8 +92,61 @@ def escape_sql_string(value):
     """Escape single quotes in SQL string values."""
     return str(value).replace("'", "''")
 
+@st.cache_data(ttl=3600)
+def get_chart_week_bounds():
+    """Get min/max chart weeks for global date filters."""
+    bounds_query = """
+    SELECT 
+        MIN(chart_week) AS min_week,
+        MAX(chart_week) AS max_week
+    FROM chart_entries
+    WHERE chart_week IS NOT NULL
+    """
+    return load_data(bounds_query)
+
+def build_chart_week_filter(filters, alias="ce"):
+    """Build reusable chart week SQL filter and parameters."""
+    if not filters:
+        return "", {}
+    start_date = filters.get("start_date")
+    end_date = filters.get("end_date")
+    if not start_date or not end_date:
+        return "", {}
+    week_col = f"{alias}.chart_week" if alias else "chart_week"
+    return f" AND {week_col} BETWEEN :start_date AND :end_date", {
+        "start_date": start_date,
+        "end_date": end_date
+    }
+
+def render_sidebar_filters():
+    """Render global sidebar filters for cross-page analysis."""
+    st.sidebar.markdown("### Global Filters")
+    bounds_df = get_chart_week_bounds()
+    if bounds_df is None or bounds_df.empty:
+        return {"start_date": None, "end_date": None, "top_n": 25}
+    min_week = bounds_df.iloc[0]["min_week"]
+    max_week = bounds_df.iloc[0]["max_week"]
+    date_range = st.sidebar.date_input(
+        "Chart week range",
+        value=(min_week, max_week),
+        min_value=min_week,
+        max_value=max_week
+    )
+    if isinstance(date_range, (tuple, list)) and len(date_range) == 2:
+        start_date, end_date = date_range
+    else:
+        start_date, end_date = min_week, max_week
+    top_n = st.sidebar.slider("Rows/series limit", min_value=10, max_value=100, value=25, step=5)
+    st.sidebar.caption("Applies to Overview, Top Songs/Artists, Chart Trajectories, and Analysis Workbench.")
+    return {
+        "start_date": start_date,
+        "end_date": end_date,
+        "top_n": top_n
+    }
+
 def main():
-    st.markdown('<h1 class="main-header">🎵 Billboard Charts Analysis Dashboard</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">Billboard Charts Analysis Dashboard</h1>', unsafe_allow_html=True)
+    st.caption("Explore chart performance, identify momentum shifts, and compare trends across time windows.")
     
     engine = get_db_engine()
     if not engine:
@@ -101,29 +154,45 @@ def main():
     
     # Sidebar navigation
     st.sidebar.title("Navigation")
+    filters = render_sidebar_filters()
     page = st.sidebar.radio(
         "Choose a page",
-        ["📊 Overview", "🏆 Top Songs & Artists", "🎸 Genre Analysis", "🎼 Audio Features", "📈 Chart Trajectories", "📅 Time Trends"]
+        [
+            "📊 Overview",
+            "🏆 Top Songs & Artists",
+            "🎸 Genre Analysis",
+            "🎼 Audio Features",
+            "📈 Chart Trajectories",
+            "📅 Time Trends",
+            "🔎 Analysis Workbench"
+        ]
     )
     
     if page == "📊 Overview":
-        show_overview()
+        show_overview(filters)
     elif page == "🏆 Top Songs & Artists":
-        show_top_songs_artists()
+        show_top_songs_artists(filters)
     elif page == "🎸 Genre Analysis":
         show_genre_analysis()
     elif page == "🎼 Audio Features":
         show_audio_features()
     elif page == "📈 Chart Trajectories":
-        show_chart_trajectories()
+        show_chart_trajectories(filters)
     elif page == "📅 Time Trends":
         show_time_trends()
+    elif page == "🔎 Analysis Workbench":
+        show_analysis_workbench(filters)
 
-def show_overview():
+def show_overview(filters):
     st.header("📊 Dashboard Overview")
+    st.caption(
+        f"Current window: {filters['start_date']} to {filters['end_date']} | Top N: {filters['top_n']}"
+    )
     
     # Key Metrics
     st.subheader("Key Metrics")
+    date_filter_plain, date_params = build_chart_week_filter(filters, alias=None)
+    date_filter_ce, _ = build_chart_week_filter(filters, alias="ce")
     
     metrics_query = """
     SELECT 
@@ -136,8 +205,10 @@ def show_overview():
     FROM chart_entries
     WHERE chart_week IS NOT NULL
     """
+    if date_filter_plain:
+        metrics_query += date_filter_plain
     
-    metrics_df = load_data(metrics_query)
+    metrics_df = load_data(metrics_query, date_params if date_filter_plain else None)
     
     if metrics_df is not None and not metrics_df.empty:
         metrics = metrics_df.iloc[0]
@@ -172,11 +243,15 @@ def show_overview():
         COUNT(*) as total_entries
     FROM chart_entries
     WHERE chart_week IS NOT NULL
+    """
+    if date_filter_plain:
+        coverage_query += date_filter_plain
+    coverage_query += """
     GROUP BY chart_week
     ORDER BY chart_week
     """
     
-    coverage_df = load_data(coverage_query)
+    coverage_df = load_data(coverage_query, date_params if date_filter_plain else None)
     
     if coverage_df is not None and not coverage_df.empty:
         fig = make_subplots(
@@ -225,12 +300,19 @@ def show_overview():
     FROM chart_entries ce
     JOIN artists a ON ce.artist_id = a.artist_id
     WHERE a.tag IS NOT NULL AND a.tag != ''
+    """
+    if date_filter_ce:
+        top_genres_query += date_filter_ce
+    top_genres_query += """
     GROUP BY a.tag
     ORDER BY song_count DESC
-    LIMIT 10
+    LIMIT :top_n
     """
     
-    genres_df = load_data(top_genres_query)
+    genre_params = {"top_n": filters["top_n"]}
+    if date_filter_ce:
+        genre_params.update(date_params)
+    genres_df = load_data(top_genres_query, genre_params)
     
     if genres_df is not None and not genres_df.empty:
         fig = px.bar(
@@ -245,8 +327,59 @@ def show_overview():
         fig.update_layout(height=400, yaxis={'categoryorder': 'total ascending'})
         st.plotly_chart(fig, use_container_width=True)
 
-def show_top_songs_artists():
+    st.subheader("📉 Biggest Rank Improvements")
+    movers_query = f"""
+    WITH song_rank_path AS (
+        SELECT 
+            ce.song_id,
+            s.title,
+            ce.chart_week,
+            ce.rank,
+            ROW_NUMBER() OVER (PARTITION BY ce.song_id ORDER BY ce.chart_week ASC) AS first_obs,
+            ROW_NUMBER() OVER (PARTITION BY ce.song_id ORDER BY ce.chart_week DESC) AS last_obs
+        FROM chart_entries ce
+        JOIN songs s ON ce.song_id = s.song_id
+        WHERE ce.song_id IS NOT NULL
+        {date_filter_ce}
+    ),
+    rank_summary AS (
+        SELECT
+            song_id,
+            title,
+            MIN(CASE WHEN first_obs = 1 THEN rank END) AS first_rank,
+            MIN(CASE WHEN last_obs = 1 THEN rank END) AS latest_rank,
+            MIN(rank) AS best_rank,
+            COUNT(*) AS total_entries
+        FROM song_rank_path
+        GROUP BY song_id, title
+    )
+    SELECT
+        title,
+        first_rank,
+        latest_rank,
+        best_rank,
+        total_entries,
+        (first_rank - latest_rank) AS rank_change
+    FROM rank_summary
+    WHERE first_rank IS NOT NULL
+      AND latest_rank IS NOT NULL
+      AND total_entries >= 4
+    ORDER BY rank_change DESC, best_rank ASC
+    LIMIT :top_n
+    """
+    movers_params = {"top_n": filters["top_n"]}
+    if date_filter_ce:
+        movers_params.update(date_params)
+    movers_df = load_data(movers_query, movers_params)
+    if movers_df is not None and not movers_df.empty:
+        st.dataframe(movers_df, use_container_width=True, hide_index=True)
+
+def show_top_songs_artists(filters):
     st.header("🏆 Top Songs & Artists")
+    st.caption(
+        f"Current window: {filters['start_date']} to {filters['end_date']} | Top N: {filters['top_n']}"
+    )
+    date_filter_ce, date_params = build_chart_week_filter(filters, alias="ce")
     
     tab1, tab2, tab3 = st.tabs(["Top Songs", "Top Artists", "Song Performance"])
     
@@ -266,13 +399,20 @@ def show_top_songs_artists():
         LEFT JOIN song_artists sa ON s.song_id = sa.song_id
         LEFT JOIN artists a ON sa.artist_id = a.artist_id
         WHERE ce.song_id IS NOT NULL
+        """
+        if date_filter_ce:
+            top_songs_query += date_filter_ce
+        top_songs_query += """
         GROUP BY s.song_id, s.title
         HAVING COUNT(DISTINCT ce.chart_week) > 0
         ORDER BY weeks_on_chart DESC, best_rank ASC
-        LIMIT 50
+        LIMIT :top_n
         """
         
-        songs_df = load_data(top_songs_query)
+        songs_params = {"top_n": filters["top_n"]}
+        if date_filter_ce:
+            songs_params.update(date_params)
+        songs_df = load_data(top_songs_query, songs_params)
         
         if songs_df is not None and not songs_df.empty:
             st.dataframe(
@@ -310,13 +450,20 @@ def show_top_songs_artists():
         FROM chart_entries ce
         JOIN artists a ON ce.artist_id = a.artist_id
         WHERE ce.artist_id IS NOT NULL
+        """
+        if date_filter_ce:
+            top_artists_query += date_filter_ce
+        top_artists_query += """
         GROUP BY a.artist_id, a.name, a.tag
         HAVING COUNT(DISTINCT ce.chart_week) > 0
         ORDER BY unique_songs DESC, total_weeks DESC
-        LIMIT 50
+        LIMIT :top_n
         """
         
-        artists_df = load_data(top_artists_query)
+        artist_params = {"top_n": filters["top_n"]}
+        if date_filter_ce:
+            artist_params.update(date_params)
+        artists_df = load_data(top_artists_query, artist_params)
         
         if artists_df is not None and not artists_df.empty:
             st.dataframe(
@@ -352,11 +499,16 @@ def show_top_songs_artists():
         SELECT DISTINCT s.title, s.song_id
         FROM songs s
         JOIN chart_entries ce ON s.song_id = ce.song_id
+        WHERE 1=1
+        """
+        if date_filter_ce:
+            song_search_query += date_filter_ce
+        song_search_query += """
         ORDER BY s.title
         LIMIT 1000
         """
         
-        all_songs = load_data(song_search_query)
+        all_songs = load_data(song_search_query, date_params if date_filter_ce else None)
         
         if all_songs is not None and not all_songs.empty:
             selected_song = st.selectbox(
@@ -376,10 +528,17 @@ def show_top_songs_artists():
                     ce.is_new
                 FROM chart_entries ce
                 WHERE ce.song_id = :song_id
+                """
+                if date_filter_ce:
+                    performance_query += date_filter_ce
+                performance_query += """
                 ORDER BY ce.chart_week
                 """
                 
-                perf_df = load_data(performance_query, {'song_id': song_id})
+                performance_params = {'song_id': song_id}
+                if date_filter_ce:
+                    performance_params.update(date_params)
+                perf_df = load_data(performance_query, performance_params)
                 
                 if perf_df is not None and not perf_df.empty:
                     # Chart trajectory
@@ -621,11 +780,176 @@ def show_audio_features():
                     title="Audio Features Correlation Matrix"
                 )
                 st.plotly_chart(fig, use_container_width=True)
+            
+            # Extreme Outliers Section
+            st.subheader("🔍 Extreme Outliers")
+            st.markdown("Songs with unusually high or low values in audio features")
+            
+            # Get songs with all their features for outlier detection
+            outliers_query = """
+            SELECT DISTINCT
+                s.song_id,
+                s.title,
+                s.danceability,
+                s.energy,
+                s.valence,
+                s.tempo,
+                s.acousticness,
+                s.instrumentalness,
+                s.liveness,
+                s.speechiness,
+                s.loudness, 
+                STRING_AGG(DISTINCT a.name, ', ' ORDER BY a.name) as artists,
+                MIN(ce.rank) as best_rank
+            FROM songs s
+            JOIN chart_entries ce ON s.song_id = ce.song_id
+            LEFT JOIN song_artists sa ON s.song_id = sa.song_id
+            LEFT JOIN artists a ON sa.artist_id = a.artist_id
+            WHERE s.song_id IS NOT NULL
+            GROUP BY s.song_id, s.title, s.danceability, s.energy, s.valence, s.tempo,
+                     s.acousticness, s.instrumentalness, s.liveness, s.speechiness, s.loudness
+            """
+            
+            outliers_df = load_data(outliers_query)
+            
+            if outliers_df is not None and not outliers_df.empty:
+                # Filter to numeric features that exist in the data
+                numeric_features_available = [f for f in numeric_features if f in outliers_df.columns]
+                
+                if len(numeric_features_available) > 0:
+                    # Calculate outliers using IQR method
+                    outlier_songs = []
+                    
+                    for feature in numeric_features_available:
+                        feature_data = outliers_df[feature].dropna()
+                        
+                        if len(feature_data) > 0:
+                            Q1 = feature_data.quantile(0.25)
+                            Q3 = feature_data.quantile(0.75)
+                            IQR = Q3 - Q1
+                            
+                            # Define outlier bounds (using 1.5 * IQR rule, but we'll be more strict)
+                            lower_bound = Q1 - 2.5 * IQR  # More extreme outliers
+                            upper_bound = Q3 + 2.5 * IQR
+                            
+                            # Find songs that are outliers
+                            feature_outliers = outliers_df[
+                                (outliers_df[feature] < lower_bound) | 
+                                (outliers_df[feature] > upper_bound)
+                            ].copy()
+                            
+                            if not feature_outliers.empty:
+                                feature_outliers['outlier_feature'] = feature
+                                feature_outliers['outlier_value'] = feature_outliers[feature]
+                                feature_outliers['outlier_type'] = feature_outliers[feature].apply(
+                                    lambda x: 'Very Low' if x < lower_bound else 'Very High'
+                                )
+                                feature_outliers['percentile'] = feature_outliers[feature].apply(
+                                    lambda x: (feature_data < x).sum() / len(feature_data) * 100
+                                )
+                                
+                                # Select relevant columns
+                                outlier_cols = ['song_id', 'title', 'artists', 'outlier_feature', 'outlier_value', 
+                                               'outlier_type', 'percentile', 'best_rank']
+                                available_cols = [c for c in outlier_cols if c in feature_outliers.columns]
+                                
+                                outlier_songs.append(feature_outliers[available_cols])
+                    
+                    if outlier_songs:
+                        all_outliers = pd.concat(outlier_songs, ignore_index=True)
+                        
+                        # Sort by how extreme the outlier is (percentile closest to 0 or 100)
+                        all_outliers['extremeness'] = all_outliers['percentile'].apply(
+                            lambda x: min(x, 100 - x)
+                        )
+                        all_outliers = all_outliers.sort_values('extremeness', ascending=True)
+                        
+                        # Group by song to show all outlier features per song
+                        st.markdown("**Songs with extreme audio feature values:**")
+                        
+                        # Create tabs for different views
+                        tab1, tab2 = st.tabs(["By Song", "By Feature"])
+                        
+                        with tab1:
+                            # Group by song
+                            for idx, row in all_outliers.head(50).iterrows():
+                                with st.expander(f"🎵 {row['title']} - {row['artists'] if pd.notna(row.get('artists')) else 'Unknown Artist'}"):
+                                    col1, col2, col3, col4 = st.columns(4)
+                                    with col1:
+                                        st.metric("Feature", row['outlier_feature'].title())
+                                    with col3:
+                                        st.metric("Value", f"{row['outlier_value']:.4f}")
+                                    with col4:
+                                        st.metric("Type", row['outlier_type'])
+                                    
+                                    percentile = row['percentile']
+                                    if percentile < 1:
+                                        st.info(f"⚠️ This song is in the **bottom {percentile:.2f}%** of all songs for {row['outlier_feature']}")
+                                    elif percentile > 99:
+                                        st.info(f"⚠️ This song is in the **top {100-percentile:.2f}%** of all songs for {row['outlier_feature']}")
+                                    
+                                    if pd.notna(row.get('best_rank')):
+                                        st.caption(f"Best chart position: #{int(row['best_rank'])}")
+                        
+                        with tab2:
+                            # Group by feature
+                            feature_selector = st.selectbox(
+                                "Select feature to view outliers",
+                                numeric_features_available,
+                                key="outlier_feature_selector"
+                            )
+                            
+                            feature_outliers_filtered = all_outliers[
+                                all_outliers['outlier_feature'] == feature_selector
+                            ].sort_values('outlier_value', ascending=False)
+                            
+                            if not feature_outliers_filtered.empty:
+                                st.markdown(f"**Extreme outliers for {feature_selector}:**")
+                                
+                                # Create visualization
+                                fig = px.bar(
+                                    feature_outliers_filtered.head(20),
+                                    x='outlier_value',
+                                    y='title',
+                                    orientation='h',
+                                    color='outlier_type',
+                                    color_discrete_map={'Very High': '#ff6b6b', 'Very Low': '#4ecdc4'},
+                                    labels={
+                                        'outlier_value': f'{feature_selector.title()} Value',
+                                        'title': 'Song',
+                                        'outlier_type': 'Type'
+                                    },
+                                    title=f'Top 20 Extreme Outliers for {feature_selector.title()}',
+                                    hover_data=['song_id', 'artists', 'best_rank']
+                                )
+                                fig.update_layout(height=600, yaxis={'categoryorder': 'total ascending'})
+                                st.plotly_chart(fig, use_container_width=True)
+                                
+                                # Table view
+                                display_cols = ['title', 'song_id', 'artists', 'outlier_value', 'outlier_type', 'best_rank']
+                                available_display_cols = [c for c in display_cols if c in feature_outliers_filtered.columns]
+                                st.dataframe(
+                                    feature_outliers_filtered[available_display_cols].head(30),
+                                    use_container_width=True,
+                                    hide_index=True
+                                )
+                            else:
+                                st.info(f"No extreme outliers found for {feature_selector}")
+                    else:
+                        st.info("No extreme outliers found in the dataset.")
+                else:
+                    st.info("No numeric audio features available for outlier analysis.")
+            else:
+                st.info("No song data available for outlier analysis.")
     else:
         st.info("No audio features found in the database. Audio features may not have been ingested yet.")
 
-def show_chart_trajectories():
+def show_chart_trajectories(filters):
     st.header("📈 Chart Trajectories")
+    st.caption(
+        f"Current window: {filters['start_date']} to {filters['end_date']} | Top N: {filters['top_n']}"
+    )
+    date_filter_ce, date_params = build_chart_week_filter(filters, alias="ce")
     
     trajectory_query = """
     SELECT 
@@ -636,13 +960,20 @@ def show_chart_trajectories():
     FROM chart_entries ce
     JOIN songs s ON ce.song_id = s.song_id
     WHERE ce.song_id IS NOT NULL
+    """
+    if date_filter_ce:
+        trajectory_query += date_filter_ce
+    trajectory_query += """
     GROUP BY s.song_id, s.title
     HAVING COUNT(DISTINCT ce.chart_week) >= 10
     ORDER BY best_rank ASC, total_weeks DESC
-    LIMIT 100
+    LIMIT :top_n
     """
     
-    songs_df = load_data(trajectory_query)
+    trajectory_params = {"top_n": filters["top_n"]}
+    if date_filter_ce:
+        trajectory_params.update(date_params)
+    songs_df = load_data(trajectory_query, trajectory_params)
     
     if songs_df is not None and not songs_df.empty:
         selected_songs = st.multiselect(
@@ -665,10 +996,14 @@ def show_chart_trajectories():
             FROM chart_entries ce
             JOIN songs s ON ce.song_id = s.song_id
             WHERE ce.song_id IN ({placeholders})
+            """
+            if date_filter_ce:
+                trajectory_detail_query += date_filter_ce
+            trajectory_detail_query += """
             ORDER BY s.title, ce.chart_week
             """
             
-            traj_df = load_data(trajectory_detail_query)
+            traj_df = load_data(trajectory_detail_query, date_params if date_filter_ce else None)
             
             if traj_df is not None and not traj_df.empty:
                 fig = px.line(
@@ -714,6 +1049,136 @@ def show_chart_trajectories():
                 if pattern_data:
                     pattern_df = pd.DataFrame(pattern_data)
                     st.dataframe(pattern_df, use_container_width=True, hide_index=True)
+
+def show_analysis_workbench(filters):
+    st.header("🔎 Analysis Workbench")
+    st.caption("Purpose-built views for comparison and actionable trend analysis.")
+    date_filter_ce, date_params = build_chart_week_filter(filters, alias="ce")
+
+    start_ts = pd.to_datetime(filters["start_date"])
+    end_ts = pd.to_datetime(filters["end_date"])
+    midpoint = start_ts + (end_ts - start_ts) / 2
+
+    st.subheader("Period Comparison")
+    left_col, right_col = st.columns(2)
+
+    comparison_query = """
+    SELECT
+        COUNT(DISTINCT ce.song_id) AS unique_songs,
+        COUNT(DISTINCT ce.artist_id) AS unique_artists,
+        COUNT(*) AS total_entries,
+        AVG(ce.rank) AS avg_rank,
+        SUM(CASE WHEN ce.rank = 1 THEN 1 ELSE 0 END) AS number_one_weeks
+    FROM chart_entries ce
+    WHERE ce.chart_week BETWEEN :period_start AND :period_end
+    """
+
+    period_a = load_data(
+        comparison_query,
+        {"period_start": start_ts.date(), "period_end": midpoint.date()}
+    )
+    period_b = load_data(
+        comparison_query,
+        {"period_start": (midpoint + timedelta(days=1)).date(), "period_end": end_ts.date()}
+    )
+
+    if period_a is not None and period_b is not None and not period_a.empty and not period_b.empty:
+        a = period_a.iloc[0]
+        b = period_b.iloc[0]
+        avg_rank_a = float(a["avg_rank"]) if pd.notna(a["avg_rank"]) else 0.0
+        avg_rank_b = float(b["avg_rank"]) if pd.notna(b["avg_rank"]) else 0.0
+        with left_col:
+            st.markdown(f"**Period A:** {start_ts.date()} to {midpoint.date()}")
+            st.metric("Unique Songs", f"{int(a['unique_songs']):,}")
+            st.metric("Unique Artists", f"{int(a['unique_artists']):,}")
+            st.metric("Average Rank", f"{avg_rank_a:.2f}")
+        with right_col:
+            st.markdown(f"**Period B:** {(midpoint + timedelta(days=1)).date()} to {end_ts.date()}")
+            st.metric("Unique Songs", f"{int(b['unique_songs']):,}", delta=int(b['unique_songs'] - a['unique_songs']))
+            st.metric("Unique Artists", f"{int(b['unique_artists']):,}", delta=int(b['unique_artists'] - a['unique_artists']))
+            st.metric("Average Rank", f"{avg_rank_b:.2f}", delta=f"{(avg_rank_a - avg_rank_b):.2f} better")
+
+    st.subheader("Genre Momentum (Improving vs Declining)")
+    momentum_query = f"""
+    SELECT
+        a.tag AS genre,
+        COUNT(*) AS observations,
+        AVG(ce.rank) AS avg_rank,
+        REGR_SLOPE(ce.rank, EXTRACT(EPOCH FROM ce.chart_week)) AS rank_slope
+    FROM chart_entries ce
+    JOIN artists a ON ce.artist_id = a.artist_id
+    WHERE a.tag IS NOT NULL AND a.tag != ''
+    {date_filter_ce}
+    GROUP BY a.tag
+    HAVING COUNT(*) >= 20
+    ORDER BY rank_slope ASC
+    LIMIT :top_n
+    """
+    momentum_params = {"top_n": filters["top_n"]}
+    if date_filter_ce:
+        momentum_params.update(date_params)
+    momentum_df = load_data(momentum_query, momentum_params)
+
+    if momentum_df is not None and not momentum_df.empty:
+        fig = px.scatter(
+            momentum_df,
+            x="rank_slope",
+            y="avg_rank",
+            size="observations",
+            color="rank_slope",
+            hover_name="genre",
+            labels={
+                "rank_slope": "Rank Slope Over Time (negative = improving)",
+                "avg_rank": "Average Rank"
+            },
+            color_continuous_scale="RdYlGn_r",
+            title="Genre Momentum Map"
+        )
+        fig.update_yaxes(autorange="reversed")
+        fig.update_layout(height=480)
+        st.plotly_chart(fig, use_container_width=True)
+        st.dataframe(momentum_df, use_container_width=True, hide_index=True)
+
+    st.subheader("Artist Efficiency")
+    efficiency_query = f"""
+    SELECT
+        a.name AS artist_name,
+        COUNT(DISTINCT ce.song_id) AS unique_songs,
+        COUNT(*) AS total_entries,
+        AVG(ce.rank) AS avg_rank,
+        MIN(ce.rank) AS best_rank
+    FROM chart_entries ce
+    JOIN artists a ON ce.artist_id = a.artist_id
+    WHERE ce.artist_id IS NOT NULL
+    {date_filter_ce}
+    GROUP BY a.artist_id, a.name
+    HAVING COUNT(*) >= 10
+    ORDER BY unique_songs DESC, total_entries DESC
+    LIMIT :top_n
+    """
+    efficiency_params = {"top_n": filters["top_n"]}
+    if date_filter_ce:
+        efficiency_params.update(date_params)
+    efficiency_df = load_data(efficiency_query, efficiency_params)
+    if efficiency_df is not None and not efficiency_df.empty:
+        fig = px.scatter(
+            efficiency_df,
+            x="unique_songs",
+            y="avg_rank",
+            size="total_entries",
+            color="best_rank",
+            hover_name="artist_name",
+            labels={
+                "unique_songs": "Unique Songs",
+                "avg_rank": "Average Rank",
+                "best_rank": "Best Rank"
+            },
+            color_continuous_scale="RdYlGn_r",
+            title="Artist Output vs Efficiency"
+        )
+        fig.update_yaxes(autorange="reversed")
+        fig.update_layout(height=500)
+        st.plotly_chart(fig, use_container_width=True)
 
 def show_time_trends():
     st.header("📅 Time-Based Trends")
@@ -866,4 +1331,3 @@ def show_time_trends():
 
 if __name__ == "__main__":
     main()
-
