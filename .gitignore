@@ -6,3 +6,5 @@
 test.ipynb
 logs
 ./deploy
+./backfill_yearly.sh
+./migrate_songs_table.sql
