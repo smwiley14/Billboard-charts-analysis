@@ -10,7 +10,8 @@ import billboard
 from billboard import ChartData
 from requests.adapters import HTTPAdapter, Retry
 from sqlalchemy import create_engine, text
-
+import argparse
+from pathlib import Path
 
 
 # load_dotenv()
@@ -549,3 +550,56 @@ class ReccoBeats:
         if res and res.status_code == 200:
             return res.json()
         return None
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Standalone SpotifyAPI test runner")
+    parser.add_argument("--song", default="Blinding Lights", help="Song title to search")
+    parser.add_argument("--artist", default="The Weeknd", help="Artist name to search")
+    args = parser.parse_args()
+
+    # Load .env from project root when running this file directly.
+    root_env = Path(__file__).resolve().parent / ".env"
+    load_dotenv(root_env)
+
+    # Refresh module-level credentials after loading .env.
+    client_id = os.getenv("CLIENT_ID")
+    client_secret = os.getenv("CLIENT_SECRET")
+
+    print(f"Using .env: {root_env}")
+    print(f"CLIENT_ID present: {'yes' if client_id else 'no'}")
+    print(f"CLIENT_SECRET present: {'yes' if client_secret else 'no'}")
+
+    if not client_id or not client_secret:
+        raise SystemExit("Missing CLIENT_ID/CLIENT_SECRET. Update your .env and retry.")
+
+    sp = SpotifyAPI()
+
+    print("\n[1/3] Getting token...")
+    try:
+        token = sp.get_access_token()
+        print(f"Token OK (length={len(token)})")
+    except Exception as exc:
+        raise SystemExit(f"Token failed: {exc}")
+
+    print("\n[2/3] Raw search request...")
+    endpoint = f"search?q={quote(f'track:{args.song} artist:{args.artist}')}&type=track&limit=1"
+    raw = sp.make_request(endpoint=endpoint)
+    if raw is None:
+        print("Raw search failed (see full payload log above).")
+    else:
+        tracks = raw.get("tracks", {})
+        print(f"Raw search OK: total={tracks.get('total', 0)}, items={len(tracks.get('items', []))}")
+
+    print("\n[3/3] search_song helper...")
+    track = sp.search_song(args.song, args.artist)
+    if track is None:
+        print("search_song returned None")
+    elif track == -1:
+        print("search_song returned -1 (no results)")
+    else:
+        print("search_song returned track:")
+        print(f"  id={track.get('id')}")
+        print(f"  name={track.get('name')}")
+        names = ", ".join(a.get("name", "") for a in track.get("artists", []))
+        print(f"  artists={names}")
