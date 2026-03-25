@@ -137,7 +137,7 @@ def render_sidebar_filters():
     else:
         start_date, end_date = min_week, max_week
     top_n = st.sidebar.slider("Rows/series limit", min_value=10, max_value=100, value=25, step=5)
-    st.sidebar.caption("Applies to Overview, Top Songs/Artists, Chart Trajectories, and Analysis Workbench.")
+    st.sidebar.caption("Applies to Overview, Top Songs/Artists, Chart Trajectories, Time Trends, and Analysis Workbench.")
     return {
         "start_date": start_date,
         "end_date": end_date,
@@ -179,7 +179,7 @@ def main():
     elif page == "📈 Chart Trajectories":
         show_chart_trajectories(filters)
     elif page == "📅 Time Trends":
-        show_time_trends()
+        show_time_trends(filters)
     elif page == "🔎 Analysis Workbench":
         show_analysis_workbench(filters)
 
@@ -189,148 +189,183 @@ def show_overview(filters):
         f"Current window: {filters['start_date']} to {filters['end_date']} | Top N: {filters['top_n']}"
     )
     
-    # Key Metrics
-    st.subheader("Key Metrics")
     date_filter_plain, date_params = build_chart_week_filter(filters, alias=None)
     date_filter_ce, _ = build_chart_week_filter(filters, alias="ce")
     
+    st.subheader("Key Metrics")
     metrics_query = """
-    SELECT 
-        COUNT(DISTINCT chart_week) as total_weeks,
-        COUNT(DISTINCT song_id) as total_songs,
-        COUNT(DISTINCT artist_id) as total_artists,
-        MIN(chart_week) as earliest_week,
-        MAX(chart_week) as latest_week,
-        COUNT(*) as total_chart_entries
+    SELECT
+        COUNT(DISTINCT chart_week) AS total_weeks,
+        COUNT(*) AS total_entries,
+        COUNT(DISTINCT song_id) AS unique_songs,
+        COUNT(DISTINCT artist_id) AS unique_artists,
+        SUM(CASE WHEN is_new THEN 1 ELSE 0 END) AS new_entries,
+        AVG(COALESCE(weeks, 0)) AS avg_weeks_on_chart,
+        AVG(rank) AS avg_rank,
+        COUNT(DISTINCT CASE WHEN rank = 1 THEN COALESCE(song_id, title) END) AS unique_number_one_records
     FROM chart_entries
     WHERE chart_week IS NOT NULL
     """
     if date_filter_plain:
         metrics_query += date_filter_plain
-    
     metrics_df = load_data(metrics_query, date_params if date_filter_plain else None)
     
     if metrics_df is not None and not metrics_df.empty:
-        metrics = metrics_df.iloc[0]
+        m = metrics_df.iloc[0]
+        total_entries = int(m["total_entries"]) if pd.notna(m["total_entries"]) else 0
+        new_entries = int(m["new_entries"]) if pd.notna(m["new_entries"]) else 0
+        new_rate = (new_entries / total_entries * 100) if total_entries else 0
         
-        col1, col2, col3, col4 = st.columns(4)
+        c1, c2, c3, c4 = st.columns(4)
+        with c1:
+            st.metric("Chart Weeks", f"{int(m['total_weeks']):,}")
+        with c2:
+            st.metric("Total Entries", f"{total_entries:,}")
+        with c3:
+            st.metric("New Entry Rate", f"{new_rate:.1f}%")
+        with c4:
+            st.metric("Avg Weeks on Chart", f"{float(m['avg_weeks_on_chart']):.1f}")
         
-        with col1:
-            st.metric("Total Chart Weeks", f"{metrics['total_weeks']:,}")
-        
-        with col2:
-            st.metric("Unique Songs", f"{metrics['total_songs']:,}")
-        
-        with col3:
-            st.metric("Unique Artists", f"{metrics['total_artists']:,}")
-        
-        with col4:
-            st.metric("Total Chart Entries", f"{metrics['total_chart_entries']:,}")
-        
-        col5, col6 = st.columns(2)
-        with col5:
-            st.metric("Earliest Week", str(metrics['earliest_week']))
-        with col6:
-            st.metric("Latest Week", str(metrics['latest_week']))
-    
-    # Data Coverage Chart
-    st.subheader("📅 Data Coverage Over Time")
-    
-    coverage_query = """
-    SELECT 
+        c5, c6, c7 = st.columns(3)
+        with c5:
+            st.metric("Unique Songs", f"{int(m['unique_songs']):,}")
+        with c6:
+            st.metric("Unique Artists", f"{int(m['unique_artists']):,}")
+        with c7:
+            st.metric("Unique #1 Records", f"{int(m['unique_number_one_records']):,}")
+
+    st.subheader("Churn vs Tenure Over Time")
+    churn_query = """
+    SELECT
         chart_week,
-        COUNT(DISTINCT song_id) as unique_songs,
-        COUNT(*) as total_entries
+        SUM(CASE WHEN is_new THEN 1 ELSE 0 END) AS new_entries,
+        AVG(COALESCE(weeks, 0)) AS avg_weeks_on_chart
     FROM chart_entries
     WHERE chart_week IS NOT NULL
     """
     if date_filter_plain:
-        coverage_query += date_filter_plain
-    coverage_query += """
+        churn_query += date_filter_plain
+    churn_query += """
     GROUP BY chart_week
     ORDER BY chart_week
     """
+    churn_df = load_data(churn_query, date_params if date_filter_plain else None)
     
-    coverage_df = load_data(coverage_query, date_params if date_filter_plain else None)
-    
-    if coverage_df is not None and not coverage_df.empty:
-        fig = make_subplots(
-            rows=2, cols=1,
-            subplot_titles=("Unique Songs Per Week", "Total Chart Entries Per Week"),
-            vertical_spacing=0.1
-        )
-        
+    if churn_df is not None and not churn_df.empty:
+        fig = make_subplots(specs=[[{"secondary_y": True}]])
         fig.add_trace(
             go.Scatter(
-                x=coverage_df['chart_week'],
-                y=coverage_df['unique_songs'],
-                mode='lines',
-                name='Unique Songs',
-                line=dict(color='#1DB954', width=2)
+                x=churn_df["chart_week"],
+                y=churn_df["new_entries"],
+                mode="lines",
+                name="New Entries",
+                line=dict(color="#ff6b6b", width=2)
             ),
-            row=1, col=1
+            secondary_y=False
         )
-        
         fig.add_trace(
             go.Scatter(
-                x=coverage_df['chart_week'],
-                y=coverage_df['total_entries'],
-                mode='lines',
-                name='Total Entries',
-                line=dict(color='#1ed760', width=2)
+                x=churn_df["chart_week"],
+                y=churn_df["avg_weeks_on_chart"],
+                mode="lines",
+                name="Avg Weeks on Chart",
+                line=dict(color="#1DB954", width=2)
             ),
-            row=2, col=1
+            secondary_y=True
         )
-        
-        fig.update_layout(height=600, showlegend=False)
-        fig.update_xaxes(title_text="Chart Week", row=2, col=1)
-        fig.update_yaxes(title_text="Count", row=1, col=1)
-        fig.update_yaxes(title_text="Count", row=2, col=1)
-        
+        fig.update_layout(height=420, xaxis_title="Chart Week")
+        fig.update_yaxes(title_text="New Entries", secondary_y=False)
+        fig.update_yaxes(title_text="Avg Weeks on Chart", secondary_y=True)
         st.plotly_chart(fig, use_container_width=True)
     
-    # Top Genres Quick View
-    st.subheader("🎸 Top Genres")
-    
-    top_genres_query = """
-    SELECT 
-        a.tag as genre,
-        COUNT(DISTINCT ce.song_id) as song_count,
-        COUNT(DISTINCT ce.artist_id) as artist_count
+    st.subheader("Top Spot Turnover")
+    number_one_query = """
+    SELECT
+        ce.chart_week,
+        COALESCE(s.song_id, ce.song_id, ce.title) AS record_key,
+        COALESCE(s.title, ce.title) AS song_title,
+        COALESCE(a.name, ce.artist) AS artist_name
     FROM chart_entries ce
-    JOIN artists a ON ce.artist_id = a.artist_id
-    WHERE a.tag IS NOT NULL AND a.tag != ''
+    LEFT JOIN songs s ON ce.song_id = s.song_id
+    LEFT JOIN artists a ON ce.artist_id = a.artist_id
+    WHERE ce.rank = 1
     """
     if date_filter_ce:
-        top_genres_query += date_filter_ce
-    top_genres_query += """
-    GROUP BY a.tag
-    ORDER BY song_count DESC
+        number_one_query += date_filter_ce
+    number_one_query += " ORDER BY ce.chart_week"
+    number_one_df = load_data(number_one_query, date_params if date_filter_ce else None)
+    
+    if number_one_df is not None and not number_one_df.empty:
+        number_one_df = number_one_df.sort_values("chart_week").copy()
+        number_one_df["changed"] = (number_one_df["record_key"] != number_one_df["record_key"].shift(1)).astype(int)
+        number_one_df.loc[number_one_df.index[0], "changed"] = 0
+        number_one_df["rolling_turnover"] = number_one_df["changed"].rolling(12, min_periods=4).mean() * 100
+        
+        c1, c2 = st.columns([2, 1])
+        with c1:
+            fig = px.line(
+                number_one_df,
+                x="chart_week",
+                y="rolling_turnover",
+                labels={"rolling_turnover": "12-Week #1 Turnover Rate (%)", "chart_week": "Chart Week"},
+                title="How often does the #1 song change?"
+            )
+            fig.update_layout(height=380)
+            st.plotly_chart(fig, use_container_width=True)
+        with c2:
+            recent_changes = int(number_one_df["changed"].tail(52).sum()) if len(number_one_df) >= 52 else int(number_one_df["changed"].sum())
+            st.metric("Recent #1 Changes", recent_changes)
+            st.metric("All-Time #1 Changes", int(number_one_df["changed"].sum()))
+            st.caption("Recent = last 52 available chart weeks in the selected window.")
+    
+    st.subheader("Artist Concentration")
+    concentration_query = """
+    WITH artist_share AS (
+        SELECT
+            ce.artist_id,
+            COALESCE(a.name, ce.artist, 'Unknown Artist') AS artist_name,
+            COUNT(*) AS chart_entries,
+            COUNT(*)::numeric / SUM(COUNT(*)) OVER () AS entry_share
+        FROM chart_entries ce
+        LEFT JOIN artists a ON ce.artist_id = a.artist_id
+        WHERE 1=1
+    """
+    if date_filter_ce:
+        concentration_query += date_filter_ce
+    concentration_query += """
+        GROUP BY ce.artist_id, COALESCE(a.name, ce.artist, 'Unknown Artist')
+    )
+    SELECT
+        artist_name,
+        chart_entries,
+        entry_share
+    FROM artist_share
+    ORDER BY chart_entries DESC
     LIMIT :top_n
     """
-    
-    genre_params = {"top_n": filters["top_n"]}
+    concentration_params = {"top_n": filters["top_n"]}
     if date_filter_ce:
-        genre_params.update(date_params)
-    genres_df = load_data(top_genres_query, genre_params)
+        concentration_params.update(date_params)
+    concentration_df = load_data(concentration_query, concentration_params)
     
-    if genres_df is not None and not genres_df.empty:
+    if concentration_df is not None and not concentration_df.empty:
+        concentration_df["entry_share_pct"] = concentration_df["entry_share"] * 100
         fig = px.bar(
-            genres_df,
-            x='song_count',
-            y='genre',
-            orientation='h',
-            labels={'song_count': 'Number of Songs', 'genre': 'Genre'},
-            color='song_count',
-            color_continuous_scale='Greens'
+            concentration_df.head(20),
+            x="entry_share_pct",
+            y="artist_name",
+            orientation="h",
+            color="chart_entries",
+            labels={"entry_share_pct": "Share of Chart Entries (%)", "artist_name": "Artist"},
+            title="Top Artists by Share of Chart Entries"
         )
-        fig.update_layout(height=400, yaxis={'categoryorder': 'total ascending'})
+        fig.update_layout(height=520, yaxis={"categoryorder": "total ascending"})
         st.plotly_chart(fig, use_container_width=True)
 
-    st.subheader("📉 Biggest Rank Improvements")
+    st.subheader("Biggest Rank Improvements")
     movers_query = f"""
     WITH song_rank_path AS (
-        SELECT 
+        SELECT
             ce.song_id,
             s.title,
             ce.chart_week,
@@ -1180,153 +1215,248 @@ def show_analysis_workbench(filters):
         fig.update_layout(height=500)
         st.plotly_chart(fig, use_container_width=True)
 
-def show_time_trends():
+def show_time_trends(filters):
     st.header("📅 Time-Based Trends")
+    st.caption(
+        f"Current window: {filters['start_date']} to {filters['end_date']} | Top N: {filters['top_n']}"
+    )
+    date_filter_ce, date_params = build_chart_week_filter(filters, alias="ce")
     
-    tab1, tab2, tab3 = st.tabs(["Yearly Trends", "Decade Comparison", "Seasonal Patterns"])
+    tab1, tab2, tab3 = st.tabs(["Yearly Dynamics", "Rank Mobility", "Seasonality"])
     
     with tab1:
-        st.subheader("Yearly Trends")
+        st.subheader("Yearly Dynamics")
         
         yearly_query = """
         SELECT 
             EXTRACT(YEAR FROM ce.chart_week) as year,
-            COUNT(DISTINCT ce.song_id) as unique_songs,
-            COUNT(DISTINCT ce.artist_id) as unique_artists,
-            AVG(ce.rank) as avg_rank
+            COUNT(*) as total_entries,
+            SUM(CASE WHEN ce.is_new THEN 1 ELSE 0 END) as new_entries,
+            AVG(COALESCE(ce.weeks, 0)) as avg_weeks_on_chart,
+            COUNT(DISTINCT CASE WHEN ce.rank = 1 THEN COALESCE(ce.song_id, ce.title) END) as unique_number_one_records
         FROM chart_entries ce
         WHERE ce.chart_week IS NOT NULL
+        """
+        if date_filter_ce:
+            yearly_query += date_filter_ce
+        yearly_query += """
         GROUP BY EXTRACT(YEAR FROM ce.chart_week)
         ORDER BY year
         """
         
-        yearly_df = load_data(yearly_query)
+        yearly_df = load_data(yearly_query, date_params if date_filter_ce else None)
         
         if yearly_df is not None and not yearly_df.empty:
+            yearly_df["new_entry_rate"] = yearly_df["new_entries"] / yearly_df["total_entries"] * 100
             fig = make_subplots(
                 rows=2, cols=2,
-                subplot_titles=("Unique Songs Per Year", "Unique Artists Per Year", 
-                               "Average Chart Rank Per Year", "Songs vs Artists Ratio"),
-                specs=[[{"secondary_y": False}, {"secondary_y": False}],
-                       [{"secondary_y": False}, {"secondary_y": False}]]
+                subplot_titles=(
+                    "New Entry Rate (%)",
+                    "Average Weeks on Chart",
+                    "Unique #1 Records",
+                    "Total Entries"
+                )
             )
             
-            # Unique songs
             fig.add_trace(
-                go.Scatter(x=yearly_df['year'], y=yearly_df['unique_songs'], 
-                          mode='lines+markers', name='Unique Songs', line=dict(color='#1DB954')),
+                go.Scatter(
+                    x=yearly_df["year"],
+                    y=yearly_df["new_entry_rate"],
+                    mode="lines+markers",
+                    line=dict(color="#ff6b6b")
+                ),
                 row=1, col=1
             )
-            
-            # Unique artists
             fig.add_trace(
-                go.Scatter(x=yearly_df['year'], y=yearly_df['unique_artists'], 
-                          mode='lines+markers', name='Unique Artists', line=dict(color='#1ed760')),
+                go.Scatter(
+                    x=yearly_df["year"],
+                    y=yearly_df["avg_weeks_on_chart"],
+                    mode="lines+markers",
+                    line=dict(color="#1DB954")
+                ),
                 row=1, col=2
             )
-            
-            # Average rank
             fig.add_trace(
-                go.Scatter(x=yearly_df['year'], y=yearly_df['avg_rank'], 
-                          mode='lines+markers', name='Avg Rank', line=dict(color='#ff6b6b')),
+                go.Bar(
+                    x=yearly_df["year"],
+                    y=yearly_df["unique_number_one_records"],
+                    marker_color="#4ecdc4"
+                ),
                 row=2, col=1
             )
-            
-            # Ratio
-            yearly_df['ratio'] = yearly_df['unique_songs'] / yearly_df['unique_artists']
             fig.add_trace(
-                go.Scatter(x=yearly_df['year'], y=yearly_df['ratio'], 
-                          mode='lines+markers', name='Songs/Artists', line=dict(color='#4ecdc4')),
+                go.Bar(
+                    x=yearly_df["year"],
+                    y=yearly_df["total_entries"],
+                    marker_color="#1ed760"
+                ),
                 row=2, col=2
             )
             
             fig.update_layout(height=700, showlegend=False)
-            fig.update_xaxes(title_text="Year", row=2, col=1)
-            fig.update_xaxes(title_text="Year", row=2, col=2)
-            fig.update_yaxes(title_text="Count", row=1, col=1)
-            fig.update_yaxes(title_text="Count", row=1, col=2)
-            fig.update_yaxes(title_text="Average Rank", row=2, col=1)
-            fig.update_yaxes(title_text="Ratio", row=2, col=2)
+            fig.update_xaxes(title_text="Year")
             
             st.plotly_chart(fig, use_container_width=True)
     
     with tab2:
-        st.subheader("Decade Comparison")
+        st.subheader("Rank Mobility")
         
-        decade_query = """
-        SELECT 
-            CASE 
-                WHEN EXTRACT(YEAR FROM ce.chart_week) < 2010 THEN '2000s'
-                WHEN EXTRACT(YEAR FROM ce.chart_week) < 2020 THEN '2010s'
-                ELSE '2020s'
-            END as decade,
-            COUNT(DISTINCT ce.song_id) as unique_songs,
-            COUNT(DISTINCT ce.artist_id) as unique_artists,
-            AVG(ce.rank) as avg_rank
-        FROM chart_entries ce
-        WHERE ce.chart_week IS NOT NULL
-        GROUP BY decade
-        ORDER BY decade
+        mobility_query = """
+        WITH ranked AS (
+            SELECT
+                ce.song_id,
+                ce.chart_week,
+                ce.rank,
+                LAG(ce.rank) OVER (PARTITION BY ce.song_id ORDER BY ce.chart_week) AS prev_rank
+            FROM chart_entries ce
+            WHERE ce.song_id IS NOT NULL
+        ),
+        deltas AS (
+            SELECT
+                EXTRACT(YEAR FROM chart_week) AS year,
+                (prev_rank - rank) AS rank_delta
+            FROM ranked
+            WHERE prev_rank IS NOT NULL
+        )
+        SELECT
+            year,
+            AVG(rank_delta) AS avg_rank_delta,
+            SUM(CASE WHEN rank_delta >= 10 THEN 1 ELSE 0 END) AS big_jumps,
+            SUM(CASE WHEN rank_delta <= -10 THEN 1 ELSE 0 END) AS big_drops,
+            COUNT(*) AS comparable_rows
+        FROM deltas
+        WHERE 1=1
+        """
+        if date_filter_ce:
+            mobility_query += date_filter_ce.replace("ce.chart_week", "chart_week")
+        mobility_query += """
+        GROUP BY year
+        ORDER BY year
         """
         
-        decade_df = load_data(decade_query)
+        mobility_df = load_data(mobility_query, date_params if date_filter_ce else None)
         
-        if decade_df is not None and not decade_df.empty:
+        if mobility_df is not None and not mobility_df.empty:
             col1, col2 = st.columns(2)
             
             with col1:
-                fig = px.bar(
-                    decade_df,
-                    x='decade',
-                    y=['unique_songs', 'unique_artists'],
-                    barmode='group',
-                    labels={'value': 'Count', 'decade': 'Decade', 'variable': 'Type'},
-                    title='Unique Songs and Artists by Decade'
+                fig = px.line(
+                    mobility_df,
+                    x="year",
+                    y="avg_rank_delta",
+                    markers=True,
+                    labels={"avg_rank_delta": "Average Week-over-Week Rank Improvement", "year": "Year"},
+                    title="Do songs generally improve or decline week to week?"
                 )
+                fig.add_hline(y=0, line_dash="dash", line_color="gray")
                 st.plotly_chart(fig, use_container_width=True)
             
             with col2:
                 fig = px.bar(
-                    decade_df,
-                    x='decade',
-                    y='avg_rank',
-                    labels={'avg_rank': 'Average Chart Rank', 'decade': 'Decade'},
-                    title='Average Chart Rank by Decade',
-                    color='avg_rank',
-                    color_continuous_scale='RdYlGn'
+                    mobility_df,
+                    x="year",
+                    y=["big_jumps", "big_drops"],
+                    barmode="group",
+                    labels={"value": "Count", "year": "Year", "variable": "Event"},
+                    title="Large Weekly Moves (10+ spots)"
                 )
                 st.plotly_chart(fig, use_container_width=True)
     
     with tab3:
-        st.subheader("Seasonal Patterns")
+        st.subheader("Seasonality")
         
         seasonal_query = """
-        SELECT 
-            EXTRACT(MONTH FROM ce.chart_week) as month,
-            COUNT(DISTINCT ce.song_id) as unique_songs,
-            AVG(ce.rank) as avg_rank
-        FROM chart_entries ce
-        WHERE ce.chart_week IS NOT NULL
-        GROUP BY EXTRACT(MONTH FROM ce.chart_week)
-        ORDER BY month
+        WITH monthly_base AS (
+            SELECT
+                EXTRACT(MONTH FROM ce.chart_week) AS month,
+                AVG(COALESCE(ce.weeks, 0)) AS avg_weeks_on_chart,
+                AVG(CASE WHEN ce.is_new THEN 1 ELSE 0 END) * 100 AS new_entry_rate
+            FROM chart_entries ce
+            WHERE ce.chart_week IS NOT NULL
+        """
+        if date_filter_ce:
+            seasonal_query += date_filter_ce
+        seasonal_query += """
+            GROUP BY EXTRACT(MONTH FROM ce.chart_week)
+        ),
+        number_one AS (
+            SELECT
+                ce.chart_week,
+                EXTRACT(MONTH FROM ce.chart_week) AS month,
+                COALESCE(ce.song_id, ce.title) AS record_key
+            FROM chart_entries ce
+            WHERE ce.rank = 1
+        """
+        if date_filter_ce:
+            seasonal_query += date_filter_ce
+        seasonal_query += """
+        ),
+        number_one_changes AS (
+            SELECT
+                month,
+                CASE
+                    WHEN record_key != LAG(record_key) OVER (ORDER BY chart_week) THEN 1
+                    ELSE 0
+                END AS changed
+            FROM number_one
+        ),
+        monthly_turnover AS (
+            SELECT
+                month,
+                AVG(COALESCE(changed, 0)) * 100 AS number_one_change_rate
+            FROM number_one_changes
+            GROUP BY month
+        )
+        SELECT
+            mb.month,
+            mb.avg_weeks_on_chart,
+            mb.new_entry_rate,
+            COALESCE(mt.number_one_change_rate, 0) AS number_one_change_rate
+        FROM monthly_base mb
+        LEFT JOIN monthly_turnover mt ON mb.month = mt.month
+        ORDER BY mb.month
         """
         
-        seasonal_df = load_data(seasonal_query)
+        seasonal_df = load_data(seasonal_query, date_params if date_filter_ce else None)
         
         if seasonal_df is not None and not seasonal_df.empty:
             month_names = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
                           'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            seasonal_df['month_name'] = seasonal_df['month'].apply(lambda x: month_names[int(x)-1])
-            
-            fig = px.bar(
-                seasonal_df,
-                x='month_name',
-                y='unique_songs',
-                labels={'unique_songs': 'Unique Songs', 'month_name': 'Month'},
-                title='Unique Songs by Month',
-                color='unique_songs',
-                color_continuous_scale='Greens'
+            seasonal_df['month_name'] = seasonal_df['month'].apply(lambda x: month_names[int(x) - 1])
+
+            fig = make_subplots(specs=[[{"secondary_y": True}]])
+            fig.add_trace(
+                go.Bar(
+                    x=seasonal_df["month_name"],
+                    y=seasonal_df["new_entry_rate"],
+                    name="New Entry Rate (%)",
+                    marker_color="#ff6b6b"
+                ),
+                secondary_y=False
             )
+            fig.add_trace(
+                go.Scatter(
+                    x=seasonal_df["month_name"],
+                    y=seasonal_df["avg_weeks_on_chart"],
+                    mode="lines+markers",
+                    name="Avg Weeks on Chart",
+                    line=dict(color="#1DB954", width=2)
+                ),
+                secondary_y=True
+            )
+            fig.add_trace(
+                go.Scatter(
+                    x=seasonal_df["month_name"],
+                    y=seasonal_df["number_one_change_rate"],
+                    mode="lines+markers",
+                    name="#1 Change Rate (%)",
+                    line=dict(color="#4ecdc4", width=2, dash="dot")
+                ),
+                secondary_y=False
+            )
+            fig.update_layout(height=520, title="Monthly Stability vs Refresh")
+            fig.update_yaxes(title_text="Rates (%)", secondary_y=False)
+            fig.update_yaxes(title_text="Avg Weeks on Chart", secondary_y=True)
             st.plotly_chart(fig, use_container_width=True)
 
 if __name__ == "__main__":

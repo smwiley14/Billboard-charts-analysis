@@ -8,7 +8,7 @@ import sqlalchemy as sa
 
 
 
-def get_spotify_song_ids_and_artists(sp, chart) -> tuple[list, list, list, list]:
+def get_spotify_song_ids_and_artists(sp, chart, db_conn) -> tuple[list, list, list, list]:
     """
     Returns:
         - chart: chart entries with song_id and artist_id (primary artist) added
@@ -26,8 +26,33 @@ def get_spotify_song_ids_and_artists(sp, chart) -> tuple[list, list, list, list]
     for idx, song in enumerate(chart, 1):
         if idx % 10 == 0 or idx == 1:
             print(f"  Processing song {idx}/{total}: {song.get('title', 'Unknown')} by {song.get('artist', 'Unknown')}")
+        title = song.get('title', '')
         artist = normalize_artist_name(song["artist"])
-        res = sp.search_song(song["title"], artist)
+        
+        spotify_id = None
+        if db_conn:
+            cur = db_conn.cursor()
+            cur.execute(
+                "SELECT spotify_id FROM spotify_id_cache WHERE title = %s AND artist = %s",
+                (title, artist)
+            )
+            row = cur.fetchone()
+            if row:
+                # Use cached result
+                spotify_id = row[0]
+                res = {'id': spotify_id} if spotify_id else -1
+            else:
+                # Not in cache, call Spotify
+                res = sp.search_song(title, artist)
+                # Save to cache
+                cur.execute("""
+                    INSERT INTO spotify_id_cache (title, artist, spotify_id)
+                    VALUES (%s, %s, %s)
+                    ON CONFLICT (title, artist) DO NOTHING
+                """, (title, artist, res['id'] if res and res != -1 else None))
+                db_conn.commit()
+        else:
+            res = sp.search_song(song["title"], artist)
         # add spotify ID and primary artist reference to each entry
         # initialize as null in case not found
         song["song_id"] = None
@@ -231,7 +256,7 @@ def create_chart_object(chart):
     return rows
 
 
-def get_dataframes(chart_week: str):
+def get_dataframes(chart_week: str, db_conn):
     print("getting dataframes")
     """
     Build dataframes that align with the schema:
@@ -250,7 +275,7 @@ def get_dataframes(chart_week: str):
     temp = BillBoardChart(chart_week).data
     chart = create_chart_object(temp)
 
-    chart, song_ids, artists, song_artists = get_spotify_song_ids_and_artists(sp, chart)
+    chart, song_ids, artists, song_artists = get_spotify_song_ids_and_artists(sp, chart, db_conn)
     get_tags_music_brainz(mb, artists)
 
     df_audio = get_audio_details(rec, song_ids)

@@ -3,6 +3,7 @@ import os
 from sqlalchemy import create_engine, text
 import sqlalchemy as sa
 from sqlalchemy import MetaData, Table
+import psycopg2
 
 output_dir = "data_exports"
 os.makedirs(output_dir, exist_ok=True)
@@ -43,13 +44,25 @@ def load_to_postgres(date: str):
     `date` should be a YYYY-MM-DD string; this will be used as the `chart_week`
     primary key value in the warehouse schema.
     """
-    dfs = get_dataframes(date)
     # for name, df in dfs:
     #     df.to_csv(os.path.join(output_dir, f"{df.name}.csv"), index=False)
         # df.to_sql(name, con=engine, if_exists="append", index=False, method="multi")
         # print(f"  Successfully loaded {len(df)} rows into {name}")
 
     database_url = os.getenv("MUSIC_WAREHOUSE_DATABASE_URL")
+    
+    # ... your existing validation code ...
+
+    # Create psycopg2 connection for cache lookups
+    # Convert SQLAlchemy URL to psycopg2 format
+    pg_url = database_url.replace("postgresql+psycopg2://", "postgresql://")
+    db_conn = psycopg2.connect(pg_url)
+    
+    try:
+        dfs = get_dataframes(date, db_conn)
+    finally:
+        db_conn.close()
+
     if database_url:
         # Mask password in debug output
         masked_url = database_url
