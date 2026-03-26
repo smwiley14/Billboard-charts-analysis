@@ -115,6 +115,14 @@ CREATE TABLE IF NOT EXISTS chart_entries (
     CONSTRAINT chk_rank_range CHECK (rank >= 1 AND rank <= 100)
 );
 
+CREATE TABLE IF NOT EXISTS spotify_id_cache (
+    title VARCHAR,
+    artist VARCHAR,
+    spotify_id VARCHAR,
+    looked_up_at TIMESTAMP DEFAULT NOW(),
+    PRIMARY KEY (title, artist)
+);
+
 CREATE INDEX idx_chart_entries_chart_week ON chart_entries(chart_week);
 CREATE INDEX idx_chart_entries_song_id ON chart_entries(song_id);
 CREATE INDEX idx_chart_entries_artist_id ON chart_entries(artist_id);
