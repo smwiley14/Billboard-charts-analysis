@@ -554,8 +554,8 @@ class ReccoBeats:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Standalone SpotifyAPI test runner")
-    parser.add_argument("--song", default="Blinding Lights", help="Song title to search")
-    parser.add_argument("--artist", default="The Weeknd", help="Artist name to search")
+    parser.add_argument("--song", default="Liar", help="Song title to search")
+    parser.add_argument("--artist", default="Profyle", help="Artist name to search")
     args = parser.parse_args()
 
     # Load .env from project root when running this file directly.

@@ -98,16 +98,14 @@ class SpotifyAPI:
                 if res.status_code == 429:
                     retry_after = int(res.headers.get('Retry-After', 60))
                     try:
-        		delay = int(retry_after) + 5 if retry_after else 60
-    		    except ValueError:
-        		delay = 60
-		    if delay > 300:  # If wait is more than 5 minutes
-                        print(f"Rate limited with long wait ({retry_after}s). Skipping Spotify for this song.")
+                        delay = int(retry_after) + 5 if retry_after else 60
+                    except ValueError:
+                        delay = 60
+                    if delay > 300:  # If wait is more than 5 minutes
                         raise Exception(f"Spotify rate limit too long ({delay}s). Failing task to retry later.")
                     print(f"Rate limited (429). Retrying in {retry_after}s...")
                     time.sleep(delay)
                     continue
-
                 attempts += 1  # Only increment on non-429 responses
 
                 if res.status_code == 200:
