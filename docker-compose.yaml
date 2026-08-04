@@ -57,7 +57,7 @@ x-airflow-common:
     &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__CORE__AUTH_MANAGER: airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
-    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@postgres/airflow
     # AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow
     # AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0
     AIRFLOW__SCHEDULER__PARSING_PROCESSES: "1"
@@ -68,9 +68,9 @@ x-airflow-common:
     # Database URL for music data pipeline (uses same postgres service and database as Airflow)
     # To use a separate database, create it first: docker-compose exec postgres psql -U airflow -c "CREATE DATABASE music_db;"
     # Then change this to: postgresql+psycopg2://airflow:airflow@postgres/music_db
-    DATABASE_URL: postgresql+psycopg2://airflow:airflow@postgres/airflow
-    MUSIC_WAREHOUSE_DATABASE_URL: postgresql+psycopg2://airflow:airflow@postgres/music_warehouse
-    AIRFLOW__CORE__FERNET_KEY: ''
+    DATABASE_URL: postgresql+psycopg2://airflow:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@postgres/airflow
+    MUSIC_WAREHOUSE_DATABASE_URL: postgresql+psycopg2://airflow:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@postgres/music_warehouse
+    AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY:?generate one and set in .env}
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__CORE__EXECUTION_API_SERVER_URL: 'http://airflow-apiserver:8080/execution/'
@@ -102,12 +102,15 @@ x-airflow-common:
 
 services:
   postgres:
-    image: postgres:16    
+    image: postgres:16
     ports:
-      - "5432:5432"  
+      # Bind to localhost ONLY. Never expose Postgres to the public internet.
+      # Containers reach it via the internal network as host "postgres"; this
+      # published port is only for local admin (e.g. psql over an SSH tunnel).
+      - "127.0.0.1:5432:5432"
     environment:
       POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
       POSTGRES_DB: airflow
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
@@ -146,7 +149,8 @@ services:
     <<: *airflow-common
     command: api-server
     ports:
-      - "8080:8080"
+      # Localhost only — reach the Airflow UI via SSH tunnel, not the open internet.
+      - "127.0.0.1:8080:8080"
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/api/v2/version"]
       interval: 30s
@@ -336,7 +340,7 @@ services:
       _AIRFLOW_DB_MIGRATE: 'true'
       _AIRFLOW_WWW_USER_CREATE: 'true'
       _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
-      _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
+      _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:?set in .env}
       _PIP_ADDITIONAL_REQUIREMENTS: ''
     user: "0:0"
     build: .
@@ -391,7 +395,7 @@ services:
     environment:
       # Use the same database connection as Airflow services
       # postgres is the service name in docker-compose network
-      MUSIC_WAREHOUSE_DATABASE_URL: postgresql+psycopg2://airflow:airflow@postgres:5432/music_warehouse
+      MUSIC_WAREHOUSE_DATABASE_URL: postgresql+psycopg2://airflow:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@postgres:5432/music_warehouse
     depends_on:
       postgres:
         condition: service_healthy
