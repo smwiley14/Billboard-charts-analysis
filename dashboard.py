@@ -426,9 +426,12 @@ def _song_detail_data(song_id):
                s.danceability, s.energy, s.valence, s.acousticness,
                s.instrumentalness, s.liveness, s.speechiness,
                s.loudness, s.tempo, s.key, s.mode,
-               (SELECT STRING_AGG(a.name, ', ' ORDER BY a.name)
-                  FROM song_artists sa JOIN artists a ON a.artist_id = sa.artist_id
-                 WHERE sa.song_id = s.song_id) AS artists
+               COALESCE(
+                 (SELECT STRING_AGG(a.name, ', ' ORDER BY a.name)
+                    FROM song_artists sa JOIN artists a ON a.artist_id = sa.artist_id
+                   WHERE sa.song_id = s.song_id),
+                 (SELECT MAX(ce.artist) FROM chart_entries ce WHERE ce.song_id = s.song_id)
+               ) AS artists
         FROM songs s WHERE s.song_id = :sid
     """, {"sid": song_id})
     stats = load_data("""
@@ -500,50 +503,52 @@ def song_detail_dialog(song_id):
 
 
 @st.cache_data(ttl=3600)
-def _artist_detail_data(artist_id):
-    """All info for one artist: attributes, chart stats, and top songs."""
-    info = load_data(
-        "SELECT artist_id, name, url, mbid, tag FROM artists WHERE artist_id = :aid",
-        {"aid": artist_id})
+def _artist_detail_data(artist_name):
+    """Chart stats + top songs for one artist, keyed on the Billboard artist
+    string so it covers all entries (not just the ~6% with a resolved Spotify id).
+    Genre / Spotify link come from the resolved artist row when one exists."""
     stats = load_data("""
-        SELECT COUNT(DISTINCT song_id) AS unique_songs,
-               COUNT(DISTINCT chart_week) AS total_weeks,
-               MIN(rank) AS best_rank,
-               MIN(chart_week) AS first_week,
-               MAX(chart_week) AS last_week,
-               SUM(CASE WHEN rank = 1 THEN 1 ELSE 0 END) AS weeks_at_no1
-        FROM chart_entries WHERE artist_id = :aid
-    """, {"aid": artist_id})
+        SELECT COUNT(DISTINCT ce.song_id) AS unique_songs,
+               COUNT(DISTINCT ce.chart_week) AS total_weeks,
+               MIN(ce.rank) AS best_rank,
+               MIN(ce.chart_week) AS first_week,
+               MAX(ce.chart_week) AS last_week,
+               SUM(CASE WHEN ce.rank = 1 THEN 1 ELSE 0 END) AS weeks_at_no1,
+               MAX(ce.artist_id) AS artist_id,
+               MAX(a.tag) AS genre,
+               MAX(a.url) AS url
+        FROM chart_entries ce
+        LEFT JOIN artists a ON a.artist_id = ce.artist_id
+        WHERE ce.artist = :name
+    """, {"name": artist_name})
     songs = load_data("""
         SELECT s.title,
                MIN(ce.rank) AS best_rank,
                COUNT(DISTINCT ce.chart_week) AS weeks_on_chart
         FROM chart_entries ce JOIN songs s ON s.song_id = ce.song_id
-        WHERE ce.artist_id = :aid
+        WHERE ce.artist = :name
         GROUP BY s.song_id, s.title
         ORDER BY weeks_on_chart DESC, best_rank ASC
         LIMIT 15
-    """, {"aid": artist_id})
-    return info, stats, songs
+    """, {"name": artist_name})
+    return stats, songs
 
 
 @st.dialog("Artist details", width="large")
-def artist_detail_dialog(artist_id):
-    info, stats, songs = _artist_detail_data(artist_id)
-    if info is None or info.empty:
-        st.warning("No details found for this artist.")
-        return
-    row = info.iloc[0]
-    st.markdown(f"### {row['name']}")
-    if pd.notna(row.get('tag')) and row.get('tag'):
-        st.caption(f"Genre: {row['tag']}")
-    url = row['url'] if (pd.notna(row.get('url')) and row.get('url')) else \
-        (f"https://open.spotify.com/artist/{artist_id}" if artist_id else None)
-    if url:
-        st.markdown(f"[▶ Open on Spotify]({url})")
+def artist_detail_dialog(artist_name):
+    stats, songs = _artist_detail_data(artist_name)
+    st.markdown(f"### {artist_name}")
 
     if stats is not None and not stats.empty:
         s = stats.iloc[0]
+        if pd.notna(s.get('genre')) and s.get('genre'):
+            st.caption(f"Genre: {s['genre']}")
+        url = s['url'] if (pd.notna(s.get('url')) and s.get('url')) else (
+            f"https://open.spotify.com/artist/{s['artist_id']}"
+            if pd.notna(s.get('artist_id')) and s.get('artist_id') else None)
+        if url:
+            st.markdown(f"[▶ Open on Spotify]({url})")
+
         c1, c2, c3, c4 = st.columns(4)
         c1.metric("Charting songs", int(s['unique_songs']) if pd.notna(s['unique_songs']) else 0)
         c2.metric("Total weeks", int(s['total_weeks']) if pd.notna(s['total_weeks']) else 0)
@@ -557,6 +562,30 @@ def artist_detail_dialog(artist_id):
         st.dataframe(
             songs.rename(columns={'title': 'Song', 'best_rank': 'Peak', 'weeks_on_chart': 'Weeks'}),
             use_container_width=True, hide_index=True)
+    else:
+        st.info("No Spotify-linked songs found for this artist yet.")
+
+
+def render_clickable_table(df, columns, id_col, on_select, key_prefix):
+    """Render df as a table whose first column is a clickable (link-style) button
+    that calls on_select(row[id_col]). columns: list of (header, col_name, width)."""
+    widths = [c[2] for c in columns]
+    header = st.columns(widths)
+    for h, (title, _, _) in zip(header, columns):
+        h.markdown(f"**{title}**")
+    for _, r in df.iterrows():
+        cells = st.columns(widths)
+        if cells[0].button(str(r[columns[0][1]]), key=f"{key_prefix}_{r[id_col]}",
+                           type="tertiary", use_container_width=True):
+            on_select(r[id_col])
+        for cell, (_, col_name, _) in zip(cells[1:], columns[1:]):
+            val = r[col_name]
+            if pd.isna(val):
+                cell.write("—")
+            elif isinstance(val, float):
+                cell.write(f"{val:.1f}")
+            else:
+                cell.write(str(val))
 
 
 def show_top_songs_artists(filters):
@@ -578,7 +607,7 @@ def show_top_songs_artists(filters):
             COUNT(DISTINCT ce.chart_week) as weeks_on_chart,
             MIN(ce.rank) as best_rank,
             MAX(ce.weeks) as max_weeks,
-            STRING_AGG(DISTINCT a.name, ', ' ORDER BY a.name) as artists
+            COALESCE(STRING_AGG(DISTINCT a.name, ', ' ORDER BY a.name), MAX(ce.artist)) as artists
         FROM chart_entries ce
         JOIN songs s ON ce.song_id = s.song_id
         LEFT JOIN song_artists sa ON s.song_id = sa.song_id
@@ -600,20 +629,13 @@ def show_top_songs_artists(filters):
         songs_df = load_data(top_songs_query, songs_params)
         
         if songs_df is not None and not songs_df.empty:
-            st.caption("👆 Click a row to see full song details.")
-            song_event = st.dataframe(
-                songs_df[['title', 'artists', 'weeks_on_chart', 'best_rank', 'max_weeks']],
-                use_container_width=True,
-                hide_index=True,
-                on_select="rerun",
-                selection_mode="single-row",
-                key="top_songs_table",
+            st.caption("Click a song title to see full details.")
+            render_clickable_table(
+                songs_df,
+                columns=[("Song", "title", 4), ("Artist(s)", "artists", 3),
+                         ("Weeks", "weeks_on_chart", 1.3), ("Peak", "best_rank", 1.2)],
+                id_col="song_id", on_select=song_detail_dialog, key_prefix="songrow",
             )
-            if song_event.selection.rows:
-                sel_id = songs_df.iloc[song_event.selection.rows[0]]['song_id']
-                if st.session_state.get('_song_dialog_for') != sel_id:
-                    st.session_state['_song_dialog_for'] = sel_id
-                    song_detail_dialog(sel_id)
             
             # Visualization
             top_20 = songs_df.head(20)
@@ -635,21 +657,20 @@ def show_top_songs_artists(filters):
         
         top_artists_query = """
         SELECT
-            a.artist_id,
-            a.name as artist_name,
+            ce.artist as artist_name,
+            MAX(a.tag) as genre,
             COUNT(DISTINCT ce.song_id) as unique_songs,
             COUNT(DISTINCT ce.chart_week) as total_weeks,
             AVG(ce.rank) as avg_rank,
-            MIN(ce.rank) as best_rank,
-            a.tag as genre
+            MIN(ce.rank) as best_rank
         FROM chart_entries ce
-        JOIN artists a ON ce.artist_id = a.artist_id
-        WHERE ce.artist_id IS NOT NULL
+        LEFT JOIN artists a ON a.artist_id = ce.artist_id
+        WHERE ce.artist IS NOT NULL AND TRIM(ce.artist) <> ''
         """
         if date_filter_ce:
             top_artists_query += date_filter_ce
         top_artists_query += """
-        GROUP BY a.artist_id, a.name, a.tag
+        GROUP BY ce.artist
         HAVING COUNT(DISTINCT ce.chart_week) > 0
         ORDER BY unique_songs DESC, total_weeks DESC
         LIMIT :top_n
@@ -661,20 +682,14 @@ def show_top_songs_artists(filters):
         artists_df = load_data(top_artists_query, artist_params)
         
         if artists_df is not None and not artists_df.empty:
-            st.caption("👆 Click a row to see full artist details.")
-            artist_event = st.dataframe(
-                artists_df[['artist_name', 'genre', 'unique_songs', 'total_weeks', 'avg_rank', 'best_rank']],
-                use_container_width=True,
-                hide_index=True,
-                on_select="rerun",
-                selection_mode="single-row",
-                key="top_artists_table",
+            st.caption("Click an artist name to see full details.")
+            render_clickable_table(
+                artists_df,
+                columns=[("Artist", "artist_name", 3.5), ("Genre", "genre", 2.5),
+                         ("Songs", "unique_songs", 1), ("Weeks", "total_weeks", 1),
+                         ("Avg rank", "avg_rank", 1.3), ("Best", "best_rank", 1)],
+                id_col="artist_name", on_select=artist_detail_dialog, key_prefix="artistrow",
             )
-            if artist_event.selection.rows:
-                sel_aid = artists_df.iloc[artist_event.selection.rows[0]]['artist_id']
-                if st.session_state.get('_artist_dialog_for') != sel_aid:
-                    st.session_state['_artist_dialog_for'] = sel_aid
-                    artist_detail_dialog(sel_aid)
             
             # Visualization
             top_20 = artists_df.head(20)
