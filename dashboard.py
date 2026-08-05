@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
@@ -964,8 +965,18 @@ def show_audio_features():
                                 'genre': 'Genre'
                             },
                             title=f'{selected_feature.title()} vs Chart Rank',
-                            trendline='ols'
                         )
+                        # Overall linear trend via numpy — avoids the statsmodels
+                        # dependency that plotly's trendline='ols' would require.
+                        _valid = feature_df[[selected_feature, 'rank']].dropna()
+                        if len(_valid) >= 2:
+                            _m, _b = np.polyfit(_valid[selected_feature].astype(float),
+                                                _valid['rank'].astype(float), 1)
+                            _xs = np.array([_valid[selected_feature].min(),
+                                            _valid[selected_feature].max()], dtype=float)
+                            fig.add_trace(go.Scatter(
+                                x=_xs, y=_m * _xs + _b, mode='lines', name='Trend',
+                                line=dict(color='#111', dash='dash')))
                         st.plotly_chart(fig, use_container_width=True)
                     
                     with col2:
