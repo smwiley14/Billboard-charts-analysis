@@ -409,6 +409,156 @@ def show_overview(filters):
     if movers_df is not None and not movers_df.empty:
         st.dataframe(movers_df, use_container_width=True, hide_index=True)
 
+# ---------------------------------------------------------------------------
+# Detail panels: click a song/artist row to open a modal with everything we know
+# ---------------------------------------------------------------------------
+
+# Audio features that live on a 0-1 scale (comparable on one bar chart)
+_UNIT_FEATURES = ["danceability", "energy", "valence", "acousticness",
+                  "instrumentalness", "liveness", "speechiness"]
+
+
+@st.cache_data(ttl=3600)
+def _song_detail_data(song_id):
+    """All info for one song: attributes, chart stats, and rank trajectory."""
+    info = load_data("""
+        SELECT s.song_id, s.title, s.duration_ms, s.popularity,
+               s.danceability, s.energy, s.valence, s.acousticness,
+               s.instrumentalness, s.liveness, s.speechiness,
+               s.loudness, s.tempo, s.key, s.mode,
+               (SELECT STRING_AGG(a.name, ', ' ORDER BY a.name)
+                  FROM song_artists sa JOIN artists a ON a.artist_id = sa.artist_id
+                 WHERE sa.song_id = s.song_id) AS artists
+        FROM songs s WHERE s.song_id = :sid
+    """, {"sid": song_id})
+    stats = load_data("""
+        SELECT MIN(rank) AS best_rank,
+               COUNT(DISTINCT chart_week) AS weeks_on_chart,
+               MIN(chart_week) AS first_week,
+               MAX(chart_week) AS last_week,
+               SUM(CASE WHEN rank = 1 THEN 1 ELSE 0 END) AS weeks_at_no1
+        FROM chart_entries WHERE song_id = :sid
+    """, {"sid": song_id})
+    traj = load_data("""
+        SELECT chart_week, rank FROM chart_entries
+        WHERE song_id = :sid ORDER BY chart_week
+    """, {"sid": song_id})
+    return info, stats, traj
+
+
+@st.dialog("Song details", width="large")
+def song_detail_dialog(song_id):
+    info, stats, traj = _song_detail_data(song_id)
+    if info is None or info.empty:
+        st.warning("No details found for this song.")
+        return
+    row = info.iloc[0]
+    st.markdown(f"### {row['title']}")
+    if pd.notna(row.get('artists')) and row.get('artists'):
+        st.caption(row['artists'])
+    if song_id:
+        st.markdown(f"[▶ Open on Spotify](https://open.spotify.com/track/{song_id})")
+
+    if stats is not None and not stats.empty:
+        s = stats.iloc[0]
+        c1, c2, c3, c4 = st.columns(4)
+        c1.metric("Peak position", f"#{int(s['best_rank'])}" if pd.notna(s['best_rank']) else "—")
+        c2.metric("Weeks on chart", int(s['weeks_on_chart']) if pd.notna(s['weeks_on_chart']) else 0)
+        c3.metric("Weeks at #1", int(s['weeks_at_no1']) if pd.notna(s['weeks_at_no1']) else 0)
+        c4.metric("First charted", str(s['first_week']) if pd.notna(s['first_week']) else "—")
+
+    if traj is not None and not traj.empty and len(traj) > 1:
+        fig = px.line(traj, x='chart_week', y='rank', markers=True, title="Chart trajectory")
+        fig.update_yaxes(autorange="reversed", title="Rank")
+        fig.update_xaxes(title="")
+        fig.update_layout(height=300, margin=dict(t=40, b=0))
+        st.plotly_chart(fig, use_container_width=True)
+
+    feats = {f: float(row[f]) for f in _UNIT_FEATURES if f in row.index and pd.notna(row[f])}
+    if feats:
+        fdf = pd.DataFrame({"feature": list(feats.keys()), "value": list(feats.values())})
+        fig2 = px.bar(fdf, x="value", y="feature", orientation="h",
+                      range_x=[0, 1], title="Audio features")
+        fig2.update_layout(height=300, yaxis={'categoryorder': 'total ascending'},
+                           margin=dict(t=40, b=0))
+        st.plotly_chart(fig2, use_container_width=True)
+    else:
+        st.info("No Spotify audio features stored for this song yet.")
+
+    extras = {}
+    if pd.notna(row.get('tempo')):
+        extras["Tempo (BPM)"] = round(float(row['tempo']), 1)
+    if pd.notna(row.get('loudness')):
+        extras["Loudness (dB)"] = round(float(row['loudness']), 1)
+    if pd.notna(row.get('popularity')):
+        extras["Spotify popularity"] = int(row['popularity'])
+    if pd.notna(row.get('duration_ms')):
+        ms = int(row['duration_ms'])
+        extras["Duration"] = f"{ms // 60000}:{ms % 60000 // 1000:02d}"
+    if extras:
+        st.table(pd.DataFrame(extras.items(), columns=["Attribute", "Value"]))
+
+
+@st.cache_data(ttl=3600)
+def _artist_detail_data(artist_id):
+    """All info for one artist: attributes, chart stats, and top songs."""
+    info = load_data(
+        "SELECT artist_id, name, url, mbid, tag FROM artists WHERE artist_id = :aid",
+        {"aid": artist_id})
+    stats = load_data("""
+        SELECT COUNT(DISTINCT song_id) AS unique_songs,
+               COUNT(DISTINCT chart_week) AS total_weeks,
+               MIN(rank) AS best_rank,
+               MIN(chart_week) AS first_week,
+               MAX(chart_week) AS last_week,
+               SUM(CASE WHEN rank = 1 THEN 1 ELSE 0 END) AS weeks_at_no1
+        FROM chart_entries WHERE artist_id = :aid
+    """, {"aid": artist_id})
+    songs = load_data("""
+        SELECT s.title,
+               MIN(ce.rank) AS best_rank,
+               COUNT(DISTINCT ce.chart_week) AS weeks_on_chart
+        FROM chart_entries ce JOIN songs s ON s.song_id = ce.song_id
+        WHERE ce.artist_id = :aid
+        GROUP BY s.song_id, s.title
+        ORDER BY weeks_on_chart DESC, best_rank ASC
+        LIMIT 15
+    """, {"aid": artist_id})
+    return info, stats, songs
+
+
+@st.dialog("Artist details", width="large")
+def artist_detail_dialog(artist_id):
+    info, stats, songs = _artist_detail_data(artist_id)
+    if info is None or info.empty:
+        st.warning("No details found for this artist.")
+        return
+    row = info.iloc[0]
+    st.markdown(f"### {row['name']}")
+    if pd.notna(row.get('tag')) and row.get('tag'):
+        st.caption(f"Genre: {row['tag']}")
+    url = row['url'] if (pd.notna(row.get('url')) and row.get('url')) else \
+        (f"https://open.spotify.com/artist/{artist_id}" if artist_id else None)
+    if url:
+        st.markdown(f"[▶ Open on Spotify]({url})")
+
+    if stats is not None and not stats.empty:
+        s = stats.iloc[0]
+        c1, c2, c3, c4 = st.columns(4)
+        c1.metric("Charting songs", int(s['unique_songs']) if pd.notna(s['unique_songs']) else 0)
+        c2.metric("Total weeks", int(s['total_weeks']) if pd.notna(s['total_weeks']) else 0)
+        c3.metric("Best rank", f"#{int(s['best_rank'])}" if pd.notna(s['best_rank']) else "—")
+        c4.metric("Weeks at #1", int(s['weeks_at_no1']) if pd.notna(s['weeks_at_no1']) else 0)
+        if pd.notna(s['first_week']):
+            st.caption(f"On the Hot 100 between {s['first_week']} and {s['last_week']}")
+
+    if songs is not None and not songs.empty:
+        st.markdown("**Charting songs**")
+        st.dataframe(
+            songs.rename(columns={'title': 'Song', 'best_rank': 'Peak', 'weeks_on_chart': 'Weeks'}),
+            use_container_width=True, hide_index=True)
+
+
 def show_top_songs_artists(filters):
     st.header("🏆 Top Songs & Artists")
     st.caption(
@@ -450,11 +600,20 @@ def show_top_songs_artists(filters):
         songs_df = load_data(top_songs_query, songs_params)
         
         if songs_df is not None and not songs_df.empty:
-            st.dataframe(
+            st.caption("👆 Click a row to see full song details.")
+            song_event = st.dataframe(
                 songs_df[['title', 'artists', 'weeks_on_chart', 'best_rank', 'max_weeks']],
                 use_container_width=True,
-                hide_index=True
+                hide_index=True,
+                on_select="rerun",
+                selection_mode="single-row",
+                key="top_songs_table",
             )
+            if song_event.selection.rows:
+                sel_id = songs_df.iloc[song_event.selection.rows[0]]['song_id']
+                if st.session_state.get('_song_dialog_for') != sel_id:
+                    st.session_state['_song_dialog_for'] = sel_id
+                    song_detail_dialog(sel_id)
             
             # Visualization
             top_20 = songs_df.head(20)
@@ -475,7 +634,8 @@ def show_top_songs_artists(filters):
         st.subheader("Most Successful Artists")
         
         top_artists_query = """
-        SELECT 
+        SELECT
+            a.artist_id,
             a.name as artist_name,
             COUNT(DISTINCT ce.song_id) as unique_songs,
             COUNT(DISTINCT ce.chart_week) as total_weeks,
@@ -501,11 +661,20 @@ def show_top_songs_artists(filters):
         artists_df = load_data(top_artists_query, artist_params)
         
         if artists_df is not None and not artists_df.empty:
-            st.dataframe(
+            st.caption("👆 Click a row to see full artist details.")
+            artist_event = st.dataframe(
                 artists_df[['artist_name', 'genre', 'unique_songs', 'total_weeks', 'avg_rank', 'best_rank']],
                 use_container_width=True,
-                hide_index=True
+                hide_index=True,
+                on_select="rerun",
+                selection_mode="single-row",
+                key="top_artists_table",
             )
+            if artist_event.selection.rows:
+                sel_aid = artists_df.iloc[artist_event.selection.rows[0]]['artist_id']
+                if st.session_state.get('_artist_dialog_for') != sel_aid:
+                    st.session_state['_artist_dialog_for'] = sel_aid
+                    artist_detail_dialog(sel_aid)
             
             # Visualization
             top_20 = artists_df.head(20)

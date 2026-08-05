@@ -390,6 +390,10 @@ services:
     container_name: billboard-dashboard
     ports:
       - "8501:8501"
+    volumes:
+      # Mount the app code so edits need only `docker compose restart dashboard`
+      # (no image rebuild — which reinstalls all deps and fills the disk).
+      - ./dashboard.py:/app/dashboard.py
     env_file:
       - ${ENV_FILE_PATH:-.env}  # Use same env file as other services
     environment:
